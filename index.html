@@ -68,10 +68,10 @@
 .hero-bg-image {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800');
+  background-image: url('https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=1920');
   background-size: cover;
-  background-position: center;
-  opacity: 0.12;
+  background-position: center 40%;
+  opacity: 0.38;
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
@@ -83,7 +83,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(10,61,31,0.94) 0%, rgba(14,79,40,0.82) 55%, rgba(10,61,31,0.9) 100%);
+  background: linear-gradient(135deg, rgba(10,61,31,0.88) 0%, rgba(14,79,40,0.68) 50%, rgba(10,61,31,0.84) 100%);
 }
 
 .hero-grid-pattern {
@@ -312,7 +312,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  line-height: 0;
 }
 
 .cert-name { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.9); }
@@ -690,6 +690,8 @@
   box-shadow: 0 24px 56px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,200,60,0.15);
 }
 .stat-big-card:hover::after { opacity: 1; }
+a.stat-big-card { cursor: pointer; }
+a.hero-stat-chip { cursor: pointer; }
 
 .stat-big-num {
   font-family: 'Sora', sans-serif;
@@ -931,7 +933,7 @@
   white-space: nowrap; transition: border-color 0.2s;
 }
 .partner-chip:hover { border-color: rgba(46,184,92,0.3); }
-.partner-chip-icon { font-size: 1rem; }
+.partner-chip-icon { display:inline-flex;align-items:center;line-height:0; }
 
 /* ── CEO SPOTLIGHT ────────────────────────────────────────────── */
 .ceo-spotlight {
@@ -1487,6 +1489,55 @@ a.qc-value:hover { color: var(--green-light); }
   background: var(--green); flex-shrink: 0;
 }
 .sector-modal-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+/* ── BRAND SCROLL ─────────────────────────────────────── */
+.brand-scroll-strip {
+  background: var(--cream, #f8f5f0);
+  border-top: 1px solid var(--border, #e8e4dc);
+  border-bottom: 1px solid var(--border, #e8e4dc);
+  padding: 0;
+  overflow: hidden;
+}
+.brand-scroll-track { display: flex; overflow: hidden; }
+.brand-scroll-inner {
+  display: flex;
+  gap: 0;
+  animation: brandScroll 45s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+.brand-scroll-inner:hover { animation-play-state: paused; }
+@keyframes brandScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.brand-scroll-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--forest, #0a3d1f);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border-right: 1px solid var(--border, #e8e4dc);
+}
+.brand-scroll-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2EB85C;
+  flex-shrink: 0;
+}
+.dark .brand-scroll-strip {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+.dark .brand-scroll-pill {
+  color: rgba(255,255,255,0.7);
+  border-right-color: rgba(255,255,255,0.08);
+}
 </style>
 
 </head>
@@ -1573,10 +1624,10 @@ a.qc-value:hover { color: var(--green-light); }
           <a href="about.html" class="btn-hero-outline">Our Vision</a>
         </div>
         <div class="hero-stats-row" data-reveal>
-          <div class="hero-stat-chip"><span class="chip-num">18</span><span class="chip-label">Departments</span></div>
-          <div class="hero-stat-chip"><span class="chip-num">24</span><span class="chip-label">Core Managers</span></div>
-          <div class="hero-stat-chip"><span class="chip-num">27</span><span class="chip-label">Brands</span></div>
-          <div class="hero-stat-chip"><span class="chip-num">2000+</span><span class="chip-label">Professionals</span></div>
+          <a href="departments.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">18</span><span class="chip-label">Departments</span></a>
+          <a href="leadership.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">24</span><span class="chip-label">Core Managers</span></a>
+          <a href="brands.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">27</span><span class="chip-label">Brands</span></a>
+          <a href="teams.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">2000+</span><span class="chip-label">Professionals</span></a>
         </div>
       </div>
     </div>
@@ -1587,38 +1638,38 @@ a.qc-value:hover { color: var(--green-light); }
 <!-- ══════════════════ CERT MARQUEE ══════════════════ -->
 <div class="cert-strip">
   <div class="cert-strip-inner">
-    <div class="cert-item"><div class="cert-icon-wrap">🏅</div><div><div class="cert-name">MSME Award 2024</div><div class="cert-desc">Best Agri-Consulting Brand</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></div><div><div class="cert-name">MSME Award 2024</div><div class="cert-desc">Best Agri-Consulting Brand</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🌐</div><div><div class="cert-name">Global Business Conclave</div><div class="cert-desc">India's Leading Farm Engineering Brand</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="cert-name">Global Business Conclave</div><div class="cert-desc">India's Leading Farm Engineering Brand</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">📜</div><div><div class="cert-name">ISO 9001:2015</div><div class="cert-desc">Quality Management</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div><div><div class="cert-name">ISO 9001:2015</div><div class="cert-desc">Quality Management</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🏦</div><div><div class="cert-name">NABARD Approved</div><div class="cert-desc">Partner Institution</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div><div><div class="cert-name">NABARD Approved</div><div class="cert-desc">Partner Institution</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🚢</div><div><div class="cert-name">APEDA Registered</div><div class="cert-desc">Agricultural Export Promotion</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 10V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10"/><path d="M1 6h22v4H1z"/><path d="M10 16h4"/></svg></div><div><div class="cert-name">APEDA Registered</div><div class="cert-desc">Agricultural Export Promotion</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🏆</div><div><div class="cert-name">Startup India</div><div class="cert-desc">Recognised Ecosystem Participant</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div><div><div class="cert-name">Startup India</div><div class="cert-desc">Recognised Ecosystem Participant</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">📺</div><div><div class="cert-name">Pitch It On — Star TV</div><div class="cert-desc">Dr. John Yesudhas, Judge</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/><polygon points="10 12 16 15 10 18 10 12"/></svg></div><div><div class="cert-name">Pitch It On — Star TV</div><div class="cert-desc">Dr. John Yesudhas, Judge</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🥇</div><div><div class="cert-name">National Excellence Award</div><div class="cert-desc">Sustainable Farming Innovation</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></div><div><div class="cert-name">National Excellence Award</div><div class="cert-desc">Sustainable Farming Innovation</div></div></div>
     <div class="cert-divider"></div>
     <!-- Duplicate for infinite loop -->
-    <div class="cert-item"><div class="cert-icon-wrap">🏅</div><div><div class="cert-name">MSME Award 2024</div><div class="cert-desc">Best Agri-Consulting Brand</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></div><div><div class="cert-name">MSME Award 2024</div><div class="cert-desc">Best Agri-Consulting Brand</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🌐</div><div><div class="cert-name">Global Business Conclave</div><div class="cert-desc">India's Leading Farm Engineering Brand</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="cert-name">Global Business Conclave</div><div class="cert-desc">India's Leading Farm Engineering Brand</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">📜</div><div><div class="cert-name">ISO 9001:2015</div><div class="cert-desc">Quality Management</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div><div><div class="cert-name">ISO 9001:2015</div><div class="cert-desc">Quality Management</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🏦</div><div><div class="cert-name">NABARD Approved</div><div class="cert-desc">Partner Institution</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div><div><div class="cert-name">NABARD Approved</div><div class="cert-desc">Partner Institution</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🚢</div><div><div class="cert-name">APEDA Registered</div><div class="cert-desc">Agricultural Export Promotion</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M21 10V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10"/><path d="M1 6h22v4H1z"/><path d="M10 16h4"/></svg></div><div><div class="cert-name">APEDA Registered</div><div class="cert-desc">Agricultural Export Promotion</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🏆</div><div><div class="cert-name">Startup India</div><div class="cert-desc">Recognised Ecosystem Participant</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div><div><div class="cert-name">Startup India</div><div class="cert-desc">Recognised Ecosystem Participant</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">📺</div><div><div class="cert-name">Pitch It On — Star TV</div><div class="cert-desc">Dr. John Yesudhas, Judge</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/><polygon points="10 12 16 15 10 18 10 12"/></svg></div><div><div class="cert-name">Pitch It On — Star TV</div><div class="cert-desc">Dr. John Yesudhas, Judge</div></div></div>
     <div class="cert-divider"></div>
-    <div class="cert-item"><div class="cert-icon-wrap">🥇</div><div><div class="cert-name">National Excellence Award</div><div class="cert-desc">Sustainable Farming Innovation</div></div></div>
+    <div class="cert-item"><div class="cert-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></div><div><div class="cert-name">National Excellence Award</div><div class="cert-desc">Sustainable Farming Innovation</div></div></div>
     <div class="cert-divider"></div>
   </div>
 </div>
@@ -1628,13 +1679,13 @@ a.qc-value:hover { color: var(--green-light); }
   <div class="container">
     <div class="partner-logos-label">Recognized & Accredited By</div>
     <div class="partner-logos-row">
-      <div class="partner-chip"><span class="partner-chip-icon">📜</span> ISO 9001:2015</div>
-      <div class="partner-chip"><span class="partner-chip-icon">🏦</span> NABARD Approved</div>
-      <div class="partner-chip"><span class="partner-chip-icon">🚢</span> APEDA Registered</div>
-      <div class="partner-chip"><span class="partner-chip-icon">🚀</span> Startup India</div>
-      <div class="partner-chip"><span class="partner-chip-icon">🏅</span> MSME Certified</div>
-      <div class="partner-chip"><span class="partner-chip-icon">📺</span> Star TV Featured</div>
-      <div class="partner-chip"><span class="partner-chip-icon">🌐</span> Global Business Conclave</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span> ISO 9001:2015</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span> NABARD Approved</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M21 10V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10"/><path d="M1 6h22v4H1z"/><path d="M10 16h4"/></svg></span> APEDA Registered</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span> Startup India</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></span> MSME Certified</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/><polygon points="10 12 16 15 10 18 10 12"/></svg></span> Star TV Featured</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span> Global Business Conclave</div>
     </div>
   </div>
 </div>
@@ -1758,7 +1809,7 @@ a.qc-value:hover { color: var(--green-light); }
       <a href="brands.html" class="btn btn-primary" data-reveal>View All 26 Brands →</a>
     </div>
     <div class="bento-grid">
-      <div class="bento-card span-2 span-row-2" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; border-top: 3px solid var(--green); cursor: pointer;" onclick="openSectorModal('agriculture')" data-reveal>
+      <div class="bento-card span-2 span-row-2" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; border-top: 3px solid var(--green); cursor: pointer;" onclick="window.location.href='sector-detail.html?id=agriculture'" data-reveal>
         <div style="width: 100%; height: 50%;">
           <img src="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Core Agriculture" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
@@ -1774,7 +1825,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
       </div>
       
-      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="openSectorModal('finance')" data-reveal>
+      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=finance'" data-reveal>
         <div class="bento-accent-top" style="background: linear-gradient(90deg, var(--gold), transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="https://images.pexels.com/photos/187041/pexels-photo-187041.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Finance & Realty" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
@@ -1791,7 +1842,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
       </div>
       
-      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="openSectorModal('retail')" data-reveal>
+      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=retail'" data-reveal>
         <div class="bento-accent-top" style="background: linear-gradient(90deg, #fb7185, transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Retail & Food" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
@@ -1808,7 +1859,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
       </div>
       
-      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="openSectorModal('tech')" data-reveal>
+      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=tech'" data-reveal>
         <div class="bento-accent-top" style="background: linear-gradient(90deg, #a78bfa, transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tech & Digital" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
@@ -1825,7 +1876,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
       </div>
       
-      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="openSectorModal('trade')" data-reveal>
+      <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=trade'" data-reveal>
         <div class="bento-accent-top" style="background: linear-gradient(90deg, #fb923c, transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="https://images.pexels.com/photos/3057960/pexels-photo-3057960.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Trade & Export" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
@@ -1846,6 +1897,15 @@ a.qc-value:hover { color: var(--green-light); }
 </section>
 
 
+<!-- ════════════════ BRAND SCROLL ════════════════ -->
+<div class="brand-scroll-strip">
+  <div class="brand-scroll-track">
+    <div class="brand-scroll-inner">
+      <div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO CropCare</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Agritech Farms</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Nursery</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Organics</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Farm Loans</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Realty</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Wealth</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Mart</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Protein Cuts</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Export</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Import-Export</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Tech</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>India Green App</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Digital</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Aqua</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Mushroom Farms</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Floriculture</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Solar</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Landscaping</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Agri Training</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Joint Ventures</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO FarmGate</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Precision Agri</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO CSR</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Media</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Global Trade</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO CropCare</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Agritech Farms</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Nursery</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Organics</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Farm Loans</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Realty</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Wealth</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Mart</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Protein Cuts</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Export</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Import-Export</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Tech</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>India Green App</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Digital</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Aqua</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Mushroom Farms</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Floriculture</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Solar</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Landscaping</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Agri Training</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Joint Ventures</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO FarmGate</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Precision Agri</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO CSR</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Media</div><div class="brand-scroll-pill"><span class="brand-scroll-dot"></span>IGO Global Trade</div>
+    </div>
+  </div>
+</div>
+
 <!-- ══════════════════ BIG STATS ══════════════════ -->
 <section class="big-stats">
   <div class="container">
@@ -1854,13 +1914,13 @@ a.qc-value:hover { color: var(--green-light); }
       <h2 class="section-title" style="color: #fff;">The Numbers That Define Us</h2>
     </div>
     <div class="stats-main-grid">
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="10" data-suffix="+">10+</span><div class="stat-big-label">Years Experience</div><div class="stat-big-sub">Founded 2016, growing strong</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="18">18</span><div class="stat-big-label">Departments</div><div class="stat-big-sub">Powering the conglomerate</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="24">24</span><div class="stat-big-label">Core Managers</div><div class="stat-big-sub">Leading every department</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="27">27</span><div class="stat-big-label">Active Brands</div><div class="stat-big-sub">Across 8 industry verticals</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="2000" data-suffix="+">2000+</span><div class="stat-big-label">Global Staff</div><div class="stat-big-sub">Across India and beyond</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="6000" data-suffix="+">6000+</span><div class="stat-big-label">Projects Delivered</div><div class="stat-big-sub">Farm engineering &amp; consulting</div></div>
-      <div class="stat-big-card" data-reveal><span class="stat-big-num" data-count="50" data-suffix="K+">50K+</span><div class="stat-big-label">Farmers Served</div><div class="stat-big-sub">With premium products &amp; services</div></div>
+      <a href="about.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="10" data-suffix="+">10+</span><div class="stat-big-label">Years Experience</div><div class="stat-big-sub">Founded 2016, growing strong</div></a>
+      <a href="departments.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="18">18</span><div class="stat-big-label">Departments</div><div class="stat-big-sub">Powering the conglomerate</div></a>
+      <a href="leadership.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="24">24</span><div class="stat-big-label">Core Managers</div><div class="stat-big-sub">Leading every department</div></a>
+      <a href="brands.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="27">27</span><div class="stat-big-label">Active Brands</div><div class="stat-big-sub">Across 8 industry verticals</div></a>
+      <a href="teams.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="2000" data-suffix="+">2000+</span><div class="stat-big-label">Global Staff</div><div class="stat-big-sub">Across India and beyond</div></a>
+      <a href="projects.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="6000" data-suffix="+">6000+</span><div class="stat-big-label">Projects Delivered</div><div class="stat-big-sub">Farm engineering &amp; consulting</div></a>
+      <a href="about.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="50" data-suffix="K+">50K+</span><div class="stat-big-label">Farmers Served</div><div class="stat-big-sub">With premium products &amp; services</div></a>
     </div>
   </div>
 </section>
@@ -2047,55 +2107,58 @@ a.qc-value:hover { color: var(--green-light); }
     <div class="news-awards-grid">
       <div data-reveal>
         <div class="na-col-title"><span>&#128240;</span> Latest News</div>
-        <a href="news.html" class="news-item">
-          <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Star TV feature" class="news-item-img">
+        <a href="https://www.igoagritechfarms.in/blog/campus-drive-200-students" target="_blank" rel="noopener" class="news-item">
+          <img src="assets/blog/blog5.webp" alt="Campus Drive 200+ Students" class="news-item-img">
           <div>
-            <div class="news-item-meta">Media &middot; 2024</div>
-            <div class="news-item-title">IGO Groups Featured on Star TV&rsquo;s &lsquo;Pitch It On&rsquo; &mdash; Dr. John Yesudhas serves as Industry Judge</div>
+            <div class="news-item-meta">Careers &middot; Feb 24, 2024</div>
+            <div class="news-item-title">IGO Agritech Farms Selects 200+ Students in Campus Drive for AgriTech Careers</div>
           </div>
         </a>
-        <a href="news.html" class="news-item">
-          <img src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=200" alt="MSME award" class="news-item-img">
+        <a href="https://www.igoagritechfarms.in/blog/igo-agrimart-solutions" target="_blank" rel="noopener" class="news-item">
+          <img src="assets/blog/blog1.webp" alt="IGO Agrimart" class="news-item-img">
           <div>
-            <div class="news-item-meta">Award &middot; 2024</div>
-            <div class="news-item-title">MSME National Award 2024 conferred upon Founder Dr. John Yesudhas by Government of India</div>
+            <div class="news-item-meta">Products &middot; Jun 12, 2024</div>
+            <div class="news-item-title">IGO Agrimart: Your One-Stop Shop for Cutting-Edge Farming Solutions</div>
           </div>
         </a>
-        <a href="news.html" class="news-item">
-          <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Global Business Conclave" class="news-item-img">
+        <a href="https://www.igoagritechfarms.in/blog/jnn-institute-industrial-visit" target="_blank" rel="noopener" class="news-item">
+          <img src="assets/blog/blog4.webp" alt="JNN Institute Industrial Visit" class="news-item-img">
           <div>
-            <div class="news-item-meta">Event &middot; 2023</div>
-            <div class="news-item-title">IGO Groups recognised at Global Business Conclave as Best Agri-Tech Brand of the Year</div>
+            <div class="news-item-meta">Education &middot; Jun 12, 2024</div>
+            <div class="news-item-title">IGO Agritech Farms Provides Industrial Visit to JNN Institute Students on Polyhouse Farming</div>
           </div>
         </a>
+        <div style="margin-top: 16px;">
+          <a href="news.html" class="btn btn-outline-dark" style="font-size: 0.82rem;">View All News &rarr;</a>
+        </div>
       </div>
       <div data-reveal>
         <div class="na-col-title"><span>&#127942;</span> Awards &amp; Accolades</div>
-        <div class="award-item">
+        <a href="https://www.igoagritechfarms.in/blog/dr-john-yesudhas-icon-of-india" target="_blank" rel="noopener" class="award-item">
           <span class="award-icon">&#129351;</span>
           <div>
-            <div class="award-name">Icon of India 2024</div>
-            <div class="award-org">National Business Leadership Forum</div>
+            <div class="award-name">Icon of India for Positive Change</div>
+            <div class="award-org">Dr. John Yesudhas &mdash; June 2024</div>
           </div>
-        </div>
-        <div class="award-item">
+        </a>
+        <a href="https://www.igoagritechfarms.in/blog/best-innovative-startup-2022" target="_blank" rel="noopener" class="award-item">
           <span class="award-icon">&#127942;</span>
           <div>
-            <div class="award-name">Best Agri-Tech Brand 2022</div>
-            <div class="award-org">Global Business Conclave</div>
+            <div class="award-name">Best Innovative Start-up Agri Tech Brand 2022</div>
+            <div class="award-org">India Trade Awards</div>
           </div>
-        </div>
-        <div class="award-item">
+        </a>
+        <a href="https://www.igoagritechfarms.in/blog/press-media-honours-dr-john" target="_blank" rel="noopener" class="award-item">
           <span class="award-icon">🏅</span>
           <div>
-            <div class="award-name">MSME National Award 2024</div>
-            <div class="award-org">Government of India</div>
+            <div class="award-name">Press &amp; Media Reporters Union Honour</div>
+            <div class="award-org">Tamil Nadu Press Union &mdash; December 2024</div>
           </div>
-        </div>
+        </a>
         <div class="award-item">
           <span class="award-icon">&#128250;</span>
           <div>
-            <div class="award-name">Star TV Pitch It On &mdash; Industry Judge</div>
+            <div class="award-name">Star TV &lsquo;Pitch It On&rsquo; &mdash; Industry Judge</div>
             <div class="award-org">Star TV / Vijay TV Network, 2024</div>
           </div>
         </div>
@@ -2147,7 +2210,7 @@ a.qc-value:hover { color: var(--green-light); }
       <div class="qc-item">
         <span class="qc-icon">&#128345;</span>
         <div class="qc-label">Business Hours</div>
-        <span class="qc-value">Mon &ndash; Sat, 9 AM &ndash; 6 PM</span>
+        <span class="qc-value">Mon &ndash; Sat, 10 AM &ndash; 7:30 PM</span>
       </div>
     </div>
   </div>
@@ -2224,95 +2287,10 @@ a.qc-value:hover { color: var(--green-light); }
 
 <!-- ══════════════════ WHATSAPP FLOAT ══════════════════ -->
 <a href="https://wa.me/917397789803" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="whatsapp-tooltip">Chat with us</span>
 </a>
 
-
-<!-- ══════════════════ SECTOR MODAL ══════════════════ -->
-<div class="sector-modal-overlay" id="sectorModal" onclick="closeSectorModal(event)">
-  <div class="sector-modal">
-    <button class="sector-modal-close" onclick="closeSectorModal(null, true)" aria-label="Close">&#10005;</button>
-    <div class="sector-modal-tag" id="smTag"></div>
-    <div class="sector-modal-title" id="smTitle"></div>
-    <div class="sector-modal-desc" id="smDesc"></div>
-    <div class="sector-block-label">KEY SERVICES</div>
-    <div class="sector-service-tags" id="smServices"></div>
-    <div class="sector-block-label">BRANDS IN THIS SECTOR</div>
-    <div class="sector-brand-list" id="smBrands"></div>
-    <div class="sector-modal-cta" id="smCta"></div>
-  </div>
-</div>
-
-
 <script src="assets/js/main.js"></script>
-<script>
-var sectorData = {
-  agriculture: {
-    tag: 'Core Agriculture',
-    title: 'Farm Engineering & Agritech',
-    desc: 'The foundation of IGO Groups. From precision crop care and nursery cultivation to polyhouse engineering and farm-to-market distribution.',
-    services: ['Crop Protection & Agronomy','Polyhouse & Greenhouse Design','Precision Farming Automation','Nursery & Plant Propagation','Organic Produce Distribution','Soil Health & Diagnostics'],
-    brands: ['IGO CropCare','IGO Agritech Farms','IGO Nursery','IGO Organics'],
-    ctaLink: 'services.html', ctaText: 'View Services'
-  },
-  finance: {
-    tag: 'Finance & Realty',
-    title: 'Farm Finance & Real Estate',
-    desc: 'Bridging the credit gap for farmers. Farm loans, micro-finance, wealth management, and premium farmland estate development.',
-    services: ['Farm Loans & Kisan Credit','Micro-Finance for Farmers','Farmland Estate Development','Agri Wealth Management','NABARD-Linked Credit Schemes'],
-    brands: ['IGO Farm Loans','IGO Realty','IGO Wealth'],
-    ctaLink: 'services.html', ctaText: 'Learn More'
-  },
-  retail: {
-    tag: 'Retail & Food',
-    title: 'Farm-to-Table Retail',
-    desc: 'From IGO Mart franchise stores to organic cafes and premium protein products — eliminating middlemen and delivering farm-fresh quality.',
-    services: ['IGO Mart Franchise Network','Farm-Fresh Grocery Retail','Organic Cafe Chain','Premium Protein Products','Cold Chain Logistics'],
-    brands: ['IGO Mart','IGO Protein Cuts','IGO Organics Cafe'],
-    ctaLink: 'brands.html', ctaText: 'Explore Brands'
-  },
-  tech: {
-    tag: 'Tech & Digital',
-    title: 'AgriTech & Digital Innovation',
-    desc: 'IoT, AI, and data analytics powering smart farming solutions and the India Green App ecosystem.',
-    services: ['IoT Sensor Networks','AI-Driven Farm Advisory','India Green App Platform','Drone Surveillance & Mapping','Digital Market Linkage','Climate Risk Analytics'],
-    brands: ['IGO Tech','India Green App','IGO Digital'],
-    ctaLink: 'services.html', ctaText: 'Learn More'
-  },
-  trade: {
-    tag: 'Trade & Export',
-    title: 'Global Agri Trade & Export',
-    desc: 'Exporting premium Indian agricultural commodities to 18+ countries. APEDA-registered and ISO-certified.',
-    services: ['Fresh Produce Export','Spices & Commodity Trade','Organic Certification Support','Global Buyer Network','APEDA Compliance Management','Farm Factory Production'],
-    brands: ['IGO Export','IGO Import-Export','IGO Global Trade'],
-    ctaLink: 'services.html', ctaText: 'Learn More'
-  }
-};
-
-function openSectorModal(key) {
-  var d = sectorData[key];
-  if (!d) return;
-  document.getElementById('smTag').textContent = d.tag;
-  document.getElementById('smTitle').textContent = d.title;
-  document.getElementById('smDesc').textContent = d.desc;
-  document.getElementById('smServices').innerHTML = d.services.map(function(s){return '<span class="sector-service-tag">'+s+'</span>';}).join('');
-  document.getElementById('smBrands').innerHTML = d.brands.map(function(b){return '<div class="sector-brand-item">'+b+'</div>';}).join('');
-  document.getElementById('smCta').innerHTML = '<a href="'+d.ctaLink+'" class="btn btn-primary">'+d.ctaText+' →</a><button class="btn btn-outline-dark" onclick="closeSectorModal(null,true)">Close</button>';
-  document.getElementById('sectorModal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeSectorModal(e, force) {
-  if (force || (e && e.target === document.getElementById('sectorModal'))) {
-    document.getElementById('sectorModal').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeSectorModal(null, true);
-});
-</script>
 </body>
 </html>

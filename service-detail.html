@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pg-title">Service Detail | IGO Groups</title>
+<meta name="description" content="Detailed information about IGO Groups service lines." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<style>
+.svc-hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:14px;display:block;margin-bottom:2rem;}
+.svc-brand-badge{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase;}
+.svc-highlights{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0 2rem;}
+.svc-tag{background:#f1f8e9;border:1px solid #c5e1a5;color:#33691e;padding:6px 16px;border-radius:24px;font-size:.85rem;font-weight:500;}
+.svc-section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#999;margin:0 0 .7rem;}
+.svc-points{margin:0 0 2.5rem;padding-left:1.5rem;line-height:2.1;color:#444;font-size:.97rem;}
+.svc-points li::marker{color:#2e7d32;font-size:1.1em;}
+.svc-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:2rem;}
+.svc-back-link{color:#2e7d32;text-decoration:none;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:6px;}
+.svc-back-link:hover{text-decoration:underline;}
+.svc-visit-btn{padding:.8rem 2rem;background:#2e7d32;color:#fff;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.svc-visit-btn:hover{background:#1b5e20;}
+.svc-enquire-btn{padding:.8rem 2rem;border:2px solid #2e7d32;color:#2e7d32;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.svc-enquire-btn:hover{background:#f1f8e9;}
+.svc-detail-grid{display:grid;grid-template-columns:1fr 340px;gap:3rem;align-items:start;}
+.svc-sidebar{background:var(--card-bg,#f9f9f7);border:1px solid var(--border,#e8e4dc);border-radius:12px;padding:1.75rem;}
+.svc-sidebar h4{margin:0 0 1rem;font-size:1rem;}
+.svc-sidebar ul{margin:0;padding-left:1.2rem;line-height:2;color:#555;font-size:.9rem;}
+.svc-breadcrumb{font-size:.85rem;color:#888;margin-bottom:1.5rem;}
+.svc-breadcrumb a{color:#2e7d32;text-decoration:none;}
+.svc-breadcrumb a:hover{text-decoration:underline;}
+.dark .svc-brand-badge{background:#1a3a1a;color:#81c784;}
+.dark .svc-tag{background:#1a3a1a;border-color:#2e7d32;color:#a5d6a7;}
+.dark .svc-points{color:#ccc;}
+.dark .svc-sidebar{background:#1e2a1e;border-color:#2e7d32;}
+.dark .svc-sidebar ul{color:#bbb;}
+@media(max-width:768px){.svc-detail-grid{grid-template-columns:1fr;}.svc-hero-img{max-height:240px;}}
+</style>
+</head>
+<body>
+<script>
+  (function(){
+    var t = localStorage.getItem('igo-theme');
+    if (t === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<svg class="icon-sprite" aria-hidden="true">
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="icon-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3 11.2c.4.3.6.8.6 1.3v.5h4.8v-.5c0-.5.2-1 .6-1.3A6 6 0 0 0 12 3Z"/></symbol>
+  <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M5 21c8 0 14-6 14-14V4h-3C8 4 4 9 4 16v5h1Z"/><path d="M5 21c2-5 5-8 9-10"/></symbol>
+  <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12l4-3 4 2 3-3 3 2 4-2 2 3-3 6h-4l-2-2-2 2H6Z"/></symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2Z"/></symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></symbol>
+  <symbol id="icon-seed" viewBox="0 0 24 24"><path d="M12 21c4-1 7-4 7-9 0-4-3-8-7-9-4 1-7 5-7 9 0 5 3 8 7 9Z"/><path d="M12 21V7"/></symbol>
+  <symbol id="icon-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+  <symbol id="icon-truck" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 11h4l4 3v2h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></symbol>
+  <symbol id="icon-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14h2"/></symbol>
+  <symbol id="icon-grad" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5Z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></symbol>
+  <symbol id="icon-leaf2" viewBox="0 0 24 24"><path d="M4 13c0-6 5-9 16-9 0 11-4 16-10 16-4 0-6-2-6-7Z"/></symbol>
+  <symbol id="icon-energy" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></symbol>
+</svg>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+    <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:52px; width:auto; object-fit:contain; display:block;">
+  </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="dropdown" tabindex="0">
+        <a href="javascript:void(0)">Company &#9662;</a>
+        <div class="dropdown-menu">
+          <a href="about.html">About Us</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
+          <a href="csr.html">CSR &amp; Sustainability</a>
+        </div>
+      </div>
+      <div class="dropdown" tabindex="0">
+        <a href="javascript:void(0)">Business &#9662;</a>
+        <div class="dropdown-menu">
+          <a href="brands.html">Business Divisions</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="products.html">Products</a>
+        </div>
+      </div>
+      <div class="dropdown" tabindex="0">
+        <a href="javascript:void(0)">Media &#9662;</a>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Events</a>
+          <a href="gallery.html">Media Gallery</a>
+          <a href="awards.html">Awards</a>
+          <a href="testimonials.html">Testimonials</a>
+        </div>
+      </div>
+      <a href="careers.html">Careers</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero — populated by JS -->
+<section class="page-hero" id="pg-hero">
+  <div class="container">
+    <span class="eyebrow" id="pg-eyebrow">SERVICE</span>
+    <h1 id="pg-heading">Loading&hellip;</h1>
+    <p id="pg-sub"></p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <p class="svc-breadcrumb"><a href="services.html">&#8592; All Services</a> &nbsp;/&nbsp; <span id="bc-title"></span></p>
+
+    <div class="svc-detail-grid">
+
+      <!-- LEFT: main content -->
+      <div>
+        <img id="svc-img" src="" alt="" class="svc-hero-img" data-reveal>
+        <span id="svc-brand" class="svc-brand-badge"></span>
+        <p id="svc-desc" style="font-size:1.05rem;line-height:1.8;margin:0 0 1.75rem;"></p>
+
+        <div class="svc-section-label">Service Highlights</div>
+        <div id="svc-highlights" class="svc-highlights"></div>
+
+        <div class="svc-section-label">Key Benefits</div>
+        <ul id="svc-points" class="svc-points"></ul>
+
+        <div class="svc-actions">
+          <a id="svc-visit" href="#" target="_blank" rel="noopener" class="svc-visit-btn">Visit Website &#8594;</a>
+          <a href="contact.html" class="svc-enquire-btn">Enquire Now</a>
+          <a href="services.html" class="svc-back-link">&#8592; Back to Services</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: sidebar -->
+      <div class="svc-sidebar" data-reveal="right">
+        <h4>About This Service</h4>
+        <ul id="svc-sidebar-list"></ul>
+        <hr style="margin:1.25rem 0;border:none;border-top:1px solid #ddd;">
+        <p style="font-size:.87rem;color:#666;margin:0;">Need a custom quote or project consultation?</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:.85rem;display:inline-block;font-size:.88rem;padding:.6rem 1.4rem;">Contact Our Team</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Our experts are available to design the right solution for your farm or business.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-dark">Talk to Our Team</a>
+      <a id="cta-visit" href="#" target="_blank" rel="noopener" class="btn btn-primary">Visit Brand Website &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+    <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
+  </div>
+        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/company/igo-agritechfarms" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="brands.html">Our Brands</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="departments.html">Departments</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="teams.html">Teams</a>
+        <a href="awards.html">Awards</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="careers.html">Careers</a>
+        <a href="news.html">News</a>
+      </div>
+      <div class="footer-col">
+        <h4>Group Companies</h4>
+        <a href="brands/cropcare.html">IGO CropCare</a>
+        <a href="brands/agritech-farms.html">IGO Agritech Farms</a>
+        <a href="brands/farm-loans.html">IGO Farm Loans</a>
+        <a href="brands.html">View All Brands &rarr;</a>
+      </div>
+      <div class="footer-col">
+        <h4>Head Office</h4>
+        <p>No. 17, Kovalan Street,<br>2nd Main Road, Uthandi Kanathur,<br>Chennai &ndash; 600119, India</p>
+        <p><a href="mailto:bd2@igogroups.com">bd2@igogroups.com</a></p>
+        <p><a href="tel:+917397789803">+91 73977 89803</a></p>
+      </div>
+  </div>
+  <div class="container footer-bottom">
+    <div>&copy; 2026 IGO Groups. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+var SERVICES = {
+  'agri-engineering': {
+    title: 'Agri Engineering & Consulting',
+    brand: 'IGO Agritech Farms',
+    img: 'assets/img/services/farm-planning.webp',
+    desc: 'Turnkey design, build, and annual maintenance for advanced agricultural setups — polyhouse, hydroponics, vertical farming, aquaculture, mushroom cultivation, floriculture, landscaping and rooftop gardens.',
+    highlights: ['Polyhouse Construction','Hydroponics Setup','Vertical Farming','Goat Farming','Aquaculture','Mushroom Cultivation','Floriculture','Rooftop Gardens'],
+    points: [
+      'End-to-end project delivery from site survey to first harvest',
+      'Custom-designed polyhouse structures suited to any climate zone',
+      'Drip irrigation, fertigation, and automated climate control systems',
+      'Annual Maintenance Contracts (AMC) keeping every setup at peak performance',
+      '200+ completed projects across Tamil Nadu and beyond',
+      'Crop planning, variety selection, and yield optimisation advisory included'
+    ],
+    sidebar: ['Polyhouse & Greenhouse Projects','Hydroponic NFT & DWC Systems','Vertical Farming Infrastructure','Goat & Livestock Farm Setup','Aquaculture Pond & RAS Setup','Mushroom Cultivation Units','Floriculture & Landscaping','Rooftop Kitchen Gardens','Farm AMC & Ongoing Support'],
+    btnText: 'Visit Website',
+    url: 'https://igoagritechfarms.com/'
+  },
+  'crop-inputs': {
+    title: 'Crop Inputs & AI Diagnostics',
+    brand: 'IGO CropCare',
+    img: 'assets/img/services/crop-selection.webp',
+    desc: 'Genuine seeds, fertilizers, pesticides and an AI-powered Crop Doctor for instant disease diagnosis from a photo. Trusted by 50,000+ farmers across India.',
+    highlights: ['AI Crop Doctor','Genuine Pesticides','Premium Seeds','Fast Delivery','Expert Helpline'],
+    points: [
+      'AI-powered Crop Doctor — diagnose plant disease from a single photo in seconds',
+      'Genuine seeds, fertilizers, and pesticides sourced from certified manufacturers',
+      'Trusted by 50,000+ farmers across India with verified reviews',
+      'Same-day dispatch for orders placed before 2 PM',
+      'Expert agronomist helpline available post-purchase for crop guidance',
+      'Wide product range covering vegetables, fruits, paddy, and plantation crops'
+    ],
+    sidebar: ['Vegetable & Fruit Seeds','Fertilizers & Micronutrients','Pesticides & Fungicides','Bio-Stimulants','Growing Media','AI Crop Disease Diagnosis','Farm Advisory Helpline'],
+    btnText: 'Visit CropCare',
+    url: 'https://igocropcare.com/'
+  },
+  'organic-food': {
+    title: 'Organic Food Retail & Wholesale',
+    brand: 'Farmers Factory / Valluvam',
+    img: 'assets/img/services/farm-business-planning.webp',
+    desc: 'Farm-fresh fruits, vegetables, millets, cold-pressed oils, spices and dry fruits — delivered direct to households and bulk to restaurants, hotels, and institutions.',
+    highlights: ['24-Hr Farm to Kitchen','Cold-Pressed Oils','Organic Certification','Bulk B2B Wholesale','Zero Preservatives'],
+    points: [
+      'Farm-fresh produce delivered within 24 hours of harvest',
+      'Cold-pressed oils with zero additives, preservatives, or artificial flavours',
+      'Certified organic produce sourced directly from partner farms',
+      'Bulk B2B wholesale pricing for restaurants, hotels, and caterers',
+      'Millets, spices, dry fruits, and traditional grocery staples available',
+      'Subscription boxes for regular healthy home delivery'
+    ],
+    sidebar: ['Fresh Fruits & Vegetables','Cold-Pressed Oils','Organic Millets & Grains','Traditional Spices','Dry Fruits & Nuts','B2B Wholesale Orders','Home Delivery Subscriptions'],
+    btnText: 'Visit Valluvam',
+    url: 'https://valluvamproducts.com/'
+  },
+  'fresh-meat': {
+    title: 'Fresh Meat & Seafood Delivery',
+    brand: 'IGO Protein Cuts',
+    img: 'assets/img/services/fish-farming-setup.webp',
+    desc: 'Never-frozen chicken, mutton, fish and seafood delivered farm-to-fork in 60–90 minutes. 100% antibiotic-free and FSSAI certified for safety and quality.',
+    highlights: ['60-Minute Delivery','Antibiotic-Free','FSSAI Certified','Farm-to-Fork','Custom Cuts'],
+    points: [
+      'Never-frozen protein — chicken, mutton, fish, and seafood always delivered fresh',
+      'Farm-to-fork in 60–90 minutes from order placement',
+      '100% antibiotic-free and hormone-free across all protein products',
+      'FSSAI certified processing facility with strict hygiene and cold-chain standards',
+      'Custom cuts, marination, and portioning available on request',
+      'Regular subscriptions available for households and mess operators'
+    ],
+    sidebar: ['Fresh Chicken (Whole & Cuts)','Mutton & Lamb','Seafood & Fish','Prawn & Crab','Custom Butchery & Marination','Bulk Mess & Canteen Orders','Subscription Plans'],
+    btnText: 'Order Now',
+    url: 'https://igoproteincuts.com/'
+  },
+  'land-investment': {
+    title: 'Land & Estate Investment',
+    brand: 'Farm Land Estates',
+    img: 'assets/img/services/land-leveling.webp',
+    desc: 'Verified agricultural land, plantations, and fully managed farmland for local and NRI investors seeking stable, high-return agricultural assets.',
+    highlights: ['Legal Verification','Managed Farmland','High-ROI Crops','NRI Investment Desk','Transparent Pricing'],
+    points: [
+      'Verified agricultural land with clear titles and complete legal documentation',
+      'Managed farmland — earn passive returns without active farming involvement',
+      'High-ROI crop planning: turmeric, sandalwood, teak, banana, and spices',
+      'Dedicated NRI investment desk with repatriation and FEMA compliance support',
+      'Site visits arranged on request with no-pressure consultation',
+      'Professional farm managers assigned post-purchase for worry-free ownership'
+    ],
+    sidebar: ['Agricultural Land Sale','Managed Plantation Farmland','Orchard & Garden Estates','NRI Investment Advisory','Legal Documentation','Site Visit & Due Diligence','Post-Purchase Farm Management'],
+    btnText: 'View Estates',
+    url: 'https://igoagriestate.com/'
+  },
+  'agri-loans': {
+    title: 'Agri-Fintech & Loans',
+    brand: 'IGO Farm Loans',
+    img: 'assets/img/services/agri-investment.webp',
+    desc: 'Farm loan facilitation, government subsidy maximisation, and Detailed Project Report (DPR) preparation — helping modern farmers access the capital they deserve.',
+    highlights: ['KCC & PMEGP Loans','NABARD Subsidies','PM-KUSUM Solar','DPR Preparation','Zero Rejection'],
+    points: [
+      'Kisan Credit Card (KCC) and PMEGP loan facilitation with fast approvals',
+      'NABARD and state government subsidy maximisation for farm infrastructure',
+      'PM-KUSUM solar pump scheme processing with end-to-end support',
+      'Detailed Project Report (DPR) preparation accepted by all nationalised banks',
+      'Complete documentation support — zero rejection guarantee on eligible cases',
+      'MSME and agri-business working capital loans also facilitated'
+    ],
+    sidebar: ['Kisan Credit Card (KCC)','PMEGP & MSME Loans','NABARD Subsidy Processing','PM-KUSUM Solar Scheme','DPR Preparation','Bank Liaison Support','Agri-Business Working Capital'],
+    btnText: 'Apply Now',
+    url: 'https://igofarmloans.com/'
+  },
+  'import-export': {
+    title: 'Import & Export Trade',
+    brand: 'Exports & Imports',
+    img: 'assets/img/services/farm-building-design.webp',
+    desc: 'Verified sourcing, third-party quality inspection, and full export documentation for global agri-commodity buyers — connecting Indian farms to international markets.',
+    highlights: ['Global Freight Logistics','Quality Inspection','Export Documentation','Direct Sourcing','APEDA Certified'],
+    points: [
+      'Verified sourcing of agri-commodities directly from certified farms',
+      'Third-party quality inspection at origin before every export shipment',
+      'Complete export documentation: phytosanitary certificates, certificate of origin, APEDA',
+      'Global freight logistics by sea, air, and road to over 20 countries',
+      'Key markets: UAE, Singapore, UK, USA, Malaysia, and Saudi Arabia',
+      'Import facilitation for agri-machinery, nutrients, and polyhouse materials'
+    ],
+    sidebar: ['Agri-Commodity Export','Quality Inspection & Certification','Phytosanitary & APEDA Docs','Sea & Air Freight Logistics','Import of Farm Equipment','Sourcing from FPOs & Farms','Global Buyer Connections'],
+    btnText: 'Trade Desk',
+    url: 'https://igo-import-export-website.vercel.app/'
+  },
+  'farmgate-mandi': {
+    title: 'Farm-to-Buyer Marketplace',
+    brand: 'Farmgate Mandi',
+    img: 'assets/img/services/pond-construction.webp',
+    desc: 'Direct mandi marketplace eliminating middlemen — connecting farmers and FPOs with institutional buyers across India, with a 7-day guaranteed payment on every transaction.',
+    highlights: ['Direct FPO Linkage','7-Day Payment Guarantee','Price Discovery','Logistics Support','Zero Middlemen'],
+    points: [
+      'Direct linkage between farmers, FPOs, and institutional buyers — no middlemen',
+      '7-day guaranteed payment on all completed and verified transactions',
+      'Real-time price discovery with transparent live bidding mechanism',
+      'Integrated cold-chain logistics and transport support included in listing',
+      'Bulk buyers: supermarkets, hotel chains, processors, and exporters onboarded',
+      'Free listing for farmers and FPOs — revenue only on successful trades'
+    ],
+    sidebar: ['Farmer & FPO Listing Portal','Live Price Discovery','Bulk Buyer Connections','Cold-Chain Logistics','7-Day Payment Guarantee','Commodity Warehousing','Digital Trade Documentation'],
+    btnText: 'Visit Mandi',
+    url: 'https://farmgatemandi.com/'
+  },
+  'plant-nursery': {
+    title: 'Plant Nursery & Propagation',
+    brand: 'IGO Nursery',
+    img: 'assets/img/services/vertical-farming-setup.webp',
+    desc: 'Premium indoor, outdoor, and agricultural plants, saplings, and certified organic seedlings — with Pan-India doorstep delivery in humidity-safe packaging.',
+    highlights: ['Bulk Sapling Orders','Exotic Plant Varieties','Certified Organic Seeds','Pan-India Delivery','Landscaping Plants'],
+    points: [
+      'Extensive range of indoor, outdoor, and agricultural plants under one roof',
+      'Bulk sapling orders fulfilled for afforestation, landscaping, and farm projects',
+      'Exotic and rare plant varieties for collectors, boutique farms, and resorts',
+      'Certified organic seeds for kitchen gardens and hydroponic growers',
+      'Pan-India doorstep delivery with humidity-safe, transit-proof packaging',
+      'Expert plant-care advice included with every order'
+    ],
+    sidebar: ['Indoor & Outdoor Decorative Plants','Agricultural Saplings (Bulk)','Exotic & Rare Plant Varieties','Organic Vegetable Seedlings','Medicinal & Herb Plants','Hydroponic Starter Kits','Landscaping Project Supply'],
+    btnText: 'Shop Nursery',
+    url: 'https://igonursery.com/'
+  },
+  'precision-agritech': {
+    title: 'Precision AgriTech',
+    brand: 'Tech Farming Foundation',
+    img: 'assets/img/services/hydroponic-setup.webp',
+    desc: 'Where precision technology meets Indian farmland — IoT rhizosphere probes, satellite NDVI crop-health analytics, and direct APMC market linkage for data-driven agriculture.',
+    highlights: ['IoT Soil Sensors','Satellite NDVI Analytics','APMC Linkage','AI Yield Prediction','Remote Monitoring'],
+    points: [
+      'IoT rhizosphere probes for real-time root-zone soil health monitoring',
+      'Satellite NDVI and chlorophyll analytics for full-field crop health mapping',
+      'Direct APMC market linkage ensuring fair price realisation for farmers',
+      'AI-based yield prediction and optimal harvest scheduling advisory',
+      'Remote monitoring dashboard accessible from any smartphone or computer',
+      'Alerts and automated irrigation triggers based on sensor thresholds'
+    ],
+    sidebar: ['IoT Soil & Climate Sensors','Satellite Crop Health Mapping','NDVI & Chlorophyll Analytics','APMC Price Linkage','AI Yield Forecasting','Farm Remote Dashboard','Sensor Installation & Support'],
+    btnText: 'Learn More',
+    url: 'https://igo-tech-farming-experts.vercel.app/'
+  },
+  'green-energy': {
+    title: 'Green Energy Solutions',
+    brand: 'IGO Green Energies',
+    img: 'assets/img/services/drip-irrigation.webp',
+    desc: 'Sustainable, reliable clean energy systems built for Tamil Nadu farm operations — solar, biogas, and wind, with PM-KUSUM subsidy support and grid integration.',
+    highlights: ['Solar Farm Panels','Biogas Plants','Wind Energy','Grid Integration','PM-KUSUM Subsidy'],
+    points: [
+      'Solar panel installation for farms, packhouses, cold storage, and pump sets',
+      'Biogas plants converting farm and animal waste to clean cooking fuel and power',
+      'Wind energy systems for off-grid and remote farm locations',
+      'Grid integration and net-metering setup for significant energy cost savings',
+      'PM-KUSUM solar pump scheme processing with full subsidy assistance',
+      'Turnkey installation with commissioning and 5-year service contract'
+    ],
+    sidebar: ['Solar Farm & Rooftop Systems','Solar Pump Sets (PM-KUSUM)','Biogas Plants','Wind Energy Systems','Grid Integration & Net-Metering','Energy Audit & DPR','5-Year Service Contracts'],
+    btnText: 'View Energy',
+    url: 'https://igo-green-enargy.vercel.app/'
+  },
+  'agri-training': {
+    title: 'Agri Training & Education',
+    brand: 'IGO Academy',
+    img: 'assets/img/services/goat-farm-setup.webp',
+    desc: 'Certified skill-building courses and hands-on training in modern farming techniques — from hydroponics masterclasses to agri-business management, online and at live project sites.',
+    highlights: ['Hydroponics Masterclass','Organic Farming Certs','Agri-Business MBA','Live Field Training','Placement Support'],
+    points: [
+      'Certified hydroponics and vertical farming masterclasses with practical modules',
+      'Organic farming certifications recognised by state agricultural boards',
+      'Agri-business management courses designed for farm entrepreneurs and investors',
+      'Hands-on field training conducted at live IGO project sites across Tamil Nadu',
+      'Online and offline batch formats to suit working farmers and students',
+      'Placement assistance and incubation support for course graduates'
+    ],
+    sidebar: ['Hydroponics & Vertical Farming Courses','Organic Farming Certification','Polyhouse Management Training','Aquaculture & Livestock Programs','Agri-Business MBA Module','Online Self-Paced Batches','Field Training at IGO Sites'],
+    btnText: 'Enroll Now',
+    url: 'https://igoacademy.in/'
+  }
+};
+
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id') || '';
+  var svc = SERVICES[id];
+
+  if (!svc) {
+    // Unknown ID — redirect back
+    window.location.href = 'services.html';
+    return;
+  }
+
+  // Page title
+  document.title = svc.title + ' | IGO Groups';
+  document.getElementById('pg-title').textContent = svc.title + ' | IGO Groups';
+
+  // Hero
+  document.getElementById('pg-eyebrow').textContent = svc.brand.toUpperCase();
+  document.getElementById('pg-heading').textContent = svc.title;
+  document.getElementById('pg-sub').textContent = svc.desc;
+
+  // Breadcrumb
+  document.getElementById('bc-title').textContent = svc.title;
+
+  // Image
+  var img = document.getElementById('svc-img');
+  img.src = svc.img;
+  img.alt = svc.title;
+
+  // Brand
+  document.getElementById('svc-brand').textContent = svc.brand;
+
+  // Description
+  document.getElementById('svc-desc').textContent = svc.desc;
+
+  // Highlights
+  document.getElementById('svc-highlights').innerHTML = svc.highlights.map(function(h){
+    return '<span class="svc-tag">' + h + '</span>';
+  }).join('');
+
+  // Key points
+  document.getElementById('svc-points').innerHTML = svc.points.map(function(p){
+    return '<li>' + p + '</li>';
+  }).join('');
+
+  // Sidebar
+  document.getElementById('svc-sidebar-list').innerHTML = svc.sidebar.map(function(s){
+    return '<li>' + s + '</li>';
+  }).join('');
+
+  // Buttons
+  var visitBtn = document.getElementById('svc-visit');
+  visitBtn.textContent = svc.btnText + ' →';
+  visitBtn.href = svc.url;
+
+  document.getElementById('cta-visit').href = svc.url;
+  document.getElementById('cta-visit').textContent = 'Visit ' + svc.brand + ' →';
+})();
+</script>
+</body>
+</html>

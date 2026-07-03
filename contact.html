@@ -131,30 +131,74 @@
         <h2 style="margin-top: 2rem;">Department Emails</h2>
         <ul style="list-style: none; padding: 0; line-height: 1.8;">
           <li><strong>General / Business:</strong> bd2@igogroups.com</li>
-          <li><strong>HR & Careers:</strong> hr@igogroups.com</li>
-          <li><strong>Sales & Partnerships:</strong> sales@igogroups.com</li>
-          <li><strong>Support:</strong> support@igogroups.com</li>
+          <li><strong>HR &amp; Careers:</strong> hr.admin@igogroups.com</li>
         </ul>
 
         <h2 style="margin-top: 2rem;">Office Hours</h2>
-        <p>Monday – Saturday: 9:00 AM – 6:30 PM<br>Sunday: Closed</p>
+        <p>Monday – Saturday: 10:00 AM – 7:30 PM<br>Sunday: Closed</p>
       </div>
 
       <div data-reveal="right" class="card">
         <h3>Send us a message</h3>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent to our team. We will get back to you shortly.');">
-          <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
-          <input type="email" placeholder="Your Email" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
-          <select required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
+        <form id="contactForm" class="contact-form" onsubmit="submitContactForm(event)">
+          <input type="text" id="cf-name" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
+          <input type="email" id="cf-email" placeholder="Your Email" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
+          <select id="cf-dept" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;">
             <option value="">Select Department</option>
-            <option value="sales">Sales & Trade</option>
-            <option value="hr">Careers & HR</option>
+            <option value="sales">Sales &amp; Trade</option>
+            <option value="hr">Careers &amp; HR</option>
             <option value="support">Customer Support</option>
             <option value="other">General Inquiry</option>
           </select>
-          <textarea rows="5" placeholder="How can we help?" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc; font-family: inherit;"></textarea>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+          <textarea id="cf-msg" rows="5" placeholder="How can we help?" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc; font-family: inherit;"></textarea>
+          <button type="submit" id="cf-btn" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+          <div id="cf-status" style="display:none; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.9rem;"></div>
         </form>
+        <script>
+        function submitContactForm(e) {
+          e.preventDefault();
+          var btn = document.getElementById('cf-btn');
+          var status = document.getElementById('cf-status');
+          var dept = document.getElementById('cf-dept').value;
+          // Route to the right inbox based on department
+          var toEmail = dept === 'hr' ? 'hr.admin@igogroups.com' : 'bd2@igogroups.com';
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          var data = {
+            name: document.getElementById('cf-name').value,
+            email: document.getElementById('cf-email').value,
+            department: dept,
+            message: document.getElementById('cf-msg').value,
+            _replyto: document.getElementById('cf-email').value,
+            _subject: 'IGO Groups Website Enquiry – ' + dept
+          };
+          fetch('PASTE_YOUR_APPS_SCRIPT_URL_HERE', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(data)
+          }).then(function(res) {
+            if (res.ok) {
+              status.style.display = 'block';
+              status.style.background = '#e6f9ee';
+              status.style.color = '#1a6b3a';
+              status.style.border = '1px solid #a8e6c3';
+              status.textContent = '✓ Message sent! Our team will reply within one business day.';
+              document.getElementById('contactForm').reset();
+            } else {
+              throw new Error('failed');
+            }
+          }).catch(function() {
+            status.style.display = 'block';
+            status.style.background = '#fff3f3';
+            status.style.color = '#a00';
+            status.style.border = '1px solid #fcc';
+            status.textContent = 'Sending failed. Please email us directly at bd2@igogroups.com';
+          }).finally(function() {
+            btn.textContent = 'Submit Request';
+            btn.disabled = false;
+          });
+        }
+        </script>
       </div>
     </div>
   </div>

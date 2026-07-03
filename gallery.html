@@ -116,57 +116,145 @@
   </div>
 </section>
 
+<style>
+.gallery-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem;}
+.gallery-filters button{padding:0.45rem 1.1rem;border-radius:999px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.gallery-filters button.active,.gallery-filters button:hover{background:var(--green);color:#fff;border-color:var(--green);}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+@media(max-width:768px){.gallery-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.gallery-grid{grid-template-columns:1fr;}}
+.gal-card{border-radius:14px;overflow:hidden;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.10);transition:transform 0.22s,box-shadow 0.22s;background:var(--card-bg,#fff);position:relative;}
+.gal-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,0.18);}
+.gal-card img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.3s;}
+.gal-card:hover img{transform:scale(1.04);}
+.gal-card-body{padding:0.85rem 1rem 1rem;}
+.gal-cat-tag{display:inline-block;font-size:0.67rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--green);background:rgba(46,184,92,0.10);padding:2px 8px;border-radius:999px;margin-bottom:6px;}
+.gal-card-title{font-size:0.92rem;font-weight:700;color:var(--heading);margin:0;line-height:1.35;}
+.gal-card-hint{font-size:0.75rem;color:var(--muted);margin-top:4px;}
+.gal-card[data-hidden]{display:none;}
+#galModal{display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0.82);align-items:center;justify-content:center;padding:1.5rem;}
+#galModal.open{display:flex;}
+.gal-modal-box{background:var(--card-bg,#fff);border-radius:18px;max-width:880px;width:100%;max-height:90vh;overflow-y:auto;padding:2rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.35);}
+.gal-modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--muted);line-height:1;}
+.gal-modal-close:hover{color:var(--heading);}
+.gal-modal-title{font-size:1.3rem;font-weight:700;margin-bottom:0.3rem;color:var(--heading);}
+.gal-modal-cat{font-size:0.75rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.2rem;display:block;}
+.gal-modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
+@media(max-width:600px){.gal-modal-grid{grid-template-columns:1fr 1fr;}}
+.gal-modal-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:zoom-in;transition:transform 0.2s;}
+.gal-modal-img:hover{transform:scale(1.03);}
+</style>
+
 <section class="content-section">
   <div class="container">
-    <div class="grid three-grid">
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Agri Farming Projects" class="brand-card-img">
-        <span class="tag tag-live">Farm Projects</span>
-        <h4>Agri Farming Projects</h4>
+    <div class="gallery-filters">
+      <button class="active" onclick="filterGallery('all',this)">All</button>
+      <button onclick="filterGallery('farm-projects',this)">Farm Projects</button>
+      <button onclick="filterGallery('operational',this)">Operational Facilities</button>
+      <button onclick="filterGallery('corporate',this)">Corporate Events</button>
+      <button onclick="filterGallery('office-infra',this)">Office Infrastructure</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gal-card" data-cat="farm-projects" data-reveal onclick="openGalleryModal('Agri Farming Projects','Farm Projects',['assets/img/gallery/agri-farming.webp','assets/img/gallery/sub-polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-open-cultivation.webp','assets/img/gallery/sub-vertical.webp','assets/img/gallery/sub-farm-building.webp'])">
+        <img src="assets/img/gallery/agri-farming.webp" alt="Agri Farming Projects">
+        <div class="gal-card-body"><span class="gal-cat-tag">Farm Projects</span><p class="gal-card-title">Agri Farming Projects</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Aquaculture Farming Project" class="brand-card-img">
-        <span class="tag tag-live">Farm Projects</span>
-        <h4>Aquaculture Farming Projects</h4>
+
+      <div class="gal-card" data-cat="farm-projects" data-reveal onclick="openGalleryModal('Aquaculture Farming Projects','Farm Projects',['assets/img/gallery/aquaculture.webp','assets/img/gallery/sub-fish-farming.webp','assets/img/gallery/sub-shrimp.webp','assets/img/gallery/sub-biofloc.webp','assets/img/gallery/sub-crab.webp','assets/img/gallery/sub-pond.webp'])">
+        <img src="assets/img/gallery/aquaculture.webp" alt="Aquaculture Farming Projects">
+        <div class="gal-card-body"><span class="gal-cat-tag">Farm Projects</span><p class="gal-card-title">Aquaculture Farming Projects</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Livestock Farming Project" class="brand-card-img">
-        <span class="tag tag-live">Farm Projects</span>
-        <h4>Livestock Farming Projects</h4>
+
+      <div class="gal-card" data-cat="farm-projects" data-reveal onclick="openGalleryModal('Livestock Farming Projects','Farm Projects',['assets/img/gallery/livestock.webp','assets/img/gallery/sub-goat.webp','assets/img/gallery/sub-dairy.webp','assets/img/gallery/sub-sheep.webp','assets/img/gallery/sub-poultry.webp'])">
+        <img src="assets/img/gallery/livestock.webp" alt="Livestock Farming Projects">
+        <div class="gal-card-body"><span class="gal-cat-tag">Farm Projects</span><p class="gal-card-title">Livestock Farming Projects</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Farm Engineering Project" class="brand-card-img">
-        <span class="tag tag-live">Farm Projects</span>
-        <h4>Farm Engineering Projects</h4>
+
+      <div class="gal-card" data-cat="farm-projects" data-reveal onclick="openGalleryModal('Farm Engineering Projects','Farm Projects',['assets/img/gallery/farm-engineering.webp','assets/img/gallery/sub-farm-building.webp','assets/img/gallery/sub-pond.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-borewell.webp'])">
+        <img src="assets/img/gallery/farm-engineering.webp" alt="Farm Engineering Projects">
+        <div class="gal-card-body"><span class="gal-cat-tag">Farm Projects</span><p class="gal-card-title">Farm Engineering Projects</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Farm Infrastructure & Irrigation" class="brand-card-img">
-        <span class="tag tag-live">Operational Facilities</span>
-        <h4>Farm Infrastructure &amp; Irrigation</h4>
+
+      <div class="gal-card" data-cat="operational" data-reveal onclick="openGalleryModal('Farm Infrastructure &amp; Irrigation','Operational Facilities',['assets/img/gallery/irrigation-system.webp','assets/img/gallery/sub-borewell.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-pond.webp'])">
+        <img src="assets/img/gallery/irrigation-system.webp" alt="Farm Infrastructure and Irrigation">
+        <div class="gal-card-body"><span class="gal-cat-tag">Operational Facilities</span><p class="gal-card-title">Farm Infrastructure &amp; Irrigation</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Polyhouse Structure" class="brand-card-img">
-        <span class="tag tag-live">Operational Facilities</span>
-        <h4>Polyhouse Structures</h4>
+
+      <div class="gal-card" data-cat="operational" data-reveal onclick="openGalleryModal('Polyhouse Structures','Operational Facilities',['assets/img/gallery/polyhouse.webp','assets/img/gallery/sub-polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/smart-grow-sensor.webp'])">
+        <img src="assets/img/gallery/polyhouse.webp" alt="Polyhouse Structures">
+        <div class="gal-card-body"><span class="gal-cat-tag">Operational Facilities</span><p class="gal-card-title">Polyhouse Structures</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Control & Automation" class="brand-card-img">
-        <span class="tag tag-live">Operational Facilities</span>
-        <h4>Control &amp; Automation Systems</h4>
+
+      <div class="gal-card" data-cat="operational" data-reveal onclick="openGalleryModal('Control &amp; Automation Systems','Operational Facilities',['assets/img/gallery/smart-grow-sensor.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-vertical.webp'])">
+        <img src="assets/img/gallery/smart-grow-sensor.webp" alt="Control and Automation Systems">
+        <div class="gal-card-body"><span class="gal-cat-tag">Operational Facilities</span><p class="gal-card-title">Control &amp; Automation Systems</p><p class="gal-card-hint">Click to view project photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Industry award ceremony honoring IGO Agritech Farms" class="brand-card-img">
-        <span class="tag tag-live">Corporate Events</span>
-        <h4>Industry Award Ceremony</h4>
+
+      <div class="gal-card" data-cat="corporate" data-reveal onclick="openGalleryModal('Industry Award Ceremony','Corporate Events',['assets/img/gallery/award-ceremony.jpg','assets/img/gallery/sub-award2.jpg','assets/img/gallery/sub-award3.jpg','assets/img/award-icon-of-india.jpg','assets/img/award-best-startup.jpg','assets/img/award-press-media.jpg'])">
+        <img src="assets/img/gallery/award-ceremony.jpg" alt="Industry Award Ceremony">
+        <div class="gal-card-body"><span class="gal-cat-tag">Corporate Events</span><p class="gal-card-title">Industry Award Ceremony</p><p class="gal-card-hint">Click to view event photos &#8594;</p></div>
       </div>
-      <div class="card brand-card" data-reveal>
-        <img src="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Flag hoisting ceremony at IGO Agritech Farms" class="brand-card-img">
-        <span class="tag tag-live">Corporate Events</span>
-        <h4>Independence Day Flag Hoisting</h4>
+
+      <div class="gal-card" data-cat="corporate" data-reveal onclick="openGalleryModal('Campus Drives &amp; Industrial Visits','Corporate Events',['assets/img/gallery/independence-day.webp','assets/img/gallery/sub-campus-drive.webp','assets/img/gallery/sub-iv-event.webp'])">
+        <img src="assets/img/gallery/independence-day.webp" alt="Campus Drive and Events">
+        <div class="gal-card-body"><span class="gal-cat-tag">Corporate Events</span><p class="gal-card-title">Campus Drives &amp; Industrial Visits</p><p class="gal-card-hint">Click to view event photos &#8594;</p></div>
       </div>
+
+      <div class="gal-card" data-cat="office-infra" data-reveal onclick="openGalleryModal('Farm Building Design','Office Infrastructure',['assets/img/gallery/office-farm-building.webp','assets/img/gallery/office-farm-buildings.webp','assets/img/gallery/farm-buildings-infra.webp','assets/img/gallery/sub-farm-building.webp'])">
+        <img src="assets/img/gallery/office-farm-building.webp" alt="Farm Building Design">
+        <div class="gal-card-body"><span class="gal-cat-tag">Office Infrastructure</span><p class="gal-card-title">Farm Building Design</p><p class="gal-card-hint">Click to view infrastructure photos &#8594;</p></div>
+      </div>
+
+      <div class="gal-card" data-cat="office-infra" data-reveal onclick="openGalleryModal('Pack House &amp; Cold Storage','Office Infrastructure',['assets/img/gallery/packhouse.webp','assets/img/gallery/cold-storage.jpg','assets/img/gallery/office-farm-buildings.webp','assets/img/gallery/farm-buildings-infra.webp'])">
+        <img src="assets/img/gallery/packhouse.webp" alt="Pack House and Cold Storage">
+        <div class="gal-card-body"><span class="gal-cat-tag">Office Infrastructure</span><p class="gal-card-title">Pack House &amp; Cold Storage</p><p class="gal-card-hint">Click to view infrastructure photos &#8594;</p></div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<div id="galModal" onclick="closeGalModal(event)">
+  <div class="gal-modal-box">
+    <button class="gal-modal-close" onclick="closeGalModal(null,true)">&#10005;</button>
+    <div class="gal-modal-title" id="galModalTitle"></div>
+    <span class="gal-modal-cat" id="galModalCat"></span>
+    <div class="gal-modal-grid" id="galModalGrid"></div>
+  </div>
+</div>
+
+<script>
+function filterGallery(cat,btn){
+  document.querySelectorAll('.gallery-filters button').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  document.querySelectorAll('.gal-card').forEach(function(card){
+    if(cat==='all'||card.dataset.cat===cat){card.removeAttribute('data-hidden');}
+    else{card.setAttribute('data-hidden','1');}
+  });
+}
+function openGalleryModal(title,cat,imgs){
+  document.getElementById('galModalTitle').innerHTML=title;
+  document.getElementById('galModalCat').textContent=cat;
+  var grid=document.getElementById('galModalGrid');
+  grid.innerHTML='';
+  imgs.forEach(function(src){
+    var img=document.createElement('img');
+    img.src=src; img.className='gal-modal-img'; img.alt=title; img.loading='lazy';
+    grid.appendChild(img);
+  });
+  document.getElementById('galModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeGalModal(e,force){
+  if(force||(e&&e.target===document.getElementById('galModal'))){
+    document.getElementById('galModal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGalModal(null,true);});
+</script>
+
 
 <footer class="footer">
   <div class="container footer-grid">
