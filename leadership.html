@@ -107,189 +107,344 @@
 </header>
 
 
-
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">OUR LEADERSHIP</span>
     <h1>The Minds Behind IGO</h1>
-    <p>Meet the 24 core leaders driving India's fastest-growing agribusiness ecosystem.</p>
+    <p>Meet the leaders driving India's fastest-growing agribusiness ecosystem — from executive vision to department excellence.</p>
   </div>
 </section>
 
-<section class="content-section alt">
+<style>
+.tier-header { text-align: center; margin-bottom: 2.5rem; }
+.tier-header .eyebrow { margin-bottom: 0.5rem; }
+.tier-header h2 { margin-bottom: 0.5rem; }
+.tier-header p { color: var(--text-secondary, #6b7280); }
+.dept-group { margin-bottom: 2.75rem; }
+.dept-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #6b7280);
+  font-weight: 700;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--border, #e5e7eb);
+  margin-bottom: 1.5rem;
+}
+.ceo-card-wrap { display: flex; justify-content: center; }
+.ceo-card {
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 2rem !important;
+  border: 2px solid var(--brand-green, #2e7d32) !important;
+}
+.ceo-avatar {
+  width: 96px; height: 96px; font-size: 2rem;
+  border-radius: 50%;
+  background: var(--brand-green, #2e7d32);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-weight: 700;
+}
+.tier-card-center .avatar-ph { margin: 0 auto 1rem; }
+.tier-card-center { text-align: center; }
+.placeholder-card { opacity: 0.75; cursor: default !important; }
+.placeholder-card .avatar-ph { background: var(--text-secondary, #9ca3af) !important; color: #fff; }
+.tier-connector {
+  text-align: center;
+  padding: 0.25rem 0;
+  font-size: 1.6rem;
+  color: var(--text-secondary, #9ca3af);
+  line-height: 1;
+}
+</style>
+
+<!-- ══════════════════════════════════════════════════
+     TIER I — CEO
+══════════════════════════════════════════════════ -->
+<section class="content-section">
   <div class="container">
-    <div class="grid four-grid">
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Dr. John Yesudhas', 'Founder & Group CEO - Executive', 'Visionary leader who founded IGO Group in 2016 with a mission to build a world-class sustainable farming conglomerate. Drives group strategy, investor relations, and long-term vision across all 26 brands.', ["Experience: 10+ years in agri-enterprise, business conglomerate building, and sustainable development across India.","Education: Ph.D in Agricultural Management, MBA (Strategy), B.Sc Agriculture — Tamil Nadu Agricultural University"], null, null)" data-reveal>
-          <div class="avatar-ph">DJ</div>
-          <h3>Dr. John Yesudhas</h3>
-          <span class="cat-label">Founder & Group CEO</span>
-          <p>Executive</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Venkat', 'Business Development - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Business Development function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">VE</div>
-          <h3>Mr. Venkat</h3>
-          <span class="cat-label">Business Development</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Velladurai', 'Data &amp; Legal - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Data &amp; Legal function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">VE</div>
-          <h3>Mr. Velladurai</h3>
-          <span class="cat-label">Data &amp; Legal</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Houli', 'L1 Manager - Core Management Team', 'Core member of the IGO Group leadership team, serving as an L1 Manager.', null, null, null)" data-reveal>
-          <div class="avatar-ph">HO</div>
-          <h3>Mr. Houli</h3>
-          <span class="cat-label">L1 Manager</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Amir', 'Farmers Factory - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Farmers Factory unit.', null, null, null)" data-reveal>
-          <div class="avatar-ph">AM</div>
-          <h3>Mr. Amir</h3>
-          <span class="cat-label">Farmers Factory</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Mohammad', 'L1 Manager - Core Management Team', 'Core member of the IGO Group leadership team, serving as an L1 Manager.', null, null, null)" data-reveal>
-          <div class="avatar-ph">MO</div>
-          <h3>Mr. Mohammad</h3>
-          <span class="cat-label">L1 Manager</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Bleay Ham', 'HR &amp; Admin - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the HR &amp; Admin function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">BH</div>
-          <h3>Bleay Ham</h3>
-          <span class="cat-label">HR &amp; Admin</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Prasath', 'Civil - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">PR</div>
-          <h3>Mr. Prasath</h3>
-          <span class="cat-label">Civil</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Ram Prasath', 'Agri - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">RP</div>
-          <h3>Mr. Ram Prasath</h3>
-          <span class="cat-label">Agri</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Karthik', 'Agri - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">KA</div>
-          <h3>Mr. Karthik</h3>
-          <span class="cat-label">Agri</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Lokesh', 'Agri - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">LO</div>
-          <h3>Mr. Lokesh</h3>
-          <span class="cat-label">Agri</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Yuthish', 'New Projects - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the New Projects function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">YU</div>
-          <h3>Mr. Yuthish</h3>
-          <span class="cat-label">New Projects</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sandeep', 'Civil - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SA</div>
-          <h3>Mr. Sandeep</h3>
-          <span class="cat-label">Civil</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Rahul', 'Civil - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">RA</div>
-          <h3>Mr. Rahul</h3>
-          <span class="cat-label">Civil</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Bagha', 'Vendor Sourcing - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Vendor Sourcing function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">BA</div>
-          <h3>Mr. Bagha</h3>
-          <span class="cat-label">Vendor Sourcing</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sanjay', 'HR &amp; Admin - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the HR &amp; Admin function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SA</div>
-          <h3>Mr. Sanjay</h3>
-          <span class="cat-label">HR &amp; Admin</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Shanmathi', 'Academy - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Academy function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SH</div>
-          <h3>Shanmathi</h3>
-          <span class="cat-label">Academy</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sharu', 'Marketing - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Marketing function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SH</div>
-          <h3>Mr. Sharu</h3>
-          <span class="cat-label">Marketing</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Aathi Ram', 'Marketing - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Marketing function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">AR</div>
-          <h3>Aathi Ram</h3>
-          <span class="cat-label">Marketing</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Aadithee Ram (Valluvam)', 'Academy - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Academy function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">AR</div>
-          <h3>Aadithee Ram (Valluvam)</h3>
-          <span class="cat-label">Academy</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Karun', 'Buyback - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Buyback function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">KA</div>
-          <h3>Mr. Karun</h3>
-          <span class="cat-label">Buyback</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Siva', 'Buyback - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Buyback function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SI</div>
-          <h3>Mr. Siva</h3>
-          <span class="cat-label">Buyback</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Saravanan', 'Purchase - Core Management Team', 'Core member of the IGO Group leadership team, contributing to the Purchase function.', null, null, null)" data-reveal>
-          <div class="avatar-ph">SA</div>
-          <h3>Mr. Saravanan</h3>
-          <span class="cat-label">Purchase</span>
-          <p>Core Management Team</p>
-        </div>
-
-        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Newton', 'Director - Core Management Team', 'Senior director on the IGO Group core leadership team.', null, null, null)" data-reveal>
-          <div class="avatar-ph">NE</div>
-          <h3>Mr. Newton</h3>
-          <span class="cat-label">Director</span>
-          <p>Core Management Team</p>
-        </div>
+    <div class="tier-header">
+      <span class="eyebrow">TIER I — EXECUTIVE LEADERSHIP</span>
+      <h2>Founder &amp; Group CEO</h2>
+    </div>
+    <div class="ceo-card-wrap">
+      <div class="card person-card ceo-card" style="cursor: pointer;" onclick="openModal('Dr. John Yesudhas', 'Founder &amp; Group CEO', 'Visionary leader who founded IGO Group in 2016 with a mission to build a world-class sustainable farming conglomerate. Drives group strategy, investor relations, and long-term vision across all 26 brands.', [&quot;Experience: 10+ years in agri-enterprise, business conglomerate building, and sustainable development across India.&quot;,&quot;Education: Ph.D in Agricultural Management, MBA (Strategy), B.Sc Agriculture — Tamil Nadu Agricultural University&quot;], null, null)" data-reveal>
+        <div class="ceo-avatar">DJ</div>
+        <h3 style="font-size: 1.35rem;">Dr. John Yesudhas</h3>
+        <span class="cat-label" style="display: block; margin-bottom: 0.6rem;">Founder &amp; Group CEO</span>
+        <p style="font-size: 0.85rem; margin: 0;">Executive Leadership</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════════════════
+     TIER II — L3 SENIOR DIRECTORS
+══════════════════════════════════════════════════ -->
+<section class="content-section alt">
+  <div class="container">
+    <div class="tier-header">
+      <span class="eyebrow">TIER II — SENIOR LEADERSHIP</span>
+      <h2>L3 Directors</h2>
+      <p>Senior directors overseeing group-level strategy &amp; operations</p>
+    </div>
+    <div class="grid two-grid" style="max-width: 740px; margin: 0 auto;">
+      <div class="card person-card tier-card-center placeholder-card" data-reveal>
+        <div class="avatar-ph">L3</div>
+        <h3>Senior Director</h3>
+        <span class="cat-label">L3 — Details Coming Soon</span>
+        <p style="font-size: 0.82rem; margin-top: 0.5rem;">Profile to be updated</p>
+      </div>
+      <div class="card person-card tier-card-center placeholder-card" data-reveal>
+        <div class="avatar-ph">L3</div>
+        <h3>Senior Director</h3>
+        <span class="cat-label">L3 — Details Coming Soon</span>
+        <p style="font-size: 0.82rem; margin-top: 0.5rem;">Profile to be updated</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     TIER III — L1 MANAGERS
+══════════════════════════════════════════════════ -->
+<section class="content-section">
+  <div class="container">
+    <div class="tier-header">
+      <span class="eyebrow">TIER III — OPERATIONS MANAGEMENT</span>
+      <h2>L1 Managers</h2>
+    </div>
+    <div class="grid two-grid" style="max-width: 740px; margin: 0 auto;">
+      <div class="card person-card tier-card-center" style="cursor: pointer;" onclick="openModal('Mr. Houli', 'L1 Manager', 'Core member of the IGO Group leadership team, serving as an L1 Manager overseeing operational functions.', null, null, null)" data-reveal>
+        <div class="avatar-ph">HO</div>
+        <h3>Mr. Houli</h3>
+        <span class="cat-label">L1 Manager</span>
+        <p>Operations Management</p>
+      </div>
+      <div class="card person-card tier-card-center" style="cursor: pointer;" onclick="openModal('Mr. Mohammad', 'L1 Manager', 'Core member of the IGO Group leadership team, serving as an L1 Manager overseeing operational functions.', null, null, null)" data-reveal>
+        <div class="avatar-ph">MO</div>
+        <h3>Mr. Mohammad</h3>
+        <span class="cat-label">L1 Manager</span>
+        <p>Operations Management</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     TIER IV — CORE MANAGERS BY DEPARTMENT
+══════════════════════════════════════════════════ -->
+<section class="content-section alt">
+  <div class="container">
+    <div class="tier-header">
+      <span class="eyebrow">TIER IV — DEPARTMENT LEADERSHIP</span>
+      <h2>Core Management Team</h2>
+      <p>Department-wise organizational leadership across IGO Groups</p>
+    </div>
+
+    <!-- Business Development -->
+    <div class="dept-group">
+      <h4 class="dept-label">Business Development</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Venkat', 'Business Development — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Business Development function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">VE</div>
+          <h3>Mr. Venkat</h3>
+          <span class="cat-label">Business Development</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Newton', 'Director — Core Manager', 'Senior director on the IGO Group core leadership team.', null, null, null)" data-reveal>
+          <div class="avatar-ph">NE</div>
+          <h3>Mr. Newton</h3>
+          <span class="cat-label">Director</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Yuthish', 'New Projects — Core Manager', 'Core member of the IGO Group leadership team, contributing to the New Projects function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">YU</div>
+          <h3>Mr. Yuthish</h3>
+          <span class="cat-label">New Projects</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marketing -->
+    <div class="dept-group">
+      <h4 class="dept-label">Marketing</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sharu', 'Marketing — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Marketing function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SH</div>
+          <h3>Mr. Sharu</h3>
+          <span class="cat-label">Marketing</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Aathi Ram', 'Marketing — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Marketing function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">AR</div>
+          <h3>Aathi Ram</h3>
+          <span class="cat-label">Marketing</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agri Operations -->
+    <div class="dept-group">
+      <h4 class="dept-label">Agri Operations</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Ram Prasath', 'Agri — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">RP</div>
+          <h3>Mr. Ram Prasath</h3>
+          <span class="cat-label">Agri</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Karthik', 'Agri — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">KA</div>
+          <h3>Mr. Karthik</h3>
+          <span class="cat-label">Agri</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Lokesh', 'Agri — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Agri function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">LO</div>
+          <h3>Mr. Lokesh</h3>
+          <span class="cat-label">Agri</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Civil & Engineering -->
+    <div class="dept-group">
+      <h4 class="dept-label">Civil &amp; Engineering</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Prasath', 'Civil — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">PR</div>
+          <h3>Mr. Prasath</h3>
+          <span class="cat-label">Civil</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sandeep', 'Civil — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SA</div>
+          <h3>Mr. Sandeep</h3>
+          <span class="cat-label">Civil</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Rahul', 'Civil — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Civil function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">RA</div>
+          <h3>Mr. Rahul</h3>
+          <span class="cat-label">Civil</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HR & Admin -->
+    <div class="dept-group">
+      <h4 class="dept-label">HR &amp; Admin</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Bleay Ham', 'HR &amp; Admin — Core Manager', 'Core member of the IGO Group leadership team, contributing to the HR &amp; Admin function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">BH</div>
+          <h3>Bleay Ham</h3>
+          <span class="cat-label">HR &amp; Admin</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Sanjay', 'HR &amp; Admin — Core Manager', 'Core member of the IGO Group leadership team, contributing to the HR &amp; Admin function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SA</div>
+          <h3>Mr. Sanjay</h3>
+          <span class="cat-label">HR &amp; Admin</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data & Legal -->
+    <div class="dept-group">
+      <h4 class="dept-label">Data &amp; Legal</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Velladurai', 'Data &amp; Legal — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Data &amp; Legal function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">VE</div>
+          <h3>Mr. Velladurai</h3>
+          <span class="cat-label">Data &amp; Legal</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academy -->
+    <div class="dept-group">
+      <h4 class="dept-label">Academy</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Shanmathi', 'Academy — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Academy function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SH</div>
+          <h3>Shanmathi</h3>
+          <span class="cat-label">Academy</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Aadithee Ram (Valluvam)', 'Academy — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Academy function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">AR</div>
+          <h3>Aadithee Ram (Valluvam)</h3>
+          <span class="cat-label">Academy</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Farmers Factory -->
+    <div class="dept-group">
+      <h4 class="dept-label">Farmers Factory</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Amir', 'Farmers Factory — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Farmers Factory unit.', null, null, null)" data-reveal>
+          <div class="avatar-ph">AM</div>
+          <h3>Mr. Amir</h3>
+          <span class="cat-label">Farmers Factory</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor Sourcing & Purchase -->
+    <div class="dept-group">
+      <h4 class="dept-label">Vendor Sourcing &amp; Purchase</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Bagha', 'Vendor Sourcing — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Vendor Sourcing function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">BA</div>
+          <h3>Mr. Bagha</h3>
+          <span class="cat-label">Vendor Sourcing</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Saravanan', 'Purchase — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Purchase function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SA</div>
+          <h3>Mr. Saravanan</h3>
+          <span class="cat-label">Purchase</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buyback -->
+    <div class="dept-group">
+      <h4 class="dept-label">Buyback</h4>
+      <div class="grid three-grid">
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Karun', 'Buyback — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Buyback function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">KA</div>
+          <h3>Mr. Karun</h3>
+          <span class="cat-label">Buyback</span>
+          <p>Core Manager</p>
+        </div>
+        <div class="card person-card" style="cursor: pointer;" onclick="openModal('Mr. Siva', 'Buyback — Core Manager', 'Core member of the IGO Group leadership team, contributing to the Buyback function.', null, null, null)" data-reveal>
+          <div class="avatar-ph">SI</div>
+          <h3>Mr. Siva</h3>
+          <span class="cat-label">Buyback</span>
+          <p>Core Manager</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <footer class="footer">
   <div class="container footer-grid">
 
@@ -335,8 +490,8 @@
   <div class="container footer-bottom">
     <div>&copy; 2026 IGO Groups. All rights reserved.</div>
     <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
     </div>
   </div>
 </footer>
