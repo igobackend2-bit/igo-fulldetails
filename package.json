@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "start": "node server.js",
-    "dev": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +22,5 @@
     "url": "https://github.com/igobackend3-byte/IGO_GROUPS/issues"
   },
   "homepage": "https://github.com/igobackend3-byte/IGO_GROUPS#readme",
-  "devDependencies": {
-    "live-server": "^1.2.2"
-  }
+  "dependencies": {}
 }
