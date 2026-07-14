@@ -74,5 +74,5 @@ const server = http.createServer(function(req, res) {
 });
 
 server.listen(PORT, function() {
-  console.log('IGO Groups static server running on port ' + PORT);
+  console.log(`IGO Groups static server running at http://localhost:${PORT}`);
 });
