@@ -4,4 +4,16 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-User-agent: C
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://igogroups.in/sitemap.xml
