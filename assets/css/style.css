@@ -52,6 +52,7 @@ body {
   transition: background 0.25s, color 0.25s;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 .footer { margin-top: auto; }
 
@@ -980,4 +981,3 @@ html.dark .dept-team-caption { color: var(--green-light); }
     padding: 1.8rem 1.4rem !important;
   }
 }
-                                                          
