@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.igogroups.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: C
