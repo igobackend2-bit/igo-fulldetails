@@ -51,7 +51,11 @@ body {
   background: var(--cream);
   transition: background 0.25s, color 0.25s;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+.footer { margin-top: auto; }
 
 .container {
   max-width: 1180px;
@@ -65,19 +69,21 @@ img { max-width: 100%; display: block; }
 h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.01em; }
 
 /* ---------- Scroll reveal ---------- */
+@keyframes autoReveal { to { opacity: 1; transform: none; } }
 [data-reveal] {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.7s cubic-bezier(.21,.8,.32,1), transform 0.7s cubic-bezier(.21,.8,.32,1);
   will-change: opacity, transform;
+  animation: autoReveal 0.7s cubic-bezier(.21,.8,.32,1) 1.2s forwards;
 }
-[data-reveal].revealed { opacity: 1; transform: none; }
+[data-reveal].revealed { opacity: 1; transform: none; animation: none; }
 [data-reveal="left"] { transform: translateX(-30px); }
-[data-reveal="left"].revealed { transform: none; }
+[data-reveal="left"].revealed { transform: none; animation: none; }
 [data-reveal="right"] { transform: translateX(30px); }
-[data-reveal="right"].revealed { transform: none; }
+[data-reveal="right"].revealed { transform: none; animation: none; }
 [data-reveal="scale"] { transform: scale(0.92); }
-[data-reveal="scale"].revealed { transform: none; }
+[data-reveal="scale"].revealed { transform: none; animation: none; }
 
 /* ---------- Icon system ---------- */
 .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
@@ -375,7 +381,7 @@ html.dark .trust-badge { color: var(--green-light); }
 }
 .brand-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--green); }
 .brand-card-img {
-  width: calc(100% + 40px); margin: -20px -20px 16px; height: 150px; object-fit: cover;
+  width: calc(100% + 40px); margin: -20px -20px 16px; height: 220px; object-fit: cover; object-position: top;
 }
 .brand-card h4 { color: var(--forest); margin-bottom: 6px; font-size: 1.08rem; }
 html.dark .brand-card h4 { color: var(--green-light); }
@@ -842,3 +848,138 @@ html.dark .dept-team-caption { color: var(--green-light); }
   cursor: pointer; transition: background 0.2s;
 }
 .img-lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+/* ---------- WhatsApp Float Button ---------- */
+.whatsapp-float {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 58px; height: 58px;
+  background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+  z-index: 999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 12px 36px rgba(37,211,102,0.55);
+}
+.whatsapp-float svg { width: 30px; height: 30px; }
+.whatsapp-tooltip {
+  position: absolute;
+  right: 68px; top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: #fff;
+  font-size: 0.78rem; font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%; top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: #111;
+}
+.whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+/* ============================================================
+   RESPONSIVE — MOBILE & TABLET FIXES
+   ============================================================ */
+
+/* --- Small mobile (≤480px) --- */
+@media (max-width: 480px) {
+  /* Container padding stays 24px — OK */
+
+  /* Page hero: reduce padding */
+  .page-hero { padding: 54px 0 44px; }
+
+  /* Hide hero globe on very small screens to avoid massive height */
+  .hero-image { display: none; }
+
+  /* Reduce section padding further */
+  section { padding: 44px 0; }
+
+  /* Footer: 1 column on very small screens */
+  .footer-grid { grid-template-columns: 1fr; }
+
+  /* Reduce brand card image height on mobile */
+  .brand-card-img { height: 170px; }
+
+  /* News / brand cards: reduce gap */
+  .grid { gap: 16px; }
+}
+
+/* --- Mobile (≤640px) --- */
+@media (max-width: 640px) {
+  /* Contact page "Visit Us" section:
+     Override the inline 1fr 1fr map + photo grid to single column */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* The map iframe inside the contact section: cap height on mobile */
+  div[style*="grid-template-columns: 1fr 1fr"] > div[style*="height: 540px"] {
+    height: 280px !important;
+  }
+
+  /* When two-grid stacks on mobile, reduce the inline gap override */
+  .two-grid { gap: 1.5rem !important; }
+
+  /* Page hero sub-text */
+  .page-hero p { font-size: 0.95rem; }
+
+  /* Section header h2 */
+  .section-header h2 { font-size: 1.55rem; }
+
+  /* Cards: ensure proper spacing */
+  .card { padding: 20px 16px; }
+
+  /* Prevent overflow on any element */
+  .container { overflow-x: hidden; }
+}
+
+/* --- Tablet (≤768px) --- */
+@media (max-width: 768px) {
+  /* Nav CTA button hidden on ≤860px already, but ensure hero CTA stacks */
+  .hero-cta { flex-direction: column; gap: 10px; align-items: flex-start; }
+
+  /* hero-inner gap reduction */
+  .hero-inner { gap: 28px; }
+
+  /* Section header margin */
+  .section-header { margin-bottom: 8px; }
+
+  /* footer grid gap */
+  .footer-grid { gap: 20px; }
+
+  /* WhatsApp float: slightly smaller on mobile */
+  .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+  .whatsapp-float svg { width: 26px; height: 26px; }
+  .whatsapp-tooltip { display: none; }
+}
+
+/* --- Careers page inline grid fixes (mobile) --- */
+@media (max-width: 640px) {
+  /* 3-col photo mosaic → 1 column on small mobile */
+  div[style*="repeat(3, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Careers image+text panels: reduce padding when stacked */
+  div[style*="grid-template-columns: 1fr 1fr"] > div[style*="padding: 3.5rem"] {
+    padding: 1.8rem 1.4rem !important;
+  }
+}

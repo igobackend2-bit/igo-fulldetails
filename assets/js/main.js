@@ -79,6 +79,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Scroll-reveal animations
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length) {
+    // Immediately reveal elements already in the viewport (above the fold)
+    var vh = window.innerHeight;
+    revealEls.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < vh && rect.bottom > 0) {
+        el.classList.add('revealed');
+      }
+    });
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -87,10 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
       revealEls.forEach(function (el, i) {
-        el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
-        io.observe(el);
+        if (!el.classList.contains('revealed')) {
+          el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
+          io.observe(el);
+        }
       });
     } else {
       revealEls.forEach(function (el) { el.classList.add('revealed'); });
