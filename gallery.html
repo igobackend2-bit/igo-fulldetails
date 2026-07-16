@@ -186,10 +186,11 @@
   <div class="container">
     <!-- Filter bar -->
     <div class="gal-filter-bar">
-      <button class="active" onclick="filterGallery('all',this)">All <span class="gal-count">9</span></button>
+      <button class="active" onclick="filterGallery('all',this)">All <span class="gal-count">12</span></button>
       <button onclick="filterGallery('farm-projects',this)">Farm Projects <span class="gal-count">4</span></button>
       <button onclick="filterGallery('operational',this)">Operational <span class="gal-count">3</span></button>
       <button onclick="filterGallery('corporate',this)">Corporate Events <span class="gal-count">2</span></button>
+      <button onclick="filterGallery('office-team',this)">Office &amp; Team <span class="gal-count">3</span></button>
     </div>
 
     <!-- Gallery grid -->
@@ -294,6 +295,39 @@
         </div>
       </div>
 
+      <!-- Office Infrastructure -->
+      <div class="gal-pro-card" data-cat="office-team" onclick="openGalleryModal('Office Infrastructure','Office &amp; Team',['assets/img/office/office-open-plan.jpg','assets/img/office/igo-building.jpg','assets/img/office/office-meeting-brick.jpg','assets/img/office/office-agri-sign.jpg'])">
+        <img src="assets/img/office/office-open-plan.jpg" alt="IGO Groups office infrastructure" loading="lazy">
+        <span class="gal-pro-badge">Office &amp; Team</span>
+        <div class="gal-pro-overlay">
+          <span class="gal-pro-tag">Office &amp; Team</span>
+          <p class="gal-pro-title">Office Infrastructure</p>
+          <span class="gal-pro-hint">View photo collection</span>
+        </div>
+      </div>
+
+      <!-- Our Team & Culture -->
+      <div class="gal-pro-card" data-cat="office-team" onclick="openGalleryModal('Our Team &amp; Culture','Office &amp; Team',['assets/img/office/office-exec-smiling.jpg','assets/img/office/office-igo-uniforms.jpg','assets/img/office/office-team-closeup.jpg','assets/img/office/office-young-pro.jpg','assets/img/office/office-manager.jpg','assets/img/office/office-team-branded.jpg'])">
+        <img src="assets/img/office/office-team-branded.jpg" alt="IGO Groups team culture" loading="lazy">
+        <span class="gal-pro-badge">Office &amp; Team</span>
+        <div class="gal-pro-overlay">
+          <span class="gal-pro-tag">Office &amp; Team</span>
+          <p class="gal-pro-title">Our Team &amp; Culture</p>
+          <span class="gal-pro-hint">View photo collection</span>
+        </div>
+      </div>
+
+      <!-- Meet Our Teams (directory of all 15 department teams) -->
+      <div class="gal-pro-card" data-cat="office-team" onclick="openTeamsDirectory()">
+        <img src="assets/img/office/teams/agri-team/agri-team.png" alt="Meet Our Teams" loading="lazy">
+        <span class="gal-pro-badge">Office &amp; Team</span>
+        <div class="gal-pro-overlay">
+          <span class="gal-pro-tag">Office &amp; Team</span>
+          <p class="gal-pro-title">Meet Our Teams</p>
+          <span class="gal-pro-hint">View all 15 department teams</span>
+        </div>
+      </div>
+
     </div><!-- end gal-pro-grid -->
   </div><!-- end container -->
 </section>
@@ -310,6 +344,7 @@
     <button class="gal-modal-close" onclick="closeGalModal(null,true)">&#10005;</button>
     <div class="gal-modal-title" id="galModalTitle"></div>
     <span class="gal-modal-cat" id="galModalCat"></span>
+    <div id="galModalBack" style="display:none;cursor:pointer;font-size:0.8rem;font-weight:700;color:var(--green,#2e7d32);margin-bottom:1rem;"></div>
     <div class="gal-modal-grid" id="galModalGrid"></div>
   </div>
 </div>
@@ -323,9 +358,58 @@ function filterGallery(cat,btn){
     else{card.setAttribute('data-hidden','1');}
   });
 }
-function openGalleryModal(title,cat,imgs){
+var OFFICE_TEAMS=[
+  {name:'Accounts Team', imgs:['assets/img/office/teams/accounts-team/accounts-team.jpg','assets/img/office/teams/accounts-team/accounts-team-2.jpg']},
+  {name:'Agri Team', imgs:['assets/img/office/teams/agri-team/agri-team.png','assets/img/office/teams/agri-team/agri-team-2.jpg']},
+  {name:'BD Team (Business Development)', imgs:['assets/img/office/teams/bd-team/bd-team.png','assets/img/office/teams/bd-team/bd-team-2.jpg']},
+  {name:'CRM Team', imgs:['assets/img/office/teams/crm-team/crm-team.png','assets/img/office/teams/crm-team/crm-team-2.jpg']},
+  {name:'Data Analyst Team', imgs:['assets/img/office/teams/data-analyst-team/data-analyst-team.png','assets/img/office/teams/data-analyst-team/data-analyst-team-2.jpg']},
+  {name:'Engineering Team', imgs:['assets/img/office/teams/engineering-team/engineering-team.png','assets/img/office/teams/engineering-team/engineering-team-2.jpg','assets/img/office/teams/engineering-team/engineering-team-3.jpg']},
+  {name:'Farmers Factory Team', imgs:['assets/img/office/teams/farmers-factory-team/farmers-factory-team.png']},
+  {name:'HR Team', imgs:['assets/img/office/teams/hr-team/hr-team.png']},
+  {name:'IT Team', imgs:['assets/img/office/teams/it-team/it-team.png','assets/img/office/teams/it-team/it-team-2.jpg']},
+  {name:'Labour & Vendor Team', imgs:['assets/img/office/teams/labour-vendor-team/labour-vendor-team.png','assets/img/office/teams/labour-vendor-team/labour-vendor-team-2.jpg']},
+  {name:'Lease & Buy Team', imgs:['assets/img/office/teams/lease-buy-team/lease-buy-team.png','assets/img/office/teams/lease-buy-team/lease-buy-team-2.jpg']},
+  {name:'Marketing Team', imgs:['assets/img/office/teams/marketing-team/marketing-team.png','assets/img/office/teams/marketing-team/marketing-team-2.jpg']},
+  {name:'Purchase Team', imgs:['assets/img/office/teams/purchase-team/purchase-team.png','assets/img/office/teams/purchase-team/purchase-team-2.jpg','assets/img/office/teams/purchase-team/purchase-team-3.jpg']},
+  {name:'R&D Team', imgs:['assets/img/office/teams/rd-team/rd-team.png','assets/img/office/teams/rd-team/rd-team-2.jpg']},
+  {name:'Site Visit Team', imgs:['assets/img/office/teams/site-visit-team/site-visit-team.jpg']}
+];
+function openTeamsDirectory(){
+  document.getElementById('galModalTitle').innerHTML='Meet Our Teams';
+  document.getElementById('galModalCat').textContent='Office & Team — 15 Departments';
+  var backEl=document.getElementById('galModalBack');
+  backEl.style.display='none'; backEl.onclick=null;
+  var grid=document.getElementById('galModalGrid');
+  grid.innerHTML='';
+  OFFICE_TEAMS.forEach(function(t){
+    var card=document.createElement('div');
+    card.style.cssText='cursor:pointer;text-align:center;';
+    card.onclick=function(e){ e.stopPropagation(); openGalleryModal(t.name,'Office & Team',t.imgs,openTeamsDirectory); };
+    var img=document.createElement('img');
+    img.src=t.imgs[0]; img.className='gal-modal-img'; img.alt=t.name; img.loading='lazy';
+    img.style.cursor='pointer';
+    var label=document.createElement('p');
+    label.textContent=t.name;
+    label.style.cssText='margin:6px 0 0;font-size:0.85rem;font-weight:700;color:var(--heading,#111827);';
+    card.appendChild(img); card.appendChild(label);
+    grid.appendChild(card);
+  });
+  document.getElementById('galModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function openGalleryModal(title,cat,imgs,onBack){
   document.getElementById('galModalTitle').innerHTML=title;
   document.getElementById('galModalCat').textContent=cat;
+  var backEl=document.getElementById('galModalBack');
+  if(onBack){
+    backEl.style.display='block';
+    backEl.textContent='← All Teams';
+    backEl.onclick=function(e){ e.stopPropagation(); onBack(); };
+  } else {
+    backEl.style.display='none';
+    backEl.onclick=null;
+  }
   var grid=document.getElementById('galModalGrid');
   grid.innerHTML='';
   imgs.forEach(function(src){
