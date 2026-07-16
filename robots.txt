@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.igogroups.com/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://igogroups.in/sitemap.xml
