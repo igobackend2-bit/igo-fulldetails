@@ -72,7 +72,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: heroVideoIn 1.6s ease-out 0.1s both;
+  animation: heroVideoIn 1.6s ease-out 0.1s both, heroKenBurns 26s ease-in-out 1.7s infinite alternate;
   /* Promote to its own compositor layer so decoding video frames never force
      a repaint of the mesh/grid/text layers stacked above it. */
   transform: translateZ(0);
@@ -81,6 +81,10 @@
 @keyframes heroVideoIn {
   from { opacity: 0; transform: translateZ(0) scale(1.04); }
   to   { opacity: 0.72; transform: translateZ(0) scale(1); }
+}
+@keyframes heroKenBurns {
+  from { transform: translateZ(0) scale(1); }
+  to   { transform: translateZ(0) scale(1.09); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-bg-video { animation: none; opacity: 0.72; }
@@ -824,7 +828,7 @@
 }
 
 .stat-big-card {
-  flex: 0 0 calc(25% - 15px);
+  flex: 0 0 calc(33.333% - 14px);
   background: rgba(255,255,255,0.045);
   border: 1px solid rgba(255,255,255,0.1);
   border-top: 3px solid var(--gold-light);
@@ -1822,7 +1826,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
         <h1 class="hero-headline" data-reveal>
           Engineering the Future<br>
-          <span class="gold-text">of Agriculture.</span>
+          <span class="gold-text">of Farming.</span>
         </h1>
         <p class="hero-sub" data-reveal>
           Built on land, driven by purpose — 26 brands across farming, technology, trade, finance, and organic retail, creating lasting global value from the ground up.
@@ -1833,7 +1837,6 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
         <div class="hero-stats-row" data-reveal>
           <a href="departments.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">18</span><span class="chip-label">Departments</span></a>
-          <a href="leadership.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">25</span><span class="chip-label">Core Managers</span></a>
           <a href="brands.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">27</span><span class="chip-label">Brands</span></a>
           <a href="teams.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">2000+</span><span class="chip-label">Professionals</span></a>
         </div>
@@ -2040,7 +2043,7 @@ a.qc-value:hover { color: var(--green-light); }
   <div class="container">
     <div class="ceo-inner">
       <div class="ceo-img-wrap" data-reveal="left">
-        <img src="assets/img/ceo-john-yesudhas.png" alt="Dr. John Yesudhas — Founder & CEO, IGO Groups">
+        <img src="assets/img/ceo-john-yesudhas.jpg" alt="Dr. John Yesudhas — Founder & CEO, IGO Groups">
         <div class="ceo-img-overlay">
           <div class="ceo-img-name">Dr. John Yesudhas</div>
           <div class="ceo-img-title">Founder & CEO, IGO Groups</div>
@@ -2183,7 +2186,6 @@ a.qc-value:hover { color: var(--green-light); }
     <div class="stats-main-grid">
       <a href="about.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="10" data-suffix="+">10+</span><div class="stat-big-label">Years Experience</div><div class="stat-big-sub">Founded 2016, growing strong</div></a>
       <a href="departments.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="18">18</span><div class="stat-big-label">Departments</div><div class="stat-big-sub">Powering the conglomerate</div></a>
-      <a href="leadership.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="25">25</span><div class="stat-big-label">Core Managers</div><div class="stat-big-sub">Leading every department</div></a>
       <a href="brands.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="27">27</span><div class="stat-big-label">Active Brands</div><div class="stat-big-sub">Across 8 industry verticals</div></a>
       <a href="teams.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="2000" data-suffix="+">2000+</span><div class="stat-big-label">Global Staff</div><div class="stat-big-sub">Across India and beyond</div></a>
       <a href="projects.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="6000" data-suffix="+">6000+</span><div class="stat-big-label">Projects Delivered</div><div class="stat-big-sub">Farm engineering &amp; consulting</div></a>
@@ -2409,7 +2411,7 @@ a.qc-value:hover { color: var(--green-light); }
     </div>
     <div class="leader-grid" data-reveal>
       <div class="leader-card">
-        <div class="leader-avatar">JY</div>
+        <img class="leader-avatar" src="assets/img/ceo-john-yesudhas.jpg" alt="Dr. John Yesudhas" style="object-fit:cover;">
         <div class="leader-name">Dr. John Yesudhas</div>
         <div class="leader-title">Founder &amp; Group CEO</div>
       </div>
@@ -2555,9 +2557,15 @@ a.qc-value:hover { color: var(--green-light); }
 .vision-timeline-track { position: relative; height: 3px; background: rgba(255,255,255,0.14); border-radius: 3px; margin: 0 4%; }
 .vision-timeline-fill { position: absolute; inset: 0; background: linear-gradient(90deg, var(--green), var(--gold-light)); border-radius: 3px; transform: scaleX(0); }
 .vision-timeline-nodes { display: flex; justify-content: space-between; margin-top: -11px; }
-.vt-node { text-align: center; flex: 1 1 0; padding: 18px 14px; background: rgba(6,20,12,0.72); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); margin: 0 6px; }
-.vt-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--forest); border: 3px solid var(--gold-light); margin: 0 auto 22px; box-shadow: 0 0 0 6px rgba(240,179,58,0.14); }
-.vt-year { display: block; font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; color: var(--gold-light); margin-bottom: 8px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.vt-node { text-align: center; flex: 1 1 0; padding: 20px 14px; background: rgba(6,20,12,0.72); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border: 1px solid rgba(255,255,255,0.1); border-top: 2px solid rgba(240,179,58,0.5); border-radius: var(--radius-lg); margin: 0 6px; transition: transform 0.4s var(--spring), background 0.35s, border-color 0.35s, box-shadow 0.4s var(--spring); }
+.vt-node:hover { transform: translateY(-6px); background: rgba(6,20,12,0.88); border-color: rgba(240,179,58,0.5); border-top-color: var(--gold-light); box-shadow: 0 16px 32px rgba(0,0,0,0.35); }
+.vt-dot { position: relative; width: 22px; height: 22px; border-radius: 50%; background: var(--forest); border: 3px solid var(--gold-light); margin: 0 auto 22px; box-shadow: 0 0 0 6px rgba(240,179,58,0.14); }
+.vt-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--gold-light); opacity: 0.7; animation: vtPulse 2.4s ease-out infinite; }
+@keyframes vtPulse {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.1); opacity: 0; }
+}
+.vt-year { display: block; font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 8px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 .vt-node h4 { color: #fff; font-size: 0.98rem; margin-bottom: 6px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 .vt-node p { color: rgba(255,255,255,0.75); font-size: 0.82rem; line-height: 1.55; margin: 0; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 @media (max-width: 760px) {
@@ -2611,7 +2619,7 @@ a.qc-value:hover { color: var(--green-light); }
   <div class="container">
     <div class="cta-box" data-reveal>
       <span class="section-eyebrow" style="color: rgba(255,255,255,0.45);">LET&rsquo;S GROW TOGETHER</span>
-      <h2 class="cta-title">Ready to Partner with India&rsquo;s Leading Agribusiness Group?</h2>
+      <h2 class="cta-title">Ready to Partner with India&rsquo;s Leading Farming Group?</h2>
       <p class="cta-sub">Whether you&rsquo;re a farmer, investor, franchise partner, or global buyer &mdash; IGO Groups has a seat at the table for you.</p>
       <div class="cta-btn-group">
         <a href="contact.html" class="btn btn-primary" style="font-size: 0.95rem; padding: 14px 36px;">Get in Touch &rarr;</a>
