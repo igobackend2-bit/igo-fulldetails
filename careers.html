@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +27,7 @@
 
 
 </head>
+
 <body>
 <script>
   (function(){
@@ -50,46 +52,47 @@
   <symbol id="icon-energy" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></symbol>
 </svg>
 
-<header class="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="logo">
-    <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:52px; width:auto; object-fit:contain; display:block;">
-  </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img"
+          style="height:52px; width:auto; object-fit:contain; display:block;">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
 
 
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
 
-      <div class="dropdown" tabindex="0">
-        <a href="javascript:void(0)">Company ▾</a>
-        <div class="dropdown-menu">
-          <a href="about.html">About Us</a>
-          <a href="leadership.html">Leadership</a>
-          <a href="departments.html">Departments</a>
-          <a href="csr.html">CSR & Sustainability</a>
+        <div class="dropdown" tabindex="0">
+          <a href="javascript:void(0)">Company ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="departments.html">Departments</a>
+            <a href="csr.html">CSR & Sustainability</a>
+          </div>
         </div>
-      </div>
 
-      <div class="dropdown" tabindex="0">
-        <a href="javascript:void(0)">Business ▾</a>
-        <div class="dropdown-menu">
-          <a href="brands.html">Business Divisions</a>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="products.html">Products</a>
+        <div class="dropdown" tabindex="0">
+          <a href="javascript:void(0)">Business ▾</a>
+          <div class="dropdown-menu">
+            <a href="brands.html">Business Divisions</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="products.html">Products</a>
+          </div>
         </div>
-      </div>
 
-      <div class="dropdown" tabindex="0">
-        <a href="javascript:void(0)">Media ▾</a>
-        <div class="dropdown-menu">
-          <a href="news.html">News & Events</a>
-          <a href="gallery.html">Media Gallery</a>
-          <a href="awards.html">Awards</a>
-          <a href="testimonials.html">Testimonials</a>
+        <div class="dropdown" tabindex="0">
+          <a href="javascript:void(0)">Media ▾</a>
+          <div class="dropdown-menu">
+            <a href="news.html">News & Events</a>
+            <a href="gallery.html">Media Gallery</a>
+            <a href="awards.html">Awards</a>
+            <a href="testimonials.html">Testimonials</a>
+          </div>
         </div>
-      </div>
 
       <a href="careers.html" class="active">Careers</a>
       <a href="faqs.html">FAQs</a>
@@ -732,19 +735,11 @@ function submitApplyForm(e) {
     } else {
       throw new Error('failed');
     }
-  }).catch(function () {
-    status.style.display = 'block';
-    status.style.background = '#fff3f3';
-    status.style.color = '#a00';
-    status.style.border = '1px solid #fcc';
-    status.textContent = 'Sending failed. Please email your application directly to hr.admin@igogroups.com';
-  }).finally(function () {
-    btn.textContent = 'Submit Application';
-    btn.disabled = false;
-  });
-}
-</script>
 
+    .job-card:hover {
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+      transform: translateY(-4px);
+    }
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -787,14 +782,342 @@ function submitApplyForm(e) {
       <p><a href="tel:+917397789803">+91 73977 89803</a></p>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <div>&copy; 2026 IGO Groups. All rights reserved.</div>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+
+  <script>
+    var JOBS = {
+      bd: {
+        dept: 'Business Development',
+        title: 'Business Development Executive',
+        meta: ['Pan India', '10+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi / Telugu / Kannada'],
+        note: null,
+        do: [
+          'Identify and approach potential clients &mdash; farmers, institutions, and businesses &mdash; to present IGO Group\'s farm investment and agri-services offerings.',
+          'Generate leads through field visits, calls, and referrals; follow up consistently until closure.',
+          'Negotiate and close deals; maintain accurate CRM records and report the pipeline to the Head BD / NSM.',
+          'Build long-term client relationships and support cross-selling across IGO Group\'s business verticals.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are encouraged to apply.',
+          'Proficiency in at least 2 of the listed languages; multi-language candidates are strongly preferred.',
+          'Strong communication and persuasion skills; self-motivated with a target-driven attitude.',
+          'Willingness to travel and meet clients; smartphone with internet access is required.',
+          'Basic knowledge of agriculture or agribusiness is a plus but not mandatory.'
+        ],
+        apply: 'Business Development Executive'
+      },
+      ff: {
+        dept: 'Farmers Factory',
+        title: 'Farmers Factory Executive',
+        meta: ['Tamil Nadu', '4+ Vacancies', 'Freshers Welcome', 'Tamil / English / Telugu / Kannada'],
+        note: null,
+        do: [
+          'Procure fresh produce from partner farmers and manage day-to-day collection hub operations.',
+          'Inspect incoming produce for quality and grading standards; reject substandard stock and document findings.',
+          'Coordinate with logistics and supply chain teams to ensure timely dispatch from collection points.',
+          'Maintain accurate daily procurement records and submit reports to the team lead.'
+        ],
+        need: [
+          'Any degree or diploma &mdash; freshers are encouraged to apply.',
+          'Fluency in Tamil is essential; proficiency in Telugu or Kannada is an added advantage.',
+          'Comfortable working on-field and in produce collection hub environments.',
+          'Basic record-keeping, reporting, and data-entry skills.',
+          'Willingness to work in early-morning produce handling shifts when required.'
+        ],
+        apply: 'Farmers Factory Executive'
+      },
+      bb: {
+        dept: 'Buy-Back',
+        title: 'Buy-Back Executive',
+        meta: ['Tamil Nadu & Karnataka', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Kannada'],
+        note: null,
+        do: [
+          'Visit partner farmers to manage, renew, and explain buy-back agreements in clear terms.',
+          'Schedule and coordinate produce collection from farms; liaise with the logistics team.',
+          'Handle payment settlement documentation and coordinate approvals with the Finance team.',
+          'Build and maintain positive long-term relationships with farmers; resolve queries on-ground promptly.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome; prior agriculture or field sales experience is a plus.',
+          'Good communication skills in Tamil and Kannada; English is an added advantage.',
+          'Strong interpersonal skills and the ability to build trust with farming communities.',
+          'Willingness to travel to farm locations regularly; basic documentation and reporting ability.'
+        ],
+        apply: 'Buy-Back Executive'
+      },
+      'fe-hyd': {
+        dept: 'Field Executive',
+        title: 'Field Executive &mdash; Hyderabad',
+        meta: ['Hyderabad, Telangana', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
+        note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
+        do: [
+          'Conduct daily on-ground site visits, client meetings, and field assessments in Hyderabad and surrounding areas.',
+          'Collect field data, photographs, and observations; submit structured daily activity reports to the team lead.',
+          'Coordinate with internal teams (BD, Agri Ops, Engineering) to relay field findings and requirements.',
+          'Support local BD efforts &mdash; introduction visits, client follow-ups, and ground-level prospecting.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome; prior field work experience is an advantage.',
+          'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
+          'Physical fitness and willingness to travel daily across the assigned Hyderabad territory.',
+          'Smartphone with camera and internet access; basic reporting and data-entry skills.',
+          'Telugu and/or Hindi communication skills are preferred for this territory.'
+        ],
+        apply: 'Field Executive — Hyderabad'
+      },
+      'fe-kar': {
+        dept: 'Field Executive',
+        title: 'Field Executive &mdash; Karnataka',
+        meta: ['Karnataka', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
+        note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
+        do: [
+          'Conduct daily on-ground farm visits, client meetings, and site assessments across Karnataka.',
+          'Collect field data and submit structured daily activity and observation reports.',
+          'Coordinate with the Agri Ops, Buy-Back, and BD teams on ground-level needs and findings.',
+          'Support local client prospecting, follow-ups, and relationship management activities.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome.',
+          'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
+          'Fluency in Kannada is essential; Tamil or English is an added advantage.',
+          'Willingness for daily field travel; smartphone with camera and basic reporting ability.'
+        ],
+        apply: 'Field Executive — Karnataka'
+      },
+      'fe-mum': {
+        dept: 'Field Executive',
+        title: 'Field Executive &mdash; Mumbai',
+        meta: ['Mumbai, Maharashtra', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
+        note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
+        do: [
+          'Conduct daily on-ground site visits, client meetings, and project assessments in Mumbai and surrounding areas.',
+          'Collect field data, prepare structured visit notes, and submit daily reports.',
+          'Support IGO\'s BD and operational teams with local ground-level intelligence and client follow-ups.',
+          'Build and maintain a contact network with clients and prospects in the Mumbai territory.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome.',
+          'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
+          'Hindi and/or Marathi communication skills are preferred for this territory.',
+          'Good navigation skills, physical fitness, and willingness to travel daily.',
+          'Smartphone with camera and internet access; basic reporting and data-entry skills.'
+        ],
+        apply: 'Field Executive — Mumbai'
+      },
+      pur: {
+        dept: 'Purchase',
+        title: 'Purchase Executive',
+        meta: ['Chennai, Tamil Nadu', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi'],
+        note: null,
+        do: [
+          'Identify and coordinate with vendors for materials, equipment, and supplies required across IGO Group departments.',
+          'Raise and track purchase orders; follow up with vendors to ensure timely and correct delivery.',
+          'Negotiate pricing, payment terms, and delivery schedules; maintain up-to-date vendor records.',
+          'Coordinate with Finance for purchase payment approvals and settlement; track procurement costs and report variances to the Head of Purchase.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome; a background in commerce or business administration is preferred.',
+          'Good communication skills in Tamil, English, and Hindi.',
+          'Basic computer proficiency &mdash; MS Excel and email are essential.',
+          'Attention to detail, multitasking ability, and strong organizational skills.',
+          'Prior purchase or vendor coordination experience is an advantage but not required.'
+        ],
+        apply: 'Purchase Executive'
+      },
+      rs: {
+        dept: 'Rental Sourcing',
+        title: 'Rental Sourcing Executive',
+        meta: ['Tamil Nadu', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi'],
+        note: null,
+        do: [
+          'Identify agricultural land and assets available for rent or lease in target areas across Tamil Nadu.',
+          'Approach and engage landowners; explain IGO\'s rental terms, build interest, and negotiate initial terms.',
+          'Evaluate property suitability for IGO\'s farm and project requirements; document findings.',
+          'Coordinate lease documentation with legal and finance teams; maintain the sourcing pipeline tracker and report progress.'
+        ],
+        need: [
+          'Any degree &mdash; freshers are welcome; a background in real estate or agriculture is an advantage.',
+          'Good communication and negotiation skills in Tamil, English, and Hindi.',
+          'Strong interpersonal skills; ability to engage and convince landowners confidently.',
+          'Willingness to travel for field-level land visits and landlord meetings.',
+          'Basic computer skills for pipeline tracking and documentation management.'
+        ],
+        apply: 'Rental Sourcing Executive'
+      }
+    };
+
+    function openJobModal(id) {
+      var job = JOBS[id];
+      if (!job) return;
+      document.getElementById('jm-dept').textContent = job.dept;
+      document.getElementById('jm-title').innerHTML = job.title;
+
+      var metaEl = document.getElementById('jm-meta');
+      metaEl.innerHTML = '';
+      job.meta.forEach(function (m) {
+        var s = document.createElement('span');
+        s.className = 'job-badge';
+        s.textContent = m;
+        metaEl.appendChild(s);
+      });
+
+      var noteEl = document.getElementById('jm-note');
+      if (job.note) {
+        noteEl.innerHTML = job.note;
+        noteEl.style.display = 'block';
+      } else {
+        noteEl.style.display = 'none';
+      }
+
+      var doEl = document.getElementById('jm-do');
+      doEl.innerHTML = '';
+      job.do.forEach(function (d) {
+        var li = document.createElement('li');
+        li.innerHTML = d;
+        doEl.appendChild(li);
+      });
+
+      var needEl = document.getElementById('jm-need');
+      needEl.innerHTML = '';
+      job.need.forEach(function (n) {
+        var li = document.createElement('li');
+        li.innerHTML = n;
+        needEl.appendChild(li);
+      });
+
+      document.getElementById('jm-apply-btn').onclick = function () {
+        closeJobModal();
+        setTimeout(function () { openApplyModal(job.apply); }, 180);
+      };
+
+      var modal = document.getElementById('job-detail-modal');
+      void modal.offsetWidth;
+      modal.classList.add('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeJobModal() {
+      document.getElementById('job-detail-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('job-detail-modal').addEventListener('click', function (e) {
+      if (e.target === this) closeJobModal();
+    });
+  </script>
+
+  <section style="background: #fff; padding: 4rem 0 0;">
+    <div class="container">
+      <div class="section-header text-center" data-reveal>
+        <span class="eyebrow">LIFE AT IGO</span>
+        <h2>Where Innovation Meets Purpose</h2>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem;">
+      <div style="overflow: hidden;">
+        <img src="assets/img/office/office-open-plan.jpg" alt="IGO Groups corporate office floor"
+          style="width:100%; height:440px; object-fit:cover; object-position:center top; display:block;">
+      </div>
+      <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
+        <div data-reveal>
+          <span class="eyebrow">OUR CULTURE</span>
+          <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Discover Life at IGO Groups</h3>
+          <p style="color: var(--muted); line-height: 1.85;">At IGO Groups, we are united by a shared passion for
+            transforming Indian agriculture. Our dedicated team works collaboratively across 18 departments, driven by a
+            single mission &mdash; to empower farmers and bring innovation to every acre of India. We foster a culture
+            of excellence, openness, and respect that gives every team member the platform to grow and create real
+            impact.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
+        <div data-reveal>
+          <span class="eyebrow">GROWTH &amp; PURPOSE</span>
+          <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Your Growth, Our Commitment</h3>
+          <p style="color: var(--muted); line-height: 1.85;">IGO Groups invests in every team member&rsquo;s
+            professional and personal growth. We nurture talent through continuous learning, leadership development, and
+            real hands-on experience in agricultural transformation. Our environment rewards fresh thinking and empowers
+            those who take initiative to drive meaningful change alongside India&rsquo;s most driven agri-professionals.
+          </p>
+        </div>
+      </div>
+      <div style="overflow: hidden;">
+        <img src="assets/img/office/office-team-branded.jpg" alt="IGO Agri Team at work"
+          style="width:100%; height:440px; object-fit:cover; display:block;">
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="overflow: hidden;">
+        <img src="assets/img/office/office-meeting-brick.jpg" alt="IGO Groups team collaboration session"
+          style="width:100%; height:440px; object-fit:cover; display:block;">
+      </div>
+      <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
+        <div data-reveal>
+          <span class="eyebrow">TEAM SPIRIT</span>
+          <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Celebrate the Moments That
+            Matter</h3>
+          <p style="color: var(--muted); line-height: 1.85;">At IGO, every achievement is celebrated &mdash; from major
+            milestones to everyday wins. We build bonds that go beyond the workplace, creating an environment where
+            people take pride in the IGO identity, their colleagues, and the mission they share. Our teams are not just
+            coworkers &mdash; they are changemakers reshaping the future of Indian agriculture.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 3px;">
+      <img src="assets/img/office/office-exec-smiling.jpg" alt="IGO senior executive"
+        style="width:100%; height:260px; object-fit:cover; object-position:center top; display:block;">
+      <img src="assets/img/office/office-agri-sign.jpg" alt="IGO Agri Operations area"
+        style="width:100%; height:260px; object-fit:cover; display:block;">
+      <img src="assets/img/office/office-igo-uniforms.jpg" alt="IGO Agri branded team in uniform"
+        style="width:100%; height:260px; object-fit:cover; display:block;">
+      <img src="assets/img/office/office-team-closeup.jpg" alt="IGO team at blue desks"
+        style="width:100%; height:260px; object-fit:cover; display:block;">
+      <img src="assets/img/office/office-young-pro.jpg" alt="IGO young professional"
+        style="width:100%; height:260px; object-fit:cover; display:block;">
+      <img src="assets/img/office/office-manager.jpg" alt="IGO office manager"
+        style="width:100%; height:260px; object-fit:cover; display:block;">
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="applyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title">Apply Now</h2>
+          <div class="modal-subtitle" id="apply-position-label"></div>
+        </div>
+        <button type="button" class="modal-close" onclick="closeApplyModal()" aria-label="Back to Job">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="applyForm" onsubmit="submitApplyForm(event)" style="display:flex;flex-direction:column;gap:0.85rem;">
+          <input type="hidden" id="apply-position">
+          <input type="text" id="apply-name" placeholder="Your Full Name" required
+            style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
+          <input type="email" id="apply-email" placeholder="Your Email" required
+            style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
+          <input type="tel" id="apply-phone" placeholder="Your Phone Number" required
+            style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
+          <input type="text" id="apply-experience" placeholder="Years of Experience (0 for Fresher)"
+            style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
+          <textarea id="apply-message" rows="5" placeholder="Anything you'd like to add? (optional)"
+            style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);resize:vertical;"></textarea>
+          <button type="submit" id="apply-btn" class="btn btn-primary"
+            style="width:100%;padding:0.9rem;font-size:1rem;">Submit Application</button>
+          <div id="apply-status" style="display:none;padding:0.85rem 1rem;border-radius:8px;font-size:0.9rem;"></div>
+        </form>
+      </div>
     </div>
   </div>
-</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
