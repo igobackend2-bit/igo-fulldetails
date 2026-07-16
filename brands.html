@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.igogroups.com/brands.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -30,7 +30,7 @@
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -217,7 +217,7 @@
           <span class="badge" style="font-size:0.7rem; padding: 3px 10px; border-radius: 99px; background: rgba(46,184,92,0.15); color: var(--green); font-weight: 700;">Active</span>
         </div>
         <h3 style="margin-bottom: 0.5rem;">IGO Academy</h3>
-        <p style="font-size: 0.9rem; color: var(--muted);">Farming training academy empowering the next generation of agritech entrepreneurs.</p>
+        <p style="font-size: 0.9rem; color: var(--muted);">Farming training academy empowering the next generation of farming-tech entrepreneurs.</p>
         <a href="https://igoacademy.in" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">Visit Website →</a>
         <a href="brands/igo-academy.html" class="btn btn-outline" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">View Details →</a>
       </div>
@@ -270,7 +270,7 @@
           <span class="badge" style="font-size:0.7rem; padding: 3px 10px; border-radius: 99px; background: rgba(46,184,92,0.15); color: var(--green); font-weight: 700;">Active</span>
         </div>
         <h3 style="margin-bottom: 0.5rem;">Tech Farming Expert</h3>
-        <p style="font-size: 0.9rem; color: var(--muted);">Expert consulting services for modern agriculture implementation.</p>
+        <p style="font-size: 0.9rem; color: var(--muted);">Expert consulting services for modern farming implementation.</p>
         <a href="https://igo-tech-farming-experts.vercel.app" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">Visit Website →</a>
         <a href="brands/tech-farming-expert.html" class="btn btn-outline" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">View Details →</a>
       </div>
@@ -379,7 +379,7 @@
           <span class="badge" style="font-size:0.7rem; padding: 3px 10px; border-radius: 99px; background: rgba(232,160,32,0.15); color: var(--gold); font-weight: 700;">Upcoming</span>
         </div>
         <h3 style="margin-bottom: 0.5rem;">IGO Green Energy</h3>
-        <p style="font-size: 0.9rem; color: var(--muted);">Sustainable solar and wind energy solutions for agricultural zones.</p>
+        <p style="font-size: 0.9rem; color: var(--muted);">Sustainable solar and wind energy solutions for farming zones.</p>
         <a href="https://igo-green-enargy.vercel.app" target="_blank" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">Visit Website →</a>
         <a href="brands/igo-green-energy.html" class="btn btn-outline" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.5rem 1.2rem;">View Details →</a>
       </div>
@@ -417,7 +417,7 @@
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -460,6 +460,10 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 </body>
 </html>

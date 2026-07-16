@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "igo-groups-site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["live-server", "--port=8080", "--no-browser"],
-      "port": 8080
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

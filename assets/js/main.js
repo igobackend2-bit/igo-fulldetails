@@ -76,30 +76,92 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Scroll-reveal animations
+  // Scroll-reveal animations. Elements are visible by default (see CSS);
+  // only elements starting below the fold get opted into the hidden
+  // pre-reveal state, then faded in via IntersectionObserver. Above-the-fold
+  // content is never hidden, so a slow/failed observer can never leave it invisible.
   var revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length) {
-    if ('IntersectionObserver' in window) {
+    var vh = window.innerHeight;
+    var lazyEls = [];
+    revealEls.forEach(function (el, i) {
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
+      var rect = el.getBoundingClientRect();
+      if (rect.top >= vh || rect.bottom <= 0) {
+        el.classList.add('reveal-pending');
+        lazyEls.push(el);
+      }
+    });
+    if (lazyEls.length && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
+            entry.target.classList.remove('reveal-pending');
             io.unobserve(entry.target);
           }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      revealEls.forEach(function (el, i) {
-        el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
-        io.observe(el);
-      });
+      lazyEls.forEach(function (el) { io.observe(el); });
     } else {
-      revealEls.forEach(function (el) { el.classList.add('revealed'); });
+      lazyEls.forEach(function (el) { el.classList.remove('reveal-pending'); });
     }
   }
 
   // Ecosystem / hero particle-network canvas backgrounds
   var nets = document.querySelectorAll('.particle-net');
   nets.forEach(function (canvas) { initParticleNetwork(canvas); });
+
+  // ---------- Liquid glass: cursor-tracked spotlight on cards & glass panels ----------
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hoverCapable = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+  var spotlightSelector = '.card, .brand-card, .eco-item, .testi-card, .subcat-card, .proj-cat, .mini-card, .glass-panel, ' +
+    '.bento-card, .vm-card, .leader-card, .testi-card-new, .offer-card, .why-card';
+
+  if (!reduceMotion && hoverCapable) {
+    var spotlightTicking = false;
+    var lastPointerEvent = null;
+    function applySpotlight() {
+      spotlightTicking = false;
+      if (!lastPointerEvent) return;
+      var target = lastPointerEvent.target.closest(spotlightSelector);
+      if (!target) return;
+      var rect = target.getBoundingClientRect();
+      var x = ((lastPointerEvent.clientX - rect.left) / rect.width) * 100;
+      var y = ((lastPointerEvent.clientY - rect.top) / rect.height) * 100;
+      target.style.setProperty('--mx', x + '%');
+      target.style.setProperty('--my', y + '%');
+    }
+    document.addEventListener('pointermove', function (e) {
+      if (!e.target.closest(spotlightSelector)) return;
+      lastPointerEvent = e;
+      if (!spotlightTicking) {
+        spotlightTicking = true;
+        requestAnimationFrame(applySpotlight);
+      }
+    }, { passive: true });
+
+    // ---------- Liquid glass: magnetic pull on primary CTAs ----------
+    var magneticEls = document.querySelectorAll('.btn-primary, .btn-glass, .magnetic');
+    magneticEls.forEach(function (el) {
+      var raf = null, tx = 0, ty = 0;
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        tx = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+        ty = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+        if (!raf) {
+          raf = requestAnimationFrame(function () {
+            el.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
+            raf = null;
+          });
+        }
+      });
+      el.addEventListener('mouseleave', function () {
+        if (raf) cancelAnimationFrame(raf);
+        raf = null;
+        el.style.transform = '';
+      });
+    });
+  }
 });
 
 function initParticleNetwork(canvas) {
@@ -289,4 +351,80 @@ function closeImageLightbox() {
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeImageLightbox();
+});
+
+/* ══════════════════════════════════════════════════════════════
+   LIQUID GLASS 2.0 — MOTION ENGINE
+   Scroll progress, 3D card tilt, ambient cursor light, hero depth.
+   All transform/opacity only; gated behind hover + reduced-motion.
+══════════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+
+  // ── Scroll progress hairline (all devices) ──
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.appendChild(bar);
+  var barTick = false;
+  function paintBar() {
+    barTick = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+  }
+  window.addEventListener('scroll', function () {
+    if (!barTick) { barTick = true; requestAnimationFrame(paintBar); }
+  }, { passive: true });
+  paintBar();
+
+  if (reduce || !canHover) return;
+
+  // ── 3D perspective tilt on cards ──
+  var tiltSel = '.card, .brand-card, .bento-card, .offer-card, .leader-card, ' +
+    '.testi-card-new, .testi-card, .vm-card, .eco-item, .glass-panel, .why-card, ' +
+    '.mini-card, .subcat-card, .milestone-card';
+  document.querySelectorAll(tiltSel).forEach(function (el) {
+    var raf = null, rx = 0, ry = 0;
+    el.addEventListener('pointerenter', function () {
+      el.classList.add('tilting');
+      el.style.transition = 'transform 0.14s ease-out';
+    });
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      rx = ((e.clientY - r.top) / r.height - 0.5) * -5;
+      ry = ((e.clientX - r.left) / r.width - 0.5) * 5;
+      if (!raf) {
+        raf = requestAnimationFrame(function () {
+          el.style.transform = 'perspective(900px) rotateX(' + rx.toFixed(2) +
+            'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-4px)';
+          raf = null;
+        });
+      }
+    });
+    el.addEventListener('pointerleave', function () {
+      if (raf) { cancelAnimationFrame(raf); raf = null; }
+      el.classList.remove('tilting');
+      el.style.transition = '';
+      el.style.transform = '';
+    });
+  });
+
+  // ── Ambient cursor light (soft lerp-following glow) ──
+  var glow = document.createElement('div');
+  glow.className = 'ambient-glow';
+  document.body.appendChild(glow);
+
+  var mx = window.innerWidth / 2, my = window.innerHeight / 3;
+  var gx = mx, gy = my;
+
+  document.addEventListener('pointermove', function (e) {
+    mx = e.clientX; my = e.clientY;
+  }, { passive: true });
+
+  (function ambientLoop() {
+    gx += (mx - gx) * 0.08;
+    gy += (my - gy) * 0.08;
+    glow.style.transform = 'translate3d(' + gx.toFixed(1) + 'px,' + gy.toFixed(1) + 'px,0)';
+    requestAnimationFrame(ambientLoop);
+  })();
 });

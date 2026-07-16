@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Careers | IGO Groups</title>
-<meta name="description" content="Build the future of Indian agriculture with us. Explore openings and internship opportunities at IGO Groups." />
+<meta name="description" content="We're hiring across 13 departments at IGO Agritech Farms. 130+ vacancies open pan-India — build your career in India's #1 tech farming brand." />
 <link rel="canonical" href="https://www.igogroups.com/careers.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="IGO Groups" />
 <meta property="og:title" content="Careers | IGO Groups" />
-<meta property="og:description" content="Build the future of Indian agriculture with us. Explore openings and internship opportunities at IGO Groups." />
+<meta property="og:description" content="We're hiring across 13 departments at IGO Agritech Farms. 130+ vacancies open pan-India — build your career in India's #1 tech farming brand." />
 <meta property="og:url" content="https://www.igogroups.com/careers.html" />
 <meta property="og:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Careers | IGO Groups" />
-<meta name="twitter:description" content="Build the future of Indian agriculture with us. Explore openings and internship opportunities at IGO Groups." />
+<meta name="twitter:description" content="We're hiring across 13 departments at IGO Agritech Farms. 130+ vacancies open pan-India — build your career in India's #1 tech farming brand." />
 <meta name="twitter:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 
 
@@ -30,7 +30,7 @@
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -91,7 +91,7 @@
         </div>
       </div>
 
-      <a href="careers.html">Careers</a>
+      <a href="careers.html" class="active">Careers</a>
       <a href="faqs.html">FAQs</a>
       <a href="contact.html">Contact Us</a>
     </nav>
@@ -105,606 +105,599 @@
   </div>
 </header>
 
-
-
-<section class="page-hero">
-  <div class="container">
-    <span class="eyebrow">JOIN OUR MISSION</span>
-    <h1>Careers at IGO</h1>
-    <p>Build the future of Indian agriculture with us. Explore openings and internship opportunities.</p>
-  </div>
-</section>
-
 <style>
-/* ── Job Cards (compact) ── */
-.job-card {
-  background: var(--card-bg, #fff);
-  border: 1px solid var(--border, #e5e7eb);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  display: flex; flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
+/* ── Careers page — sourced to match igoagritechfarms.in/careers ── */
+.careers-hero { padding: 88px 0 64px; text-align: left; }
+.careers-hero-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.careers-hero .eyebrow { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.22); color: var(--green-light); }
+.careers-hero h1 { font-size: 2.6rem; margin-bottom: 18px; text-align: left; }
+.careers-hero .accent-italic { font-style: italic; color: var(--green-light); }
+.careers-hero p.lead { max-width: 540px; margin: 0 0 28px; opacity: 0.92; }
+.careers-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.careers-hero-actions .btn-glass {
+  background: rgba(6,20,12,0.5); border-color: rgba(255,255,255,0.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 4px 16px rgba(0,0,0,0.25);
 }
-.job-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.13); transform: translateY(-4px); }
-.job-card-strip { height: 4px; background: var(--brand-green, #2e7d32); }
-.job-card-body { padding: 1.4rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0; }
-.job-dept-tag { display: inline-block; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; background: rgba(46,125,50,0.09); color: var(--brand-green, #2e7d32); border-radius: 20px; padding: 0.18rem 0.75rem; margin-bottom: 0.55rem; }
-.job-title { font-size: 1rem; font-weight: 700; color: var(--heading, #111827); margin: 0 0 0.85rem; line-height: 1.3; }
-.job-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
-.job-badge { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.71rem; font-weight: 600; padding: 0.18rem 0.65rem; border-radius: 20px; border: 1px solid var(--border, #e5e7eb); color: var(--muted, #6b7280); background: var(--soft-gray, #f9fafb); }
-.job-badge.green { background: rgba(46,125,50,0.08); border-color: rgba(46,125,50,0.22); color: var(--brand-green, #2e7d32); }
-.job-badge.orange { background: rgba(234,88,12,0.08); border-color: rgba(234,88,12,0.22); color: #c2500a; }
-.job-summary { font-size: 0.8rem; color: var(--muted, #6b7280); line-height: 1.6; margin: 0.6rem 0 1rem; flex: 1; }
-.job-card-footer { padding: 0.75rem 1.5rem; border-top: 1px solid var(--border, #e5e7eb); display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; font-weight: 700; color: var(--brand-green, #2e7d32); }
-.jobs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.4rem; }
+.careers-hero-actions .btn-glass:hover { background: rgba(6,20,12,0.66); }
 
-/* ── Job Detail Full Page ── */
-#job-detail-modal { position: fixed; inset: 0; background: var(--bg, #f9fafb); z-index: 9999; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.22s; overflow-y: auto; }
-#job-detail-modal.active { opacity: 1; pointer-events: all; }
-.job-modal-box { width: 100%; max-width: 780px; margin: 0 auto; padding: 0 1.5rem 4rem; display: flex; flex-direction: column; flex: 1; }
-.job-modal-header { padding: 1.2rem 0 1.2rem; border-bottom: 1px solid var(--border, #e5e7eb); display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; position: sticky; top: 0; background: var(--bg, #f9fafb); z-index: 2; }
-.job-modal-close { background: none; border: 1px solid var(--border,#e5e7eb); border-radius: 8px; cursor: pointer; color: var(--muted, #6b7280); padding: 0.4rem 0.9rem; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
-.job-modal-close:hover { background: var(--soft-gray,#f3f4f6); color: var(--heading); }
-.job-modal-body { padding: 2rem 0 0; flex: 1; }
-.job-modal-section { margin-bottom: 2rem; }
-.job-modal-section h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--brand-green, #2e7d32); margin: 0 0 0.75rem; }
-.job-modal-section ul { margin: 0; padding-left: 1.3rem; }
-.job-modal-section ul li { font-size: 0.95rem; color: var(--body, #374151); line-height: 1.8; margin-bottom: 0.5rem; }
-.job-modal-note { font-size: 0.88rem; color: var(--body, #374151); background: rgba(46,125,50,0.07); border-left: 4px solid var(--brand-green, #2e7d32); border-radius: 8px; padding: 0.85rem 1.1rem; margin-bottom: 1.5rem; }
-.job-modal-actions { padding: 2rem 0 0; border-top: 1px solid var(--border, #e5e7eb); display: flex; gap: 0.75rem; }
+.careers-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.careers-stat-tile {
+  position: relative; background: rgba(6,20,12,0.55); border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%); -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  border-radius: var(--radius-md); padding: 22px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 4px 16px rgba(0,0,0,0.25);
+  transition: transform 0.4s var(--spring), background 0.3s, border-color 0.3s;
+}
+.careers-stat-tile:hover { transform: translateY(-4px); background: rgba(6,20,12,0.68); border-color: rgba(79,212,128,0.45); }
+.careers-stat-tile .cs-icon { width: 30px; height: 30px; stroke: var(--green-light); fill: none; stroke-width: 1.8; margin-bottom: 10px; }
+.careers-stat-tile .cs-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: #fff; line-height: 1; text-shadow: 0 2px 10px rgba(0,0,0,0.35); }
+.careers-stat-tile .cs-label { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 6px; }
+@media (max-width: 900px) {
+  .careers-hero-inner { grid-template-columns: 1fr; }
+  .careers-hero h1 { font-size: 2.1rem; }
+}
 
-/* ── Apply Form Full Page ── */
-.modal-overlay { position: fixed; inset: 0; background: var(--bg, #f9fafb); z-index: 10000; display: flex; flex-direction: column; overflow-y: auto; opacity: 0; pointer-events: none; transition: opacity 0.22s; }
-.modal-overlay.active { opacity: 1; pointer-events: all; }
-.modal-content { width: 100%; max-width: 620px; margin: 0 auto; padding: 0 1.5rem 4rem; }
-.modal-header { padding: 1.2rem 0 1.2rem; border-bottom: 1px solid var(--border, #e5e7eb); display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; position: sticky; top: 0; background: var(--bg, #f9fafb); z-index: 2; }
-.modal-close { background: none; border: 1px solid var(--border,#e5e7eb); border-radius: 8px; cursor: pointer; color: var(--muted, #6b7280); padding: 0.4rem 0.9rem; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
-.modal-close:hover { background: var(--soft-gray,#f3f4f6); }
-.modal-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
-.modal-subtitle { font-size: 0.9rem; color: var(--muted, #6b7280); margin-top: 0.25rem; }
-.modal-body { padding: 2rem 0 0; }
+/* Why IGO mini stat cards */
+.why-mini-card { text-align: left; }
+.why-mini-card .icon-svg { margin-bottom: 6px; }
+.why-mini-stat { margin-top: 16px; font-family: var(--font-head); font-weight: 800; font-size: 1.35rem; color: var(--green); }
+html.dark .why-mini-stat { color: var(--green-light); }
+.why-mini-stat small { display: block; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-light); margin-top: 3px; }
+
+/* Opening cards */
+.openings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 2.5rem; }
+.opening-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-sm); position: relative;
+  transition: transform 0.4s var(--spring), box-shadow 0.4s var(--spring), border-color 0.3s;
+  display: flex; flex-direction: column;
+}
+.opening-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--green); }
+.opening-card.featured { border-color: var(--gold); box-shadow: 0 0 0 1px rgba(232,160,32,0.35), var(--shadow-md); }
+.opening-media { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.opening-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+.opening-card:hover .opening-media img { transform: scale(1.07); }
+.opening-media::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,35,20,0.05) 0%, rgba(10,35,20,0.65) 100%);
+}
+.opening-emoji-badge {
+  position: absolute; top: 14px; left: 14px; z-index: 1; width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; box-shadow: var(--shadow-sm);
+}
+.opening-vacancy-badge {
+  position: absolute; top: 14px; right: 14px; z-index: 1; background: var(--green); color: #fff;
+  font-size: 0.72rem; font-weight: 700; padding: 5px 13px; border-radius: 20px; box-shadow: var(--shadow-sm);
+}
+.opening-featured-tag {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 1;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light)); color: var(--forest);
+  text-align: center; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px;
+}
+.opening-body { padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.opening-body h3 { font-size: 1.05rem; margin: 0; color: var(--forest); }
+html.dark .opening-body h3 { color: var(--green-light); }
+.opening-label { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-light); margin-bottom: 5px; }
+.opening-roles { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.opening-roles li { font-size: 0.83rem; color: var(--muted); padding-left: 14px; position: relative; line-height: 1.4; }
+.opening-roles li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.opening-qual { font-size: 0.83rem; color: var(--text); line-height: 1.5; }
+.opening-lang-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.opening-lang-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 11px; border-radius: 20px; background: var(--soft-gray); border: 1px solid var(--border); color: var(--muted); }
+.opening-apply-btn { margin-top: auto; width: 100%; text-align: center; }
+
+/* Process steps */
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 2.5rem; }
+.process-step { text-align: center; padding: 0 12px; }
+.process-num {
+  width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--forest));
+  color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-head);
+  font-weight: 800; margin: 0 auto 16px; box-shadow: 0 8px 20px rgba(46,184,92,0.28);
+}
+.process-step h4 { margin-bottom: 8px; color: var(--forest); }
+html.dark .process-step h4 { color: var(--green-light); }
+.process-step p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+@media (max-width: 760px) { .process-grid { grid-template-columns: 1fr; } }
 </style>
 
-<section class="content-section">
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="page-hero careers-hero">
+  <div class="container">
+    <div class="careers-hero-inner">
+      <div data-reveal="left">
+        <span class="eyebrow">WE&rsquo;RE HIRING &middot; 13 DEPARTMENTS OPEN</span>
+        <h1>Build Your Career in <span class="accent-italic">India&rsquo;s #1 Tech Farming</span> Brand</h1>
+        <p class="lead">Join 2000+ passionate professionals working across polyhouse engineering, hydroponics, livestock, marketing, and more &mdash; shaping the future of Indian agriculture.</p>
+        <div class="careers-hero-actions">
+          <a href="#openings" class="btn btn-primary">Browse Openings &rarr;</a>
+          <a href="mailto:hr.admin@igogroups.com" class="btn btn-glass">&#9993; Send Your CV</a>
+        </div>
+      </div>
+      <div class="careers-stats-grid" data-reveal="right">
+        <div class="careers-stat-tile">
+          <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="cs-num">13</div>
+          <div class="cs-label">Open Departments</div>
+        </div>
+        <div class="careers-stat-tile">
+          <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          <div class="cs-num">130+</div>
+          <div class="cs-label">Vacancies Open</div>
+        </div>
+        <div class="careers-stat-tile">
+          <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="cs-num">Pan India</div>
+          <div class="cs-label">Locations</div>
+        </div>
+        <div class="careers-stat-tile">
+          <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="cs-num">75+</div>
+          <div class="cs-label">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ WHY IGO ══════════════════ -->
+<section class="content-section" style="background: var(--soft-gray);">
   <div class="container">
     <div class="section-header text-center" data-reveal>
-      <span class="eyebrow">CURRENT OPENINGS</span>
-      <h2>We&rsquo;re Hiring Across Departments</h2>
-      <p style="color:var(--muted);max-width:560px;margin:0 auto;">Join IGO Group&rsquo;s growing team. All positions are immediate openings &mdash; click any role to read the full description and apply.</p>
+      <span class="eyebrow">WHY IGO</span>
+      <h2>Build a Career That Matters</h2>
+    </div>
+    <div class="grid three-grid" style="margin-top: 2.5rem;">
+      <div class="card why-mini-card" data-reveal>
+        <svg class="icon-svg lg" viewBox="0 0 24 24"><use href="#icon-target"/></svg>
+        <h3>Real Career Growth</h3>
+        <p>Work on 15,000+ live projects across India with direct career advancement and structured skill development at every level.</p>
+        <div class="why-mini-stat">15,000+<small>Live Projects</small></div>
+      </div>
+      <div class="card why-mini-card" data-reveal>
+        <svg class="icon-svg lg" viewBox="0 0 24 24"><use href="#icon-chip"/></svg>
+        <h3>Tech-Driven Work</h3>
+        <p>Use IoT, AI, and automation in real agricultural projects &mdash; not just theory, but hands-on experience with cutting-edge agritech.</p>
+        <div class="why-mini-stat">IoT + AI<small>Technology Used</small></div>
+      </div>
+      <div class="card why-mini-card" data-reveal>
+        <svg class="icon-svg lg" viewBox="0 0 24 24"><use href="#icon-handshake"/></svg>
+        <h3>Meaningful Impact</h3>
+        <p>Every project directly impacts farmers&rsquo; livelihoods and India&rsquo;s food security &mdash; your work creates visible change.</p>
+        <div class="why-mini-stat">25,000+<small>Jobs Created</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CURRENT OPENINGS ══════════════════ -->
+<section class="content-section" id="openings">
+  <div class="container">
+    <div class="section-header text-center" data-reveal>
+      <span class="eyebrow">WE ARE HIRING</span>
+      <h2>Current Openings</h2>
+      <p style="color: var(--muted); max-width: 560px; margin: 0 auto;">13 Departments &middot; 130+ Vacancies &middot; All Full Time</p>
     </div>
 
-    <div class="jobs-grid" style="margin-top:2.5rem;">
+    <div class="openings-grid">
 
-      <div class="job-card" onclick="openJobModal('bd')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Business Development</span>
-          <h3 class="job-title">Business Development Executive</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Pan India</span>
-            <span class="job-badge orange">10+ Vacancies</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Tamil</span>
-            <span class="job-badge">English</span>
-            <span class="job-badge">Hindi</span>
-            <span class="job-badge">Telugu</span>
-            <span class="job-badge">Kannada</span>
-          </div>
-          <p class="job-summary">Drive client acquisition, lead generation, and revenue growth across IGO Group business verticals. Multi-language candidates preferred.</p>
+      <div class="opening-card featured" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/farm-manager.webp" alt="Farm Manager" loading="lazy">
+          <span class="opening-emoji-badge">&#127807;</span>
+          <span class="opening-vacancy-badge">20 vacancies</span>
+          <span class="opening-featured-tag">Featured Opening &middot; High Demand</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Farm Manager</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Farm Manager</li><li>Assistant Farm Manager</li><li>Crop Production Specialist</li><li>Farm Operations Executive</li><li>Agri Supervisor</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">B.Sc. Agriculture / B.Tech Agriculture Engineering</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Farm Manager')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('ff')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Farmers Factory</span>
-          <h3 class="job-title">Farmers Factory Executive</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Tamil Nadu</span>
-            <span class="job-badge orange">4+ Vacancies</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Tamil</span>
-            <span class="job-badge">English</span>
-            <span class="job-badge">Telugu</span>
-            <span class="job-badge">Kannada</span>
-          </div>
-          <p class="job-summary">Support fresh-produce procurement, collection hub operations, and supply chain coordination across IGO&#39;s Farmers Factory network.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/mushroom.webp" alt="Mushroom Farming Team" loading="lazy">
+          <span class="opening-emoji-badge">&#127812;</span>
+          <span class="opening-vacancy-badge">5 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Mushroom Farming Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Mushroom Farm Technician</li><li>Substrate Preparation Staff</li><li>Harvest &amp; Packaging Executive</li><li>Spawn Production Technician</li><li>Quality Control &ndash; Mushroom</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree / Diploma in Mushroom Cultivation</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Mushroom Farming Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('bb')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Buy-Back</span>
-          <h3 class="job-title">Buy-Back Executive</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Tamil Nadu &amp; Karnataka</span>
-            <span class="job-badge orange">2+ Vacancies</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Tamil</span>
-            <span class="job-badge">English</span>
-            <span class="job-badge">Kannada</span>
-          </div>
-          <p class="job-summary">Manage farmer buy-back agreements, produce collection scheduling, and settlement coordination for IGO&#39;s partner farmer network.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/hydroponics.webp" alt="Hydroponics Team" loading="lazy">
+          <span class="opening-emoji-badge">&#128167;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Hydroponics Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Hydroponics Technician</li><li>NFT System Operator</li><li>Nutrient Management Specialist</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">B.Sc. Agriculture / Diploma in Horticulture</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Hydroponics Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('fe-hyd')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Field Executive</span>
-          <h3 class="job-title">Field Executive &mdash; Hyderabad</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Hyderabad, Telangana</span>
-            <span class="job-badge orange">1 Vacancy</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Own Bike + Licence &mdash; Mandatory</span>
-            <span class="job-badge green">&#8377;3/km Petrol Allowance</span>
-          </div>
-          <p class="job-summary">On-ground site visits, client coordination, and field operations across Hyderabad and surrounding areas.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/business-dev.webp" alt="Business Development Team" loading="lazy">
+          <span class="opening-emoji-badge">&#128200;</span>
+          <span class="opening-vacancy-badge">5 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Business Development Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Business Development Executive</li><li>Business Development Manager</li><li>Sales Executive</li><li>Area Sales Manager</li><li>Client Relationship Executive</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Business Development Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('fe-kar')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Field Executive</span>
-          <h3 class="job-title">Field Executive &mdash; Karnataka</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Karnataka</span>
-            <span class="job-badge orange">1 Vacancy</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Own Bike + Licence &mdash; Mandatory</span>
-            <span class="job-badge green">&#8377;3/km Petrol Allowance</span>
-          </div>
-          <p class="job-summary">On-ground farm visits, client meetings, and field assessments across Karnataka territory.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/digital-marketing.webp" alt="Digital Marketing Team" loading="lazy">
+          <span class="opening-emoji-badge">&#128227;</span>
+          <span class="opening-vacancy-badge">6 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Digital Marketing Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Digital Marketing Manager</li><li>SEO Analyst</li><li>Content Creator</li><li>Video Editor</li><li>Social Media Executive</li><li>Accounts Executive</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Digital Marketing Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('fe-mum')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Field Executive</span>
-          <h3 class="job-title">Field Executive &mdash; Mumbai</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Mumbai, Maharashtra</span>
-            <span class="job-badge orange">1 Vacancy</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Own Bike + Licence &mdash; Mandatory</span>
-            <span class="job-badge green">&#8377;3/km Petrol Allowance</span>
-          </div>
-          <p class="job-summary">On-ground site visits, client follow-ups, and field operations across Mumbai and surrounding areas.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/agri-engineering.webp" alt="Agriculture Engineering Team" loading="lazy">
+          <span class="opening-emoji-badge">&#127793;</span>
+          <span class="opening-vacancy-badge">5 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Agriculture Engineering Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Agri Project Engineer</li><li>Agronomist</li><li>Horticulturist</li><li>Irrigation Specialist</li><li>Soil Scientist</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">B.Sc. / B.Tech &ndash; Agriculture, Agronomy, Horticulture, Soil Science, Forestry</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Agriculture Engineering Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('pur')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Purchase</span>
-          <h3 class="job-title">Purchase Executive</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Chennai, Tamil Nadu</span>
-            <span class="job-badge orange">2+ Vacancies</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Tamil</span>
-            <span class="job-badge">English</span>
-            <span class="job-badge">Hindi</span>
-          </div>
-          <p class="job-summary">Handle vendor sourcing, purchase orders, procurement coordination, and cost control across IGO Group&#39;s operations.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/civil-engineering.webp" alt="Civil Engineering Team" loading="lazy">
+          <span class="opening-emoji-badge">&#127959;&#65039;</span>
+          <span class="opening-vacancy-badge">4 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Civil Engineering Team</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Civil Engineer</li><li>Site Supervisor</li><li>Structural Engineer</li><li>Project Coordinator</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">B.E. Civil Engineering</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Civil Engineering Team')">Apply Now</button>
+        </div>
       </div>
 
-      <div class="job-card" onclick="openJobModal('rs')">
-        <div class="job-card-strip"></div>
-        <div class="job-card-body">
-          <span class="job-dept-tag">Rental Sourcing</span>
-          <h3 class="job-title">Rental Sourcing Executive</h3>
-          <div class="job-meta">
-            <span class="job-badge green">&#128205; Tamil Nadu</span>
-            <span class="job-badge orange">2+ Vacancies</span>
-            <span class="job-badge green">&#127891; Freshers Welcome</span>
-          </div>
-          <div class="job-meta">
-            <span class="job-badge">Tamil</span>
-            <span class="job-badge">English</span>
-            <span class="job-badge">Hindi</span>
-          </div>
-          <p class="job-summary">Identify and evaluate rental land and assets, engage landowners, and coordinate lease agreements for IGO Group projects.</p>
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/factory-ops.webp" alt="Farmers Factory" loading="lazy">
+          <span class="opening-emoji-badge">&#127981;</span>
+          <span class="opening-vacancy-badge">4 vacancies</span>
         </div>
-        <div class="job-card-footer">View Full Details &amp; Apply <span>&#8594;</span></div>
+        <div class="opening-body">
+          <h3>Farmers Factory</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Operations Executive</li><li>Production Staff</li><li>Packing Executive</li><li>Unskilled Labour</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Farmers Factory')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/logistics.webp" alt="Logistics Manager" loading="lazy">
+          <span class="opening-emoji-badge">&#128666;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
+        </div>
+        <div class="opening-body">
+          <h3>Logistics Manager</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Logistics Manager</li><li>Supply Chain Executive</li><li>Driver</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Logistics Manager')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/quality-control.webp" alt="Quality Control" loading="lazy">
+          <span class="opening-emoji-badge">&#9989;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
+        </div>
+        <div class="opening-body">
+          <h3>Quality Control</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>QC Manager</li><li>Quality Inspector</li><li>Lab Technician</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree / Science Background</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Quality Control')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/field-exec.webp" alt="Field Executive" loading="lazy">
+          <span class="opening-emoji-badge">&#127806;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
+        </div>
+        <div class="opening-body">
+          <h3>Field Executive</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Field Executive</li><li>Field Coordinator</li><li>Ground-Level Supervisor</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Field Executive')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/warehouse.webp" alt="Warehouse Incharge" loading="lazy">
+          <span class="opening-emoji-badge">&#128230;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
+        </div>
+        <div class="opening-body">
+          <h3>Warehouse Incharge</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Warehouse Incharge</li><li>Inventory Executive</li><li>Store Keeper</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Any Degree</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Warehouse Incharge')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="opening-card" data-reveal>
+        <div class="opening-media">
+          <img src="assets/img/careers/livestock.webp" alt="Livestock Manager" loading="lazy">
+          <span class="opening-emoji-badge">&#128004;</span>
+          <span class="opening-vacancy-badge">3 vacancies</span>
+        </div>
+        <div class="opening-body">
+          <h3>Livestock Manager</h3>
+          <div>
+            <div class="opening-label">Roles</div>
+            <ul class="opening-roles">
+              <li>Livestock Manager</li><li>Veterinary Assistant</li><li>Animal Husbandry Specialist</li>
+            </ul>
+          </div>
+          <div>
+            <div class="opening-label">Qualification</div>
+            <p class="opening-qual">Animal Husbandry / Bachelor of Veterinary Science</p>
+          </div>
+          <div>
+            <div class="opening-label">Languages Required</div>
+            <div class="opening-lang-tags"><span class="opening-lang-tag">Tamil</span><span class="opening-lang-tag">Telugu</span><span class="opening-lang-tag">Hindi</span><span class="opening-lang-tag">English</span></div>
+          </div>
+          <button class="btn btn-primary opening-apply-btn" onclick="selectDeptAndScroll('Livestock Manager')">Apply Now</button>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── Job Detail Modal ── -->
-<div id="job-detail-modal">
-  <div class="job-modal-box">
-    <div class="job-modal-header">
-      <div>
-        <div id="jm-dept" style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--brand-green,#2e7d32);margin-bottom:0.3rem;"></div>
-        <h2 id="jm-title" style="margin:0;font-size:1.25rem;line-height:1.3;"></h2>
-        <div id="jm-meta" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.65rem;"></div>
-      </div>
-      <button class="job-modal-close" onclick="closeJobModal()" aria-label="Back to Jobs">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Back to Jobs
-      </button>
-    </div>
-    <div class="job-modal-body">
-      <div id="jm-note" class="job-modal-note" style="display:none;margin-bottom:1rem;"></div>
-      <div class="job-modal-section">
-        <h4>What You&rsquo;ll Do</h4>
-        <ul id="jm-do"></ul>
-      </div>
-      <div class="job-modal-section">
-        <h4>What We Need</h4>
-        <ul id="jm-need"></ul>
-      </div>
-    </div>
-    <div class="job-modal-actions">
-      <button class="btn btn-outline" onclick="closeJobModal()">Close</button>
-      <button class="btn btn-primary" id="jm-apply-btn">Apply Now</button>
-    </div>
-  </div>
-</div>
-
-<script>
-var JOBS = {
-  bd: {
-    dept: 'Business Development',
-    title: 'Business Development Executive',
-    meta: ['Pan India', '10+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi / Telugu / Kannada'],
-    note: null,
-    do: [
-      'Identify and approach potential clients &mdash; farmers, institutions, and businesses &mdash; to present IGO Group\'s farm investment and agri-services offerings.',
-      'Generate leads through field visits, calls, and referrals; follow up consistently until closure.',
-      'Negotiate and close deals; maintain accurate CRM records and report the pipeline to the Head BD / NSM.',
-      'Build long-term client relationships and support cross-selling across IGO Group\'s business verticals.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are encouraged to apply.',
-      'Proficiency in at least 2 of the listed languages; multi-language candidates are strongly preferred.',
-      'Strong communication and persuasion skills; self-motivated with a target-driven attitude.',
-      'Willingness to travel and meet clients; smartphone with internet access is required.',
-      'Basic knowledge of agriculture or agribusiness is a plus but not mandatory.'
-    ],
-    apply: 'Business Development Executive'
-  },
-  ff: {
-    dept: 'Farmers Factory',
-    title: 'Farmers Factory Executive',
-    meta: ['Tamil Nadu', '4+ Vacancies', 'Freshers Welcome', 'Tamil / English / Telugu / Kannada'],
-    note: null,
-    do: [
-      'Procure fresh produce from partner farmers and manage day-to-day collection hub operations.',
-      'Inspect incoming produce for quality and grading standards; reject substandard stock and document findings.',
-      'Coordinate with logistics and supply chain teams to ensure timely dispatch from collection points.',
-      'Maintain accurate daily procurement records and submit reports to the team lead.'
-    ],
-    need: [
-      'Any degree or diploma &mdash; freshers are encouraged to apply.',
-      'Fluency in Tamil is essential; proficiency in Telugu or Kannada is an added advantage.',
-      'Comfortable working on-field and in produce collection hub environments.',
-      'Basic record-keeping, reporting, and data-entry skills.',
-      'Willingness to work in early-morning produce handling shifts when required.'
-    ],
-    apply: 'Farmers Factory Executive'
-  },
-  bb: {
-    dept: 'Buy-Back',
-    title: 'Buy-Back Executive',
-    meta: ['Tamil Nadu & Karnataka', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Kannada'],
-    note: null,
-    do: [
-      'Visit partner farmers to manage, renew, and explain buy-back agreements in clear terms.',
-      'Schedule and coordinate produce collection from farms; liaise with the logistics team.',
-      'Handle payment settlement documentation and coordinate approvals with the Finance team.',
-      'Build and maintain positive long-term relationships with farmers; resolve queries on-ground promptly.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome; prior agriculture or field sales experience is a plus.',
-      'Good communication skills in Tamil and Kannada; English is an added advantage.',
-      'Strong interpersonal skills and the ability to build trust with farming communities.',
-      'Willingness to travel to farm locations regularly; basic documentation and reporting ability.'
-    ],
-    apply: 'Buy-Back Executive'
-  },
-  'fe-hyd': {
-    dept: 'Field Executive',
-    title: 'Field Executive &mdash; Hyderabad',
-    meta: ['Hyderabad, Telangana', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
-    note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
-    do: [
-      'Conduct daily on-ground site visits, client meetings, and field assessments in Hyderabad and surrounding areas.',
-      'Collect field data, photographs, and observations; submit structured daily activity reports to the team lead.',
-      'Coordinate with internal teams (BD, Agri Ops, Engineering) to relay field findings and requirements.',
-      'Support local BD efforts &mdash; introduction visits, client follow-ups, and ground-level prospecting.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome; prior field work experience is an advantage.',
-      'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
-      'Physical fitness and willingness to travel daily across the assigned Hyderabad territory.',
-      'Smartphone with camera and internet access; basic reporting and data-entry skills.',
-      'Telugu and/or Hindi communication skills are preferred for this territory.'
-    ],
-    apply: 'Field Executive — Hyderabad'
-  },
-  'fe-kar': {
-    dept: 'Field Executive',
-    title: 'Field Executive &mdash; Karnataka',
-    meta: ['Karnataka', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
-    note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
-    do: [
-      'Conduct daily on-ground farm visits, client meetings, and site assessments across Karnataka.',
-      'Collect field data and submit structured daily activity and observation reports.',
-      'Coordinate with the Agri Ops, Buy-Back, and BD teams on ground-level needs and findings.',
-      'Support local client prospecting, follow-ups, and relationship management activities.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome.',
-      'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
-      'Fluency in Kannada is essential; Tamil or English is an added advantage.',
-      'Willingness for daily field travel; smartphone with camera and basic reporting ability.'
-    ],
-    apply: 'Field Executive — Karnataka'
-  },
-  'fe-mum': {
-    dept: 'Field Executive',
-    title: 'Field Executive &mdash; Mumbai',
-    meta: ['Mumbai, Maharashtra', '1 Vacancy', 'Freshers Welcome', 'Own Bike + Valid Licence (Mandatory)'],
-    note: 'Petrol reimbursed at <strong>&#8377;3 per kilometre</strong> for all official field travel.',
-    do: [
-      'Conduct daily on-ground site visits, client meetings, and project assessments in Mumbai and surrounding areas.',
-      'Collect field data, prepare structured visit notes, and submit daily reports.',
-      'Support IGO\'s BD and operational teams with local ground-level intelligence and client follow-ups.',
-      'Build and maintain a contact network with clients and prospects in the Mumbai territory.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome.',
-      'Own two-wheeler and valid driving licence &mdash; <strong>mandatory requirement</strong>.',
-      'Hindi and/or Marathi communication skills are preferred for this territory.',
-      'Good navigation skills, physical fitness, and willingness to travel daily.',
-      'Smartphone with camera and internet access; basic reporting and data-entry skills.'
-    ],
-    apply: 'Field Executive — Mumbai'
-  },
-  pur: {
-    dept: 'Purchase',
-    title: 'Purchase Executive',
-    meta: ['Chennai, Tamil Nadu', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi'],
-    note: null,
-    do: [
-      'Identify and coordinate with vendors for materials, equipment, and supplies required across IGO Group departments.',
-      'Raise and track purchase orders; follow up with vendors to ensure timely and correct delivery.',
-      'Negotiate pricing, payment terms, and delivery schedules; maintain up-to-date vendor records.',
-      'Coordinate with Finance for purchase payment approvals and settlement; track procurement costs and report variances to the Head of Purchase.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome; a background in commerce or business administration is preferred.',
-      'Good communication skills in Tamil, English, and Hindi.',
-      'Basic computer proficiency &mdash; MS Excel and email are essential.',
-      'Attention to detail, multitasking ability, and strong organizational skills.',
-      'Prior purchase or vendor coordination experience is an advantage but not required.'
-    ],
-    apply: 'Purchase Executive'
-  },
-  rs: {
-    dept: 'Rental Sourcing',
-    title: 'Rental Sourcing Executive',
-    meta: ['Tamil Nadu', '2+ Vacancies', 'Freshers Welcome', 'Tamil / English / Hindi'],
-    note: null,
-    do: [
-      'Identify agricultural land and assets available for rent or lease in target areas across Tamil Nadu.',
-      'Approach and engage landowners; explain IGO\'s rental terms, build interest, and negotiate initial terms.',
-      'Evaluate property suitability for IGO\'s farm and project requirements; document findings.',
-      'Coordinate lease documentation with legal and finance teams; maintain the sourcing pipeline tracker and report progress.'
-    ],
-    need: [
-      'Any degree &mdash; freshers are welcome; a background in real estate or agriculture is an advantage.',
-      'Good communication and negotiation skills in Tamil, English, and Hindi.',
-      'Strong interpersonal skills; ability to engage and convince landowners confidently.',
-      'Willingness to travel for field-level land visits and landlord meetings.',
-      'Basic computer skills for pipeline tracking and documentation management.'
-    ],
-    apply: 'Rental Sourcing Executive'
-  }
-};
-
-function openJobModal(id) {
-  var job = JOBS[id];
-  if (!job) return;
-  document.getElementById('jm-dept').textContent = job.dept;
-  document.getElementById('jm-title').innerHTML = job.title;
-
-  var metaEl = document.getElementById('jm-meta');
-  metaEl.innerHTML = '';
-  job.meta.forEach(function(m) {
-    var s = document.createElement('span');
-    s.className = 'job-badge';
-    s.textContent = m;
-    metaEl.appendChild(s);
-  });
-
-  var noteEl = document.getElementById('jm-note');
-  if (job.note) {
-    noteEl.innerHTML = job.note;
-    noteEl.style.display = 'block';
-  } else {
-    noteEl.style.display = 'none';
-  }
-
-  var doEl = document.getElementById('jm-do');
-  doEl.innerHTML = '';
-  job.do.forEach(function(d) {
-    var li = document.createElement('li');
-    li.innerHTML = d;
-    doEl.appendChild(li);
-  });
-
-  var needEl = document.getElementById('jm-need');
-  needEl.innerHTML = '';
-  job.need.forEach(function(n) {
-    var li = document.createElement('li');
-    li.innerHTML = n;
-    needEl.appendChild(li);
-  });
-
-  document.getElementById('jm-apply-btn').onclick = function() {
-    closeJobModal();
-    setTimeout(function() { openApplyModal(job.apply); }, 180);
-  };
-
-  var modal = document.getElementById('job-detail-modal');
-  void modal.offsetWidth;
-  modal.classList.add('active');
-  document.body.style.overflow = '';
-}
-
-function closeJobModal() {
-  document.getElementById('job-detail-modal').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('job-detail-modal').addEventListener('click', function(e) {
-  if (e.target === this) closeJobModal();
-});
-</script>
-
-<section style="background: #fff; padding: 4rem 0 0;">
+<!-- ══════════════════ HOW TO APPLY ══════════════════ -->
+<section class="content-section" style="background: var(--soft-gray);">
   <div class="container">
     <div class="section-header text-center" data-reveal>
-      <span class="eyebrow">LIFE AT IGO</span>
-      <h2>Where Innovation Meets Purpose</h2>
+      <span class="eyebrow">SIMPLE PROCESS</span>
+      <h2>How to Apply</h2>
     </div>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem;">
-    <div style="overflow: hidden;">
-      <img src="assets/img/office/office-open-plan.jpg" alt="IGO Groups corporate office floor" style="width:100%; height:440px; object-fit:cover; object-position:center top; display:block;">
-    </div>
-    <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
-      <div data-reveal>
-        <span class="eyebrow">OUR CULTURE</span>
-        <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Discover Life at IGO Groups</h3>
-        <p style="color: var(--muted); line-height: 1.85;">At IGO Groups, we are united by a shared passion for transforming Indian agriculture. Our dedicated team works collaboratively across 18 departments, driven by a single mission &mdash; to empower farmers and bring innovation to every acre of India. We foster a culture of excellence, openness, and respect that gives every team member the platform to grow and create real impact.</p>
+    <div class="process-grid">
+      <div class="process-step" data-reveal>
+        <div class="process-num">01</div>
+        <h4>Send Your CV</h4>
+        <p>Email your updated resume to our careers team with the department name in the subject line.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="process-num">02</div>
+        <h4>Interview Round</h4>
+        <p>Shortlisted candidates are contacted for a telephonic or in-person interview with our department heads.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="process-num">03</div>
+        <h4>Join the IGO Family</h4>
+        <p>Selected candidates receive an offer letter and onboarding kit to kickstart their IGO journey.</p>
       </div>
     </div>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr;">
-    <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
-      <div data-reveal>
-        <span class="eyebrow">GROWTH &amp; PURPOSE</span>
-        <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Your Growth, Our Commitment</h3>
-        <p style="color: var(--muted); line-height: 1.85;">IGO Groups invests in every team member&rsquo;s professional and personal growth. We nurture talent through continuous learning, leadership development, and real hands-on experience in agricultural transformation. Our environment rewards fresh thinking and empowers those who take initiative to drive meaningful change alongside India&rsquo;s most driven agri-professionals.</p>
-      </div>
-    </div>
-    <div style="overflow: hidden;">
-      <img src="assets/img/office/office-agri-team.jpg" alt="IGO Agri Team at work" style="width:100%; height:440px; object-fit:cover; display:block;">
-    </div>
-  </div>
-
-  <div style="display: grid; grid-template-columns: 1fr 1fr;">
-    <div style="overflow: hidden;">
-      <img src="assets/img/office/office-meeting-brick.jpg" alt="IGO Groups team collaboration session" style="width:100%; height:440px; object-fit:cover; display:block;">
-    </div>
-    <div style="display:flex; align-items:center; padding: 3.5rem 4rem; background: var(--soft-gray);">
-      <div data-reveal>
-        <span class="eyebrow">TEAM SPIRIT</span>
-        <h3 style="font-size:1.6rem; margin: 0.8rem 0 1.2rem; color: var(--heading);">Celebrate the Moments That Matter</h3>
-        <p style="color: var(--muted); line-height: 1.85;">At IGO, every achievement is celebrated &mdash; from major milestones to everyday wins. We build bonds that go beyond the workplace, creating an environment where people take pride in the IGO identity, their colleagues, and the mission they share. Our teams are not just coworkers &mdash; they are changemakers reshaping the future of Indian agriculture.</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 3px;">
-    <img src="assets/img/office/office-exec-smiling.jpg" alt="IGO senior executive" style="width:100%; height:260px; object-fit:cover; object-position:center top; display:block;">
-    <img src="assets/img/office/office-exec-working.jpg" alt="IGO executive focused at work" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-agri-sign.jpg" alt="IGO Agri Operations area" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-igo-uniforms.jpg" alt="IGO Agri branded team in uniform" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-women-focus.jpg" alt="IGO women development team" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-team-closeup.jpg" alt="IGO team at blue desks" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-young-pro.jpg" alt="IGO young professional" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-manager.jpg" alt="IGO office manager" style="width:100%; height:260px; object-fit:cover; display:block;">
-    <img src="assets/img/office/office-team-branded.jpg" alt="IGO Agri TechFarms team" style="width:100%; height:260px; object-fit:cover; display:block;">
   </div>
 </section>
 
-<div class="modal-overlay" id="applyModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <div>
-        <h2 class="modal-title">Apply Now</h2>
-        <div class="modal-subtitle" id="apply-position-label"></div>
-      </div>
-      <button type="button" class="modal-close" onclick="closeApplyModal()" aria-label="Back to Job">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Back
-      </button>
+<!-- ══════════════════ APPLICATION FORM ══════════════════ -->
+<section class="content-section" id="apply-section">
+  <div class="container" style="max-width: 720px;">
+    <div class="section-header text-center" data-reveal>
+      <span class="eyebrow">APPLY TODAY</span>
+      <h2>Ready to Join IGO Agritech Farms?</h2>
+      <p style="color: var(--muted);">Fill the form below &mdash; our HR team responds within 48 hours.</p>
     </div>
-    <div class="modal-body">
-      <form id="applyForm" onsubmit="submitApplyForm(event)" style="display:flex;flex-direction:column;gap:0.85rem;">
-        <input type="hidden" id="apply-position">
-        <input type="text" id="apply-name" placeholder="Your Full Name" required style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
-        <input type="email" id="apply-email" placeholder="Your Email" required style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
-        <input type="tel" id="apply-phone" placeholder="Your Phone Number" required style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
-        <input type="text" id="apply-experience" placeholder="Years of Experience (0 for Fresher)" style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);">
-        <textarea id="apply-message" rows="5" placeholder="Anything you'd like to add? (optional)" style="width:100%;padding:0.85rem 1rem;border-radius:8px;border:1px solid var(--border,#e5e7eb);font-size:0.95rem;font-family:inherit;background:var(--card-bg,#fff);color:var(--heading,#111827);resize:vertical;"></textarea>
-        <button type="submit" id="apply-btn" class="btn btn-primary" style="width:100%;padding:0.9rem;font-size:1rem;">Submit Application</button>
-        <div id="apply-status" style="display:none;padding:0.85rem 1rem;border-radius:8px;font-size:0.9rem;"></div>
-      </form>
-    </div>
+
+    <form id="applyForm" class="contact-form" onsubmit="submitApplyForm(event)" style="margin-top: 2.5rem;">
+      <input type="text" id="apply-name" placeholder="Full Name *" required>
+      <input type="email" id="apply-email" placeholder="Email *" required>
+      <input type="tel" id="apply-phone" placeholder="Phone">
+      <select id="apply-dept" required>
+        <option value="">Select Department *</option>
+        <option>Farm Manager</option>
+        <option>Mushroom Farming Team</option>
+        <option>Hydroponics Team</option>
+        <option>Business Development Team</option>
+        <option>Digital Marketing Team</option>
+        <option>Agriculture Engineering Team</option>
+        <option>Civil Engineering Team</option>
+        <option>Farmers Factory</option>
+        <option>Logistics Manager</option>
+        <option>Quality Control</option>
+        <option>Field Executive</option>
+        <option>Warehouse Incharge</option>
+        <option>Livestock Manager</option>
+      </select>
+      <input type="text" id="apply-position-input" placeholder="Position Applying For *" required>
+      <textarea id="apply-message" rows="5" placeholder="Cover Note / Experience"></textarea>
+      <button type="submit" id="apply-btn" class="btn btn-primary">Submit Application</button>
+      <div id="apply-status" style="display:none; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem;"></div>
+    </form>
+    <p style="text-align:center; color: var(--muted-light); font-size: 0.82rem; margin-top: 1rem;">Your details are sent directly to our HR team at IGO Agritech Farms.</p>
   </div>
-</div>
+</section>
 
 <script>
-function openApplyModal(position) {
-  document.getElementById('apply-position').value = position;
-  document.getElementById('apply-position-label').textContent = position;
-  var status = document.getElementById('apply-status');
-  status.style.display = 'none';
-  document.getElementById('applyForm').reset();
-  document.getElementById('apply-position').value = position;
-  var overlay = document.getElementById('applyModal');
-  void overlay.offsetWidth;
-  overlay.classList.add('active');
-  document.body.style.overflow = '';
+function selectDeptAndScroll(dept) {
+  var sel = document.getElementById('apply-dept');
+  var posInput = document.getElementById('apply-position-input');
+  if (sel) sel.value = dept;
+  if (posInput) posInput.value = dept;
+  var target = document.getElementById('apply-section');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
-function closeApplyModal() {
-  var overlay = document.getElementById('applyModal');
-  overlay.classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('applyModal').addEventListener('click', function (e) {
-  if (e.target === this) closeApplyModal();
-});
 
 function submitApplyForm(e) {
   e.preventDefault();
@@ -714,14 +707,14 @@ function submitApplyForm(e) {
   btn.disabled = true;
 
   var data = {
-    position:   document.getElementById('apply-position').value,
     name:       document.getElementById('apply-name').value,
     email:      document.getElementById('apply-email').value,
     phone:      document.getElementById('apply-phone').value,
-    experience: document.getElementById('apply-experience').value,
+    department: document.getElementById('apply-dept').value,
+    position:   document.getElementById('apply-position-input').value,
     message:    document.getElementById('apply-message').value,
     _replyto:   document.getElementById('apply-email').value,
-    _subject:   'IGO Groups Job Application – ' + document.getElementById('apply-position').value
+    _subject:   'IGO Agritech Farms Job Application – ' + document.getElementById('apply-position-input').value
   };
 
   fetch('PASTE_YOUR_APPS_SCRIPT_URL_HERE', {
@@ -734,7 +727,7 @@ function submitApplyForm(e) {
       status.style.background = '#e6f9ee';
       status.style.color = '#1a6b3a';
       status.style.border = '1px solid #a8e6c3';
-      status.textContent = '✓ Application sent! Our HR team will review it and get back to you.';
+      status.textContent = '✓ Application sent! Our HR team will review it and get back to you within 48 hours.';
       document.getElementById('applyForm').reset();
     } else {
       throw new Error('failed');
@@ -759,7 +752,7 @@ function submitApplyForm(e) {
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -802,6 +795,10 @@ function submitApplyForm(e) {
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 </body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                            
+</html>

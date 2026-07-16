@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services | IGO Groups</title>
-<meta name="description" content="Twelve service lines spanning agri engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision agritech and green energy." />
+<meta name="description" content="Twelve service lines spanning farm engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision farming-tech and green energy." />
 <link rel="canonical" href="https://www.igogroups.com/services.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -16,19 +16,19 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="IGO Groups" />
 <meta property="og:title" content="Services | IGO Groups" />
-<meta property="og:description" content="Twelve service lines spanning agri engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision agritech and green energy." />
+<meta property="og:description" content="Twelve service lines spanning farm engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision farming-tech and green energy." />
 <meta property="og:url" content="https://www.igogroups.com/services.html" />
 <meta property="og:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Services | IGO Groups" />
-<meta name="twitter:description" content="Twelve service lines spanning agri engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision agritech and green energy." />
+<meta name="twitter:description" content="Twelve service lines spanning farm engineering, crop inputs, organic retail, fintech, trade, marketplace, nursery, precision farming-tech and green energy." />
 <meta name="twitter:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 </head>
 <body>
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -140,7 +140,7 @@
       <div class="card service-card brand-card" style="cursor:pointer;" onclick="window.location.href='service-detail.html?id=land-investment'" data-reveal>
         <img src="assets/img/services/land-leveling.webp" alt="Land &amp; Estate Investment" class="brand-card-img">
         <h3>Land &amp; Estate Investment</h3>
-        <p>Verified agricultural land, plantations and managed farmland for local and NRI investors.</p>
+        <p>Verified farmland, plantations and managed farmland for local and NRI investors.</p>
         <span class="service-brand">Farm Land Estates</span>
       </div>
 
@@ -168,7 +168,7 @@
       <div class="card service-card brand-card" style="cursor:pointer;" onclick="window.location.href='service-detail.html?id=plant-nursery'" data-reveal>
         <img src="assets/img/services/vertical-farming-setup.webp" alt="Plant Nursery &amp; Propagation" class="brand-card-img">
         <h3>Plant Nursery &amp; Propagation</h3>
-        <p>Premium indoor, outdoor and agricultural plants, saplings and organic seedlings.</p>
+        <p>Premium indoor, outdoor and farm plants, saplings and organic seedlings.</p>
         <span class="service-brand">IGO Nursery</span>
       </div>
 
@@ -248,7 +248,7 @@
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -291,6 +291,10 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 </body>
 </html>

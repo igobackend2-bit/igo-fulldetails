@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Products | IGO Groups</title>
-<meta name="description" content="Premium organic agricultural inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
+<meta name="description" content="Premium organic farming inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
 <link rel="canonical" href="https://www.igogroups.com/products.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="IGO Groups" />
 <meta property="og:title" content="Products | IGO Groups" />
-<meta property="og:description" content="Premium organic agricultural inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
+<meta property="og:description" content="Premium organic farming inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
 <meta property="og:url" content="https://www.igogroups.com/products.html" />
 <meta property="og:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Products | IGO Groups" />
-<meta name="twitter:description" content="Premium organic agricultural inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
+<meta name="twitter:description" content="Premium organic farming inputs, exotic seeds, and fresh harvested produce from IGO Groups." />
 <meta name="twitter:image" content="https://www.igogroups.com/assets/img/og-image.png" />
 
 
@@ -30,7 +30,7 @@
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -111,7 +111,7 @@
   <div class="container">
     <span class="eyebrow">WHAT WE OFFER</span>
     <h1>Products</h1>
-    <p>Premium organic agricultural inputs, exotic seeds, and fresh harvested produce.</p>
+    <p>Premium organic farming inputs, exotic seeds, and fresh harvested produce.</p>
   </div>
 </section>
 
@@ -212,7 +212,7 @@
             <div class="subcat-card"><h4>Dosing &amp; Fertigation</h4><span class="subcat-count">1 Product</span><p>Automated fertilizer dosing and pH/EC control systems for repeatable crop performance.</p><ul class="subcat-products" style="margin:0.5rem 0 0 1rem;padding:0;font-size:0.82rem;line-height:1.7;color:inherit;"><li>IGO FertiMix Classic (3-Channel)</li></ul></div>
             <div class="subcat-card"><h4>Environmental Controllers</h4><span class="subcat-count">1 Product</span><p>Centralized IGO-Link controllers for automated farm management via IoT and mobile platforms.</p><ul class="subcat-products" style="margin:0.5rem 0 0 1rem;padding:0;font-size:0.82rem;line-height:1.7;color:inherit;"><li>IGO-Link SmartHub</li></ul></div>
             <div class="subcat-card"><h4>Smart Actuators &amp; Motors</h4><span class="subcat-count">1 Product</span><p>Heavy-duty actuators and motors for automated vent and shade control in complex structures.</p><ul class="subcat-products" style="margin:0.5rem 0 0 1rem;padding:0;font-size:0.82rem;line-height:1.7;color:inherit;"><li>Precision Vent Actuator</li></ul></div>
-            <div class="subcat-card"><h4>Electrical Systems</h4><span class="subcat-count">1 Product</span><p>Control panels, VFDs, and power management systems designed for harsh agricultural environments.</p><ul class="subcat-products" style="margin:0.5rem 0 0 1rem;padding:0;font-size:0.82rem;line-height:1.7;color:inherit;"><li>Pump VFD Control Panel</li></ul></div>
+            <div class="subcat-card"><h4>Electrical Systems</h4><span class="subcat-count">1 Product</span><p>Control panels, VFDs, and power management systems designed for harsh farming environments.</p><ul class="subcat-products" style="margin:0.5rem 0 0 1rem;padding:0;font-size:0.82rem;line-height:1.7;color:inherit;"><li>Pump VFD Control Panel</li></ul></div>
           </div>
         </div>
 
@@ -312,7 +312,7 @@
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -355,7 +355,11 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 <script>
   (function(){
     var tabs = document.querySelectorAll('.sector-tab');

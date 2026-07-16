@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.igogroups.com/faqs.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
@@ -30,7 +30,7 @@
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -142,7 +142,7 @@
     </div>
     <div class="card" data-reveal style="margin-bottom:1rem;">
       <h3>How many brands does IGO Groups operate?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">IGO Groups operates 26 brands spanning agritech, farm engineering, retail, fintech, education, and sustainability sectors. You can view all brands on our <a href="brands.html">Business Divisions</a> page.</p>
+      <p style="margin-top:0.5rem; color:var(--muted);">IGO Groups operates 26 brands spanning farming-tech, farm engineering, retail, fintech, education, and sustainability sectors. You can view all brands on our <a href="brands.html">Business Divisions</a> page.</p>
     </div>
     <div class="card" data-reveal style="margin-bottom:1rem;">
       <h3>How can I invest in IGO managed farmland?</h3>
@@ -165,7 +165,7 @@
       <p style="margin-top:0.5rem; color:var(--muted);">Our head office is open Monday to Saturday, 10:00 AM to 7:30 PM IST. We are closed on Sundays and public holidays.</p>
     </div>
     <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Does IGO export agricultural products internationally?</h3>
+      <h3>Does IGO export farm products internationally?</h3>
       <p style="margin-top:0.5rem; color:var(--muted);">Yes. IGO Exports & Imports handles international trade of premium Indian farm produce. Our upcoming brand India Green Organics will focus specifically on certified organic exports to EU and USA markets.</p>
     </div>
     <div class="card" data-reveal style="margin-bottom:1rem;">
@@ -186,7 +186,7 @@
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -229,6 +229,10 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 </body>
 </html>

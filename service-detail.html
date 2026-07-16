@@ -7,7 +7,7 @@
 <meta name="description" content="Detailed information about IGO Groups service lines." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://www.igogroups.com/service-detail.html" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -51,7 +51,7 @@
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    if (t !== 'light') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -186,7 +186,7 @@
         <div class="footer-logo">
     <img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px; width:auto; object-fit:contain; display:block; margin-bottom: 12px;">
   </div>
-        <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+        <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -229,14 +229,18 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 <script>
 var SERVICES = {
   'agri-engineering': {
     title: 'Agri Engineering & Consulting',
     brand: 'IGO Agritech Farms',
     img: 'assets/img/services/farm-planning.webp',
-    desc: 'Turnkey design, build, and annual maintenance for advanced agricultural setups — polyhouse, hydroponics, vertical farming, aquaculture, mushroom cultivation, floriculture, landscaping and rooftop gardens.',
+    desc: 'Turnkey design, build, and annual maintenance for advanced farming setups — polyhouse, hydroponics, vertical farming, aquaculture, mushroom cultivation, floriculture, landscaping and rooftop gardens.',
     highlights: ['Polyhouse Construction','Hydroponics Setup','Vertical Farming','Goat Farming','Aquaculture','Mushroom Cultivation','Floriculture','Rooftop Gardens'],
     points: [
       'End-to-end project delivery from site survey to first harvest',
@@ -308,7 +312,7 @@ var SERVICES = {
     title: 'Land & Estate Investment',
     brand: 'Farm Land Estates',
     img: 'assets/img/services/land-leveling.webp',
-    desc: 'Verified agricultural land, plantations, and fully managed farmland for local and NRI investors seeking stable, high-return agricultural assets.',
+    desc: 'Verified farmland, plantations, and fully managed farmland for local and NRI investors seeking stable, high-return agricultural assets.',
     highlights: ['Legal Verification','Managed Farmland','High-ROI Crops','NRI Investment Desk','Transparent Pricing'],
     points: [
       'Verified agricultural land with clear titles and complete legal documentation',
@@ -380,17 +384,17 @@ var SERVICES = {
     title: 'Plant Nursery & Propagation',
     brand: 'IGO Nursery',
     img: 'assets/img/services/vertical-farming-setup.webp',
-    desc: 'Premium indoor, outdoor, and agricultural plants, saplings, and certified organic seedlings — with Pan-India doorstep delivery in humidity-safe packaging.',
+    desc: 'Premium indoor, outdoor, and farm plants, saplings, and certified organic seedlings — with Pan-India doorstep delivery in humidity-safe packaging.',
     highlights: ['Bulk Sapling Orders','Exotic Plant Varieties','Certified Organic Seeds','Pan-India Delivery','Landscaping Plants'],
     points: [
-      'Extensive range of indoor, outdoor, and agricultural plants under one roof',
+      'Extensive range of indoor, outdoor, and farm plants under one roof',
       'Bulk sapling orders fulfilled for afforestation, landscaping, and farm projects',
       'Exotic and rare plant varieties for collectors, boutique farms, and resorts',
       'Certified organic seeds for kitchen gardens and hydroponic growers',
       'Pan-India doorstep delivery with humidity-safe, transit-proof packaging',
       'Expert plant-care advice included with every order'
     ],
-    sidebar: ['Indoor & Outdoor Decorative Plants','Agricultural Saplings (Bulk)','Exotic & Rare Plant Varieties','Organic Vegetable Seedlings','Medicinal & Herb Plants','Hydroponic Starter Kits','Landscaping Project Supply'],
+    sidebar: ['Indoor & Outdoor Decorative Plants','Farm Saplings (Bulk)','Exotic & Rare Plant Varieties','Organic Vegetable Seedlings','Medicinal & Herb Plants','Hydroponic Starter Kits','Landscaping Project Supply'],
     btnText: 'Shop Nursery',
     url: 'https://igonursery.com/'
   },

@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title id="pg-title">Project Detail | IGO Groups</title>
-<meta name="description" content="Detailed project information from IGO Groups agri-engineering division." />
+<meta name="description" content="Detailed project information from IGO Groups farm-engineering division." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://www.igogroups.com/project-detail.html" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -50,7 +50,7 @@
 </head>
 <body>
 <script>
-  (function(){var t=localStorage.getItem('igo-theme');if(t==='dark')document.documentElement.classList.add('dark');})();
+  (function(){var t=localStorage.getItem('igo-theme');if(t!=='light')document.documentElement.classList.add('dark');})();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
   <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
@@ -162,7 +162,7 @@
   <div class="container footer-grid">
     <div class="footer-col">
       <div class="footer-logo"><img src="assets/img/igo-logo.jpg" alt="IGO Group" class="logo-img" style="height:44px;width:auto;object-fit:contain;display:block;margin-bottom:12px;"></div>
-      <p>A diversified agritech &amp; agribusiness group connecting farms, food, fintech and technology across India.</p>
+      <p>A diversified farming-tech conglomerate connecting farms, food, fintech and technology across India.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/igocropcare/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=100068904620757" target="_blank" rel="noopener">Facebook</a>
@@ -196,7 +196,11 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cinematic.js"></script>
 <script>
 var PROJECTS = {
   'polyhouse': {
