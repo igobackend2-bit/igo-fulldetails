@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title>IGO Groups — India's Premier Farming-Tech Conglomerate</title>
 <meta name="description" content="IGO Groups is India's premier farming-tech conglomerate — 26 brands, 18 departments, 2000+ staff spanning farm engineering, organic retail, fintech, trade, and technology." />
 <link rel="canonical" href="https://igogroups.in/" />
@@ -62,7 +63,7 @@
   align-items: center;
   overflow: hidden;
   /* Dark Forest Hero — same as original dark header style */
-  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-2) 60%, #0a3d1f 100%);
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-2) 60%, #0b3d13 100%);
 }
 
 .hero-bg-video {
@@ -71,32 +72,30 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  object-position: center 48%;
   animation: heroVideoIn 1.6s ease-out 0.1s both, heroKenBurns 26s ease-in-out 1.7s infinite alternate;
-  /* Promote to its own compositor layer so decoding video frames never force
-     a repaint of the mesh/grid/text layers stacked above it. */
   transform: translateZ(0);
   will-change: transform;
 }
 @keyframes heroVideoIn {
   from { opacity: 0; transform: translateZ(0) scale(1.04); }
-  to   { opacity: 0.72; transform: translateZ(0) scale(1); }
+  to   { opacity: 1; transform: translateZ(0) scale(1); }
 }
 @keyframes heroKenBurns {
   from { transform: translateZ(0) scale(1); }
   to   { transform: translateZ(0) scale(1.09); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg-video { animation: none; opacity: 0.72; }
+  .hero-bg-video { animation: none; opacity: 1; }
 }
 @media (max-width: 700px) {
-  .hero-bg-video { display: none; }
+  .hero-bg-video { object-position: 58% center; }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(7,18,12,0.62) 0%, rgba(14,79,40,0.32) 50%, rgba(7,18,12,0.6) 100%);
+  background: linear-gradient(90deg, rgba(4,20,10,0.88) 0%, rgba(7,35,17,0.76) 40%, rgba(7,35,17,0.34) 72%, rgba(4,20,10,0.46) 100%), linear-gradient(0deg, rgba(4,20,10,0.46), transparent 45%);
 }
 
 .hero-grid-pattern {
@@ -124,12 +123,12 @@
 }
 .hero-mesh-blob.b1 {
   width: 420px; height: 420px; top: -8%; left: 4%;
-  background: radial-gradient(circle, rgba(46,184,92,0.55), transparent 70%);
+  background: radial-gradient(circle, rgba(71,132,39,0.55), transparent 70%);
   animation: meshDrift1 22s ease-in-out infinite;
 }
 .hero-mesh-blob.b2 {
   width: 380px; height: 380px; bottom: -12%; right: 8%;
-  background: radial-gradient(circle, rgba(232,160,32,0.42), transparent 70%);
+  background: radial-gradient(circle, rgba(71,132,39,0.42), transparent 70%);
   animation: meshDrift2 26s ease-in-out infinite;
 }
 .hero-mesh-blob.b3 {
@@ -183,8 +182,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4FD480;
-  box-shadow: 0 0 12px #4FD480;
+  background: #69a83b;
+  box-shadow: 0 0 12px #69a83b;
   animation: pulseDot 2s ease-in-out infinite;
 }
 
@@ -204,7 +203,7 @@
 }
 
 .hero-headline .gold-text {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light), #d4860e);
+  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--forest-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -238,14 +237,14 @@
   border-radius: 99px;
   text-decoration: none;
   transition: transform 0.35s var(--spring), box-shadow 0.35s var(--spring), background 0.25s;
-  box-shadow: 0 8px 24px rgba(46,184,92,0.35);
+  box-shadow: 0 8px 24px rgba(71,132,39,0.35);
   will-change: transform;
 }
 
 .btn-hero-primary:hover {
   background: var(--green-light);
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(46,184,92,0.45);
+  box-shadow: 0 16px 40px rgba(71,132,39,0.45);
   color: #fff;
 }
 .btn-hero-primary:active, .btn-hero-outline:active { transform: scale(0.96) !important; transition-duration: 0.12s; }
@@ -371,7 +370,7 @@
 .scroll-line {
   width: 1px;
   height: 48px;
-  background: linear-gradient(to bottom, rgba(46,184,92,0.8), transparent);
+  background: linear-gradient(to bottom, rgba(71,132,39,0.8), transparent);
   animation: scrollLine 2s ease-in-out infinite;
 }
 
@@ -577,7 +576,7 @@
 /* ── SECTOR BENTO ─────────────────────────────────────────────── */
 .sectors-section {
   padding: 100px 0;
-  background: var(--light);
+  background: var(--soft-gray);
 }
 
 .section-eyebrow {
@@ -638,7 +637,7 @@
 .bento-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg), var(--glass-inset);
-  border-color: rgba(46,184,92,0.3);
+  border-color: rgba(71,132,39,0.3);
 }
 
 .bento-card.span-2 { grid-column: span 2; }
@@ -738,7 +737,7 @@
 
 .brand-showcase-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(46,184,92,0.3);
+  border-color: rgba(71,132,39,0.3);
   box-shadow: var(--shadow-md);
 }
 
@@ -768,9 +767,9 @@
   position: absolute; top: 10px; right: 10px;
   font-size: 0.62rem; font-weight: 700;
   padding: 4px 10px; border-radius: 99px;
-  background: rgba(46,184,92,0.15);
+  background: rgba(71,132,39,0.15);
   color: var(--green);
-  border: 1px solid rgba(46,184,92,0.3);
+  border: 1px solid rgba(71,132,39,0.3);
 }
 
 .brand-card-body {
@@ -807,7 +806,7 @@
 /* ── BIG STATS ────────────────────────────────────────────────── */
 .big-stats {
   padding: 100px 0;
-  background: var(--forest);
+  background: var(--cream);
   position: relative;
   overflow: hidden;
 }
@@ -815,7 +814,7 @@
 .big-stats::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(46,184,92,0.14), transparent 70%);
+  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(71,132,39,0.14), transparent 70%);
   pointer-events: none;
 }
 
@@ -829,10 +828,10 @@
 
 .stat-big-card {
   flex: 0 0 calc(33.333% - 14px);
-  background: rgba(255,255,255,0.045);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(11,61,19,0.035);
+  border: 1px solid rgba(11,61,19,0.1);
   border-top: 3px solid var(--gold-light);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow: var(--shadow-sm);
   padding: 44px 28px 40px;
   border-radius: var(--radius-lg);
   text-align: center;
@@ -844,15 +843,15 @@
 .stat-big-card::after {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(circle at 50% -10%, rgba(255,200,60,0.08), transparent 65%);
+  background: radial-gradient(circle at 50% -10%, rgba(71,132,39,0.08), transparent 65%);
   opacity: 0;
   transition: opacity 0.35s;
   pointer-events: none;
 }
 .stat-big-card:hover {
   transform: translateY(-7px);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 24px 56px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,200,60,0.15), inset 0 1px 0 rgba(255,255,255,0.14);
+  background: rgba(11,61,19,0.05);
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(71,132,39,0.15);
 }
 .stat-big-card:hover::after { opacity: 1; }
 a.stat-big-card { cursor: pointer; }
@@ -866,11 +865,11 @@ a.hero-stat-chip { cursor: pointer; }
   display: block;
   line-height: 1;
   margin-bottom: 12px;
-  text-shadow: 0 0 40px rgba(255,200,60,0.3);
+  text-shadow: 0 0 40px rgba(71,132,39,0.3);
   transition: text-shadow 0.35s;
 }
 .stat-big-card:hover .stat-big-num {
-  text-shadow: 0 0 60px rgba(255,200,60,0.65);
+  text-shadow: 0 0 60px rgba(71,132,39,0.65);
 }
 
 .stat-big-label {
@@ -878,13 +877,13 @@ a.hero-stat-chip { cursor: pointer; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.6);
+  color: var(--muted);
   margin-bottom: 4px;
 }
 
 .stat-big-sub {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.3);
+  color: var(--muted-light);
   margin-top: 6px;
   line-height: 1.45;
 }
@@ -892,7 +891,7 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── DEPARTMENTS ──────────────────────────────────────────────── */
 .depts-strip {
   padding: 80px 0;
-  background: var(--soft-gray);
+  background: var(--cream);
   border-top: 1px solid var(--border);
 }
 
@@ -917,8 +916,8 @@ a.hero-stat-chip { cursor: pointer; }
 }
 
 .dept-pill:hover {
-  background: rgba(46,184,92,0.06);
-  border-color: rgba(46,184,92,0.3);
+  background: rgba(71,132,39,0.06);
+  border-color: rgba(71,132,39,0.3);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -930,7 +929,7 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── LEADERSHIP ───────────────────────────────────────────────── */
 .leadership-teaser {
   padding: 80px 0;
-  background: var(--light);
+  background: var(--soft-gray);
   border-top: 1px solid var(--border);
 }
 
@@ -962,7 +961,7 @@ a.hero-stat-chip { cursor: pointer; }
 .leader-card:hover::after { opacity: 1; }
 
 .leader-card:hover {
-  border-color: rgba(46,184,92,0.3);
+  border-color: rgba(71,132,39,0.3);
   box-shadow: var(--shadow-md), var(--glass-inset);
   transform: translateY(-4px);
 }
@@ -979,7 +978,7 @@ a.hero-stat-chip { cursor: pointer; }
   color: #fff;
   margin: 0 auto 14px;
   font-family: 'Sora', sans-serif;
-  border: 2px solid rgba(46,184,92,0.2);
+  border: 2px solid rgba(71,132,39,0.2);
 }
 
 .leader-name {
@@ -1028,12 +1027,22 @@ a.hero-stat-chip { cursor: pointer; }
 .testi-card-new:hover::after { opacity: 1; }
 
 .testi-card-new:hover {
-  border-color: rgba(46,184,92,0.25);
+  border-color: rgba(71,132,39,0.25);
   box-shadow: var(--shadow-md), var(--glass-inset);
   transform: translateY(-4px);
 }
 
 .testi-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
+
+.testi-quote-mark {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2.6rem;
+  line-height: 0.6;
+  color: var(--green);
+  opacity: 0.35;
+  margin-bottom: 6px;
+}
 
 .testi-quote {
   font-size: 0.93rem;
@@ -1061,7 +1070,7 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── CTA FINAL ────────────────────────────────────────────────── */
 .cta-final {
   padding: 100px 0;
-  background: var(--forest);
+  background: var(--cream);
   position: relative;
   overflow: hidden;
 }
@@ -1069,7 +1078,7 @@ a.hero-stat-chip { cursor: pointer; }
 .cta-final::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(79,212,128,0.1), transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(71,132,39,0.08), transparent 70%);
   pointer-events: none;
 }
 
@@ -1079,12 +1088,12 @@ a.hero-stat-chip { cursor: pointer; }
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 16px;
   line-height: 1.2;
 }
 
-.cta-sub { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 44px; }
+.cta-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 44px; }
 
 .cta-btn-group {
   display: flex;
@@ -1092,6 +1101,8 @@ a.hero-stat-chip { cursor: pointer; }
   justify-content: center;
   flex-wrap: wrap;
 }
+.cta-final .btn-hero-outline { background: transparent; }
+.cta-final .btn-hero-outline:hover { background: rgba(71,132,39,0.08); border-color: var(--forest); }
 
 /* ── PARTNER LOGOS BAR ────────────────────────────────────────── */
 .partner-logos-bar {
@@ -1116,18 +1127,18 @@ a.hero-stat-chip { cursor: pointer; }
   font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);
   white-space: nowrap; transition: border-color 0.2s;
 }
-.partner-chip:hover { border-color: rgba(46,184,92,0.3); }
+.partner-chip:hover { border-color: rgba(71,132,39,0.3); }
 .partner-chip-icon { display:inline-flex;align-items:center;line-height:0; }
 
 /* ── CEO SPOTLIGHT ────────────────────────────────────────────── */
 .ceo-spotlight {
   padding: 80px 0;
-  background: var(--forest);
+  background: var(--cream);
   position: relative; overflow: hidden;
 }
 .ceo-spotlight::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 70% at 30% 50%, rgba(46,184,92,0.08), transparent 65%);
+  background: radial-gradient(ellipse 60% 70% at 30% 50%, rgba(71,132,39,0.08), transparent 65%);
   pointer-events: none;
 }
 .ceo-inner {
@@ -1165,22 +1176,24 @@ a.hero-stat-chip { cursor: pointer; }
 .ceo-quote-text {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-  font-style: italic; color: #fff;
+  font-style: italic; color: var(--text);
   line-height: 1.65; margin-bottom: 28px;
 }
 .ceo-award-chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .ceo-award-chip {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(71,132,39,0.08);
+  border: 1px solid rgba(71,132,39,0.18);
   border-radius: 99px; padding: 5px 14px;
   font-size: 0.7rem; font-weight: 600;
-  color: rgba(255,255,255,0.65);
+  color: var(--forest);
 }
+.ceo-spotlight .btn-hero-outline { background: transparent; color: var(--forest); border-color: var(--green); }
+.ceo-spotlight .btn-hero-outline:hover { background: rgba(71,132,39,0.08); border-color: var(--forest); }
 
 /* ── WHAT WE OFFER ────────────────────────────────────────────── */
 .what-we-offer {
   padding: 100px 0;
-  background: var(--bg);
+  background: var(--soft-gray);
 }
 .offer-grid {
   display: grid;
@@ -1196,8 +1209,8 @@ a.hero-stat-chip { cursor: pointer; }
   text-decoration: none; display: block; color: inherit;
 }
 .offer-card:hover {
-  border-color: rgba(46,184,92,0.35);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.1), var(--glass-inset);
+  border-color: rgba(71,132,39,0.35);
+  box-shadow: var(--shadow-lg), var(--glass-inset);
   transform: translateY(-6px);
 }
 .offer-card { position: relative; }
@@ -1236,8 +1249,8 @@ a.hero-stat-chip { cursor: pointer; }
   display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
 }
 .offer-highlight {
-  background: rgba(46,184,92,0.08);
-  border: 1px solid rgba(46,184,92,0.15);
+  background: rgba(71,132,39,0.08);
+  border: 1px solid rgba(71,132,39,0.15);
   border-radius: 99px; padding: 3px 12px;
   font-size: 0.7rem; font-weight: 600; color: var(--green);
 }
@@ -1261,6 +1274,7 @@ a.hero-stat-chip { cursor: pointer; }
   .intro-section .grid { grid-template-columns: 1fr !important; }
   .ceo-inner { grid-template-columns: 1fr; gap: 36px; }
   .offer-grid { grid-template-columns: 1fr; }
+  .ceo-video-split { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 480px) {
@@ -1271,14 +1285,14 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── WHY IGO ──────────────────────────────────────────────────── */
 .why-igo {
   padding: 100px 0;
-  background: var(--forest);
+  background: var(--cream);
   position: relative;
   overflow: hidden;
 }
 .why-igo::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(46,184,92,0.08), transparent 60%);
+  background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(71,132,39,0.06), transparent 60%);
   pointer-events: none;
 }
 .why-grid {
@@ -1288,38 +1302,52 @@ a.hero-stat-chip { cursor: pointer; }
   margin-top: 52px;
 }
 .why-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 34px 26px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
-  box-shadow: var(--glass-inset);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.4s var(--spring), box-shadow 0.4s var(--spring), border-color 0.3s, background 0.3s;
 }
 .why-card::after {
   content: '';
   position: absolute; inset: 0; pointer-events: none; z-index: 0;
-  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(46,184,92,0.16), transparent 62%);
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(71,132,39,0.1), transparent 62%);
   opacity: 0; transition: opacity 0.4s ease;
 }
 .why-card:hover::after { opacity: 1; }
 .why-card > * { position: relative; z-index: 1; }
+.why-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px;
+  margin: -14px 0 22px;
+  background: var(--forest);
+}
+.why-card-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s var(--spring);
+}
+.why-card:hover .why-card-media img { transform: scale(1.06); }
 .why-card:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(46,184,92,0.45);
+  background: var(--card-bg);
+  border-color: rgba(71,132,39,0.45);
   transform: translateY(-6px);
-  box-shadow: var(--glass-inset), 0 20px 44px rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-md);
 }
 .why-icon-wrap {
   width: 52px; height: 52px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 18px;
   background: linear-gradient(135deg, var(--green), var(--forest-2));
-  box-shadow: 0 8px 20px rgba(46,184,92,0.28), inset 0 1px 0 rgba(255,255,255,0.28);
+  box-shadow: 0 8px 20px rgba(71,132,39,0.28), inset 0 1px 0 rgba(255,255,255,0.28);
   transition: transform 0.4s var(--spring);
 }
 .why-card:hover .why-icon-wrap { transform: translateY(-3px) scale(1.06); }
@@ -1327,9 +1355,9 @@ a.hero-stat-chip { cursor: pointer; }
 .why-card h3 {
   font-family: 'Sora', sans-serif;
   font-size: 1.05rem; font-weight: 700;
-  color: #fff; margin-bottom: 10px;
+  color: var(--text); margin-bottom: 10px;
 }
-.why-card p { font-size: 0.85rem; color: rgba(255,255,255,0.68); line-height: 1.65; }
+.why-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
 .why-card-arrow {
   display: inline-block;
   margin-top: 14px;
@@ -1374,7 +1402,7 @@ a.hero-stat-chip { cursor: pointer; }
   background: linear-gradient(90deg, var(--green), transparent);
 }
 .milestone-card:hover {
-  border-color: rgba(46,184,92,0.3);
+  border-color: rgba(71,132,39,0.3);
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
@@ -1421,7 +1449,7 @@ a.hero-stat-chip { cursor: pointer; }
 .app-feature-list li::before {
   content: '✓';
   display: inline-flex; width: 20px; height: 20px;
-  background: rgba(46,184,92,0.2); border-radius: 50%;
+  background: rgba(71,132,39,0.2); border-radius: 50%;
   align-items: center; justify-content: center;
   font-size: 0.7rem; color: var(--green-light); font-weight: 700; flex-shrink: 0;
 }
@@ -1437,7 +1465,7 @@ a.hero-stat-chip { cursor: pointer; }
 }
 .app-badge:hover {
   background: rgba(255,255,255,0.14);
-  border-color: rgba(46,184,92,0.4); color: #fff;
+  border-color: rgba(71,132,39,0.4); color: #fff;
 }
 .app-visual { display: flex; justify-content: center; align-items: center; }
 .app-phone-mock {
@@ -1458,7 +1486,7 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── NEWS & AWARDS ─────────────────────────────────────────────── */
 .news-awards-section {
   padding: 100px 0;
-  background: var(--soft-gray);
+  background: var(--cream);
   border-top: 1px solid var(--border);
 }
 .news-awards-grid {
@@ -1503,7 +1531,7 @@ a.hero-stat-chip { cursor: pointer; }
   cursor: pointer;
 }
 .award-item:hover {
-  border-color: rgba(232,160,32,0.4);
+  border-color: rgba(71,132,39,0.4);
   box-shadow: var(--shadow-sm);
   transform: translateX(4px);
 }
@@ -1554,9 +1582,9 @@ a.hero-stat-chip { cursor: pointer; }
 /* ── QUICK CONTACT STRIP ───────────────────────────────────────── */
 .quick-contact-strip {
   padding: 60px 0;
-  background: var(--forest);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: var(--soft-gray);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .qc-grid {
   display: grid;
@@ -1564,31 +1592,31 @@ a.hero-stat-chip { cursor: pointer; }
 }
 .qc-item {
   padding: 24px 32px;
-  border-right: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid var(--border);
   text-align: center;
   transition: background 0.2s ease;
 }
 .qc-item:last-child { border-right: none; }
-.qc-item:hover { background: rgba(255,255,255,0.04); }
+.qc-item:hover { background: var(--soft-gray); }
 .qc-icon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
 .qc-label {
   font-size: 0.68rem; text-transform: uppercase;
-  letter-spacing: 1.5px; color: rgba(255,255,255,0.38);
+  letter-spacing: 1.5px; color: var(--muted-light);
   font-weight: 700; margin-bottom: 7px;
 }
 .qc-value {
-  font-size: 0.92rem; color: rgba(255,255,255,0.8);
+  font-size: 0.92rem; color: var(--text);
   font-weight: 600; text-decoration: none; display: block;
   transition: color 0.2s ease;
 }
-a.qc-value:hover { color: var(--green-light); }
+a.qc-value:hover { color: var(--green); }
 
 /* ── CSR STRIP ──────────────────────────────────────────────────── */
 .csr-bar {
   padding: 28px 0;
-  background: linear-gradient(90deg, rgba(46,184,92,0.08), rgba(46,184,92,0.04));
-  border-top: 1px solid rgba(46,184,92,0.15);
-  border-bottom: 1px solid rgba(46,184,92,0.15);
+  background: linear-gradient(90deg, rgba(71,132,39,0.08), rgba(71,132,39,0.04));
+  border-top: 1px solid rgba(71,132,39,0.15);
+  border-bottom: 1px solid rgba(71,132,39,0.15);
 }
 .csr-bar-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -1715,7 +1743,7 @@ a.qc-value:hover { color: var(--green-light); }
   padding: 12px 20px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--forest, #0a3d1f);
+  color: var(--forest, #0b3d13);
   letter-spacing: 0.02em;
   white-space: nowrap;
   border-right: 1px solid var(--border, #e8e4dc);
@@ -1724,7 +1752,7 @@ a.qc-value:hover { color: var(--green-light); }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #2EB85C;
+  background: #478427;
   flex-shrink: 0;
 }
 .dark .brand-scroll-strip {
@@ -1742,7 +1770,7 @@ a.qc-value:hover { color: var(--green-light); }
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t !== 'light') document.documentElement.classList.add('dark');
+    if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -1769,7 +1797,9 @@ a.qc-value:hover { color: var(--green-light); }
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR & Sustainability</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
       <div class="dropdown" tabindex="0">
@@ -1806,10 +1836,11 @@ a.qc-value:hover { color: var(--green-light); }
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero-premium">
-  <!-- Hero brand film. To swap in the AI-generated film later, replace src with e.g. assets/video/igo-brandfilm.mp4 -->
-  <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
-    poster="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=1920"
-    src="https://videos.pexels.com/video-files/36236866/15367737_1280_720_30fps.mp4"></video>
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"
+    poster="assets/img/office/hq-front-hero.jpg">
+    <source src="https://videos.pexels.com/video-files/36236866/15367737_1280_720_30fps.mp4" type="video/mp4" />
+    <source src="assets/video/igo-hq-vision.mp4" type="video/mp4" />
+  </video>
   <div class="hero-overlay"></div>
   <div class="hero-mesh" aria-hidden="true">
     <div class="hero-mesh-blob b1"></div>
@@ -1837,7 +1868,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
         <div class="hero-stats-row" data-reveal>
           <a href="departments.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">18</span><span class="chip-label">Departments</span></a>
-          <a href="brands.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">27</span><span class="chip-label">Brands</span></a>
+          <a href="brands.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">26</span><span class="chip-label">Brands</span></a>
           <a href="teams.html" class="hero-stat-chip" style="text-decoration:none;"><span class="chip-num">2000+</span><span class="chip-label">Professionals</span></a>
         </div>
       </div>
@@ -1890,35 +1921,46 @@ a.qc-value:hover { color: var(--green-light); }
   <div class="container">
     <div class="partner-logos-label">Recognized & Accredited By</div>
     <div class="partner-logos-row">
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span> ISO 9001:2015</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span> NABARD Approved</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M21 10V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10"/><path d="M1 6h22v4H1z"/><path d="M10 16h4"/></svg></span> APEDA Registered</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span> Startup India</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></span> MSME Certified</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/><polygon points="10 12 16 15 10 18 10 12"/></svg></span> Star TV Featured</div>
-      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span> Global Business Conclave</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span> ISO 9001:2015</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span> NABARD Approved</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M21 10V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10"/><path d="M1 6h22v4H1z"/><path d="M10 16h4"/></svg></span> APEDA Registered</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span> Startup India</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.11"/></svg></span> MSME Certified</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/><polygon points="10 12 16 15 10 18 10 12"/></svg></span> Star TV Featured</div>
+      <div class="partner-chip"><span class="partner-chip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span> Global Business Conclave</div>
     </div>
   </div>
 </div>
 
 <!-- ══════════════════ HEADQUARTERS ══════════════════ -->
 <style>
-.hq-section { position: relative; overflow: hidden; background: var(--forest); padding: 100px 0; }
+.hq-section { position: relative; overflow: hidden; background: var(--forest); padding: 56px 0 64px; }
 .hq-bg-video-wrap { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
 .hq-bg-video-wrap video { width: 100%; height: 100%; object-fit: cover; opacity: 0.62; filter: saturate(1.35) brightness(1.1); }
 .hq-bg-video-wrap::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,61,31,0.92) 0%, rgba(10,61,31,0.12) 22%, rgba(10,61,31,0.12) 78%, rgba(10,61,31,0.92) 100%);
+  background: linear-gradient(180deg, rgba(11,61,19,0.92) 0%, rgba(11,61,19,0.12) 22%, rgba(11,61,19,0.12) 78%, rgba(11,61,19,0.92) 100%);
 }
 .hq-section .container { position: relative; z-index: 1; max-width: 1360px; }
-.hq-gallery { margin-top: 3rem; }
+.hq-section .section-header { text-align: center; margin: 0 auto; }
+.hq-section .section-header .eyebrow { margin-bottom: 12px; }
+.hq-gallery { margin-top: 2rem; }
 .hq-photo-card {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
   border: 1px solid rgba(255,255,255,0.12); box-shadow: var(--shadow-lg);
 }
 .hq-photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
 .hq-photo-card:hover img { transform: scale(1.05); }
-.hq-photo-card.lead { min-height: 620px; }
+.hq-photo-card.lead {
+  min-height: 620px;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
 .hq-photo-caption {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 24px;
   background: linear-gradient(180deg, transparent, rgba(6,20,12,0.88));
@@ -1932,9 +1974,6 @@ a.qc-value:hover { color: var(--green-light); }
 }
 </style>
 <section class="hq-section">
-  <div class="hq-bg-video-wrap" aria-hidden="true">
-    <video class="cinematic-bg-video" autoplay muted loop playsinline preload="metadata" src="assets/video/glass-cubes-energy.mp4"></video>
-  </div>
   <div class="container">
     <div class="section-header text-center" data-reveal>
       <span class="eyebrow" style="background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.22); color: var(--gold-light);">WHERE IT ALL RUNS FROM</span>
@@ -1958,30 +1997,34 @@ a.qc-value:hover { color: var(--green-light); }
 <section class="why-igo">
   <div class="container">
     <div style="text-align: center;" data-reveal>
-      <span class="section-eyebrow" style="color: rgba(255,255,255,0.5);">WHY IGO GROUPS</span>
-      <h2 class="section-title" style="color: #fff;">The IGO Advantage</h2>
-      <p class="section-desc" style="color: rgba(255,255,255,0.45); margin: 0 auto; max-width: 520px;">What sets us apart from every other farming business in India — built on a decade of ground-up execution.</p>
+      <span class="section-eyebrow" style="color: var(--green);">WHY IGO GROUPS</span>
+      <h2 class="section-title" style="color: var(--text);">The IGO Advantage</h2>
+      <p class="section-desc" style="color: var(--muted); margin: 0 auto; max-width: 520px;">What sets us apart from every other farming business in India — built on a decade of ground-up execution.</p>
     </div>
     <div class="why-grid">
       <div class="why-card" onclick="location.href='why-zero-middlemen.html'" data-reveal>
+        <div class="why-card-media"><img src="assets/img/farm-products-organic.png" alt="Fresh produce from IGO farms" loading="lazy"></div>
         <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M2 12l4-3 4 2 3-3 3 2 4-2 2 3-3 6h-4l-2-2-2 2H6Z"/></svg></div>
         <h3>Zero Middlemen</h3>
         <p>Direct from our farms to farmers, consumers, and export partners — eliminating hidden costs and ensuring fair value at every step.</p>
         <span class="why-card-arrow">Explore How We Do It →</span>
       </div>
       <div class="why-card" onclick="location.href='why-tech-farming.html'" data-reveal>
+        <div class="why-card-media"><img src="assets/img/products/digital-agri-iot.webp" alt="Digital precision-farming technology" loading="lazy"></div>
         <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
         <h3>Tech-Enabled Farming</h3>
         <p>IoT sensors, AI crop diagnostics, drone monitoring, and the India Green App powering precision farming across all operations.</p>
         <span class="why-card-arrow">Explore Our Technology →</span>
       </div>
       <div class="why-card" onclick="location.href='why-ecosystem.html'" data-reveal>
+        <div class="why-card-media"><img src="assets/img/farm-projects-aerial.png" alt="Integrated IGO farm projects" loading="lazy"></div>
         <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M9.4 9.4l5.2 5.2"/></svg></div>
         <h3>End-to-End Ecosystem</h3>
         <p>From seed to shelf — farm engineering, cultivation, processing, retail, export, and fintech all operating under one unified roof.</p>
         <span class="why-card-arrow">Explore the Ecosystem →</span>
       </div>
       <div class="why-card" onclick="location.href='why-pan-india.html'" data-reveal>
+        <div class="why-card-media"><img src="assets/img/office/hq-grid-composite.jpg" alt="IGO Groups operations and headquarters" loading="lazy"></div>
         <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg></div>
         <h3>Pan-India Presence</h3>
         <p>Operations across Tamil Nadu, Karnataka, Kerala, and Andhra Pradesh — with active exports reaching 18+ countries across three continents.</p>
@@ -2039,7 +2082,7 @@ a.qc-value:hover { color: var(--green-light); }
 </section>
 
 <!-- ══════════════════ CEO SPOTLIGHT ══════════════════ -->
-<section class="ceo-spotlight">
+<section class="ceo-spotlight" id="ceo-video">
   <div class="container">
     <div class="ceo-inner">
       <div class="ceo-img-wrap" data-reveal="left">
@@ -2050,7 +2093,7 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
       </div>
       <div data-reveal="right">
-        <span class="section-eyebrow" style="color: rgba(255,255,255,0.45);">FOUNDER'S VISION</span>
+        <span class="section-eyebrow" style="color: var(--green);">FOUNDER'S VISION</span>
         <span class="ceo-quote-mark">"</span>
         <p class="ceo-quote-text">Agriculture is not just a profession — it is the foundation of every civilization. At IGO, we are not simply building businesses. We are building a system that gives every Indian farmer access to the same tools, technology, and markets that the world's best farmers have.</p>
         <div class="ceo-award-chips">
@@ -2061,6 +2104,32 @@ a.qc-value:hover { color: var(--green-light); }
         </div>
         <div style="margin-top: 28px;">
           <a href="https://ceodrjohnyesudhas.com/" target="_blank" rel="noopener" class="btn-hero-outline" style="font-size: 0.85rem;">About the Founder →</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:56px; max-width:1120px; margin-left:auto; margin-right:auto;" data-reveal>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px; justify-content:center;">
+        <span style="background:rgba(71,132,39,0.12); color:var(--green-light); font-size:0.7rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; padding:4px 12px; border-radius:20px;">CEO Chronicles</span>
+      </div>
+      <div class="ceo-video-split" style="display:grid; grid-template-columns: 1fr 1fr; gap:44px; align-items:center;">
+        <div>
+          <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;">
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>IGO Agritech Farms recognized as "India's Most Trusted Farm Engineering Brand"</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Shared IGO Group's journey from a vision to a nationally recognized agritech conglomerate</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Highlighted how technology, innovation, and smart farming are transforming Indian agriculture</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Emphasized the role of agriculture in India's journey towards a 10 Trillion Dollar Economy</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Stressed the importance of modern, sustainable, and profitable farming models</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Encouraged farmers and agripreneurs to adopt technology-driven farming practices</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Reinforced IGO Group's mission to create reliable and structured income opportunities through agriculture</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Outlined ambitious expansion plans across farming, agri-infrastructure, and rural entrepreneurship</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; line-height:1.6; color:var(--text);"><span style="flex-shrink:0;">✅</span><span>Dedicated these awards and achievements to IGO's employees, clients, farmers, partners, and vendors who made this success possible</span></li>
+          </ul>
+        </div>
+        <div>
+          <video controls preload="none" poster="assets/img/ceo-chronicles-poster.jpg" style="width:100%; border-radius:16px; display:block; box-shadow:0 20px 50px rgba(0,0,0,0.25);">
+            <source src="assets/video/ceo-chronicles-teaser.mp4" type="video/mp4">
+          </video>
+          <p style="text-align:center; font-size:0.85rem; color:var(--muted); margin-top:12px;">Highlight clip: Dr. John Yesudhas on building IGO Group and India's agri-tech future.<br>For the full interview, <a href="https://youtu.be/WsKyzfDihsI" target="_blank" rel="noopener" style="color:var(--green-light); font-weight:600;">watch on YouTube &rarr;</a></p>
         </div>
       </div>
     </div>
@@ -2084,8 +2153,8 @@ a.qc-value:hover { color: var(--green-light); }
           <img src="assets/img/services/crop-selection.webp" alt="Core Farming" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
         <div style="padding: 0 32px 32px; display: flex; flex-direction: column; flex: 1;">
-          <div class="bento-icon-wrap" style="background: rgba(46,184,92,0.15); margin-top: -30px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#2EB85C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          <div class="bento-icon-wrap" style="background: rgba(71,132,39,0.15); margin-top: -30px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
           </div>
           <div class="bento-content" style="margin-top: 16px;">
             <div class="bento-label">Core Farming</div>
@@ -2101,64 +2170,64 @@ a.qc-value:hover { color: var(--green-light); }
           <img src="assets/img/services/agri-investment.webp" alt="Finance & Realty" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
         <div style="padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1;">
-          <div class="bento-icon-wrap" style="background: rgba(232,160,32,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          <div class="bento-icon-wrap" style="background: rgba(71,132,39,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
           </div>
           <div class="bento-content" style="margin-top: 8px;">
             <div class="bento-label">Finance & Realty</div>
             <div class="bento-desc">Micro-finance, wealth management, farmland estates, and farm loans.</div>
-            <a href="services.html" class="bento-link" style="color: #E8A020;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="services.html" class="bento-link" style="color: #478427;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
       
       <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=retail'" data-reveal>
-        <div class="bento-accent-top" style="background: linear-gradient(90deg, #fb7185, transparent); z-index: 2;"></div>
+        <div class="bento-accent-top" style="background: linear-gradient(90deg, #69a83b, transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="assets/img/gallery/packhouse.webp" alt="Retail & Food" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
         <div style="padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1;">
-          <div class="bento-icon-wrap" style="background: rgba(251,113,133,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <div class="bento-icon-wrap" style="background: rgba(105,168,59,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2f6b1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
           <div class="bento-content" style="margin-top: 8px;">
             <div class="bento-label">Retail & Food</div>
             <div class="bento-desc">Farm-fresh groceries, organic cafés, and premium protein — direct from farm to consumer.</div>
-            <a href="brands.html" class="bento-link" style="color: #E11D48;" onclick="event.stopPropagation()">Explore Brands <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="brands.html" class="bento-link" style="color: #2f6b1a;" onclick="event.stopPropagation()">Explore Brands <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
       
       <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=tech'" data-reveal>
-        <div class="bento-accent-top" style="background: linear-gradient(90deg, #a78bfa, transparent); z-index: 2;"></div>
+        <div class="bento-accent-top" style="background: linear-gradient(90deg, var(--forest), transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
-          <img src="assets/img/services/hydroponic-setup.webp" alt="Tech & Digital" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+          <img src="assets/img/careers/digital-marketing.webp" alt="Tech & Digital" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
         <div style="padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1;">
-          <div class="bento-icon-wrap" style="background: rgba(167,139,250,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#8B6FE0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          <div class="bento-icon-wrap" style="background: rgba(71,132,39,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
           </div>
           <div class="bento-content" style="margin-top: 8px;">
             <div class="bento-label">Tech & Digital</div>
             <div class="bento-desc">IoT sensors, AI-driven automation, and the India Green App ecosystem.</div>
-            <a href="services.html" class="bento-link" style="color: #8B6FE0;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="services.html" class="bento-link" style="color: #478427;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
       
       <div class="bento-card" style="padding: 0; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" onclick="window.location.href='sector-detail.html?id=trade'" data-reveal>
-        <div class="bento-accent-top" style="background: linear-gradient(90deg, #fb923c, transparent); z-index: 2;"></div>
+        <div class="bento-accent-top" style="background: linear-gradient(90deg, #69a83b, transparent); z-index: 2;"></div>
         <div style="width: 100%; height: 140px;">
           <img src="assets/img/careers/logistics.webp" alt="Trade & Export" style="width: 100%; height: 100%; object-fit: cover; display: block; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
         </div>
         <div style="padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1;">
-          <div class="bento-icon-wrap" style="background: rgba(251,146,60,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#E8740C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <div class="bento-icon-wrap" style="background: rgba(105,168,59,0.15); margin-top: -34px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background-color: var(--card-bg);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#478427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
           <div class="bento-content" style="margin-top: 8px;">
             <div class="bento-label">Trade & Export</div>
             <div class="bento-desc">Premium farm export to 18+ countries, farm factory outputs and global markets.</div>
-            <a href="services.html" class="bento-link" style="color: #E8740C;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="services.html" class="bento-link" style="color: #478427;" onclick="event.stopPropagation()">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
@@ -2180,8 +2249,8 @@ a.qc-value:hover { color: var(--green-light); }
 <section class="big-stats">
   <div class="container">
     <div style="text-align: center; margin-bottom: 52px;" data-reveal>
-      <span class="section-eyebrow" style="color: rgba(255,255,255,0.5);">OUR SCALE</span>
-      <h2 class="section-title" style="color: #fff;">The Numbers That Define Us</h2>
+      <span class="section-eyebrow" style="color: var(--green);">OUR SCALE</span>
+      <h2 class="section-title" style="color: var(--text);">The Numbers That Define Us</h2>
     </div>
     <div class="stats-main-grid">
       <a href="about.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="10" data-suffix="+">10+</span><div class="stat-big-label">Years Experience</div><div class="stat-big-sub">Founded 2016, growing strong</div></a>
@@ -2190,6 +2259,7 @@ a.qc-value:hover { color: var(--green-light); }
       <a href="teams.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="2000" data-suffix="+">2000+</span><div class="stat-big-label">Global Staff</div><div class="stat-big-sub">Across India and beyond</div></a>
       <a href="projects.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="6000" data-suffix="+">6000+</span><div class="stat-big-label">Projects Delivered</div><div class="stat-big-sub">Farm engineering &amp; consulting</div></a>
       <a href="about.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="50" data-suffix="K+">50K+</span><div class="stat-big-label">Farmers Served</div><div class="stat-big-sub">With premium products &amp; services</div></a>
+      <a href="brands/igo-academy.html" class="stat-big-card" data-reveal style="text-decoration:none;display:block;"><span class="stat-big-num" data-count="5200" data-suffix="+">5,200+</span><div class="stat-big-label">Students Trained &amp; Placed</div><div class="stat-big-sub">Via IGO Academy, with 45+ hiring partners</div></a>
     </div>
   </div>
 </section>
@@ -2258,7 +2328,7 @@ a.qc-value:hover { color: var(--green-light); }
 .innovation-section .cinematic-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 0; filter: saturate(1.3) brightness(1.1); }
 .innovation-section::after {
   content: ''; position: absolute; inset: 0; z-index: 0;
-  background: linear-gradient(180deg, rgba(10,61,31,0.9) 0%, rgba(10,61,31,0.12) 22%, rgba(10,61,31,0.12) 78%, rgba(10,61,31,0.9) 100%);
+  background: linear-gradient(180deg, rgba(11,61,19,0.9) 0%, rgba(11,61,19,0.12) 22%, rgba(11,61,19,0.12) 78%, rgba(11,61,19,0.9) 100%);
 }
 .innovation-section .container { position: relative; z-index: 1; }
 .innovation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 3rem; }
@@ -2269,15 +2339,15 @@ a.qc-value:hover { color: var(--green-light); }
   box-shadow: var(--glass-inset);
   transition: transform 0.4s var(--spring), border-color 0.3s, background 0.3s;
 }
-.innovation-card:hover { transform: translateY(-6px); border-color: rgba(46,184,92,0.4); background: rgba(255,255,255,0.08); }
+.innovation-card:hover { transform: translateY(-6px); border-color: rgba(71,132,39,0.4); background: rgba(255,255,255,0.08); }
 .innovation-icon {
   width: 52px; height: 52px; border-radius: 14px; margin-bottom: 16px;
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--green), var(--forest-2));
-  box-shadow: 0 8px 20px rgba(46,184,92,0.28), inset 0 1px 0 rgba(255,255,255,0.28);
+  box-shadow: 0 8px 20px rgba(71,132,39,0.28), inset 0 1px 0 rgba(255,255,255,0.28);
 }
-.innovation-card:nth-child(3n+2) .innovation-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); box-shadow: 0 8px 20px rgba(232,160,32,0.28), inset 0 1px 0 rgba(255,255,255,0.28); }
-.innovation-card:nth-child(3n+3) .innovation-icon { background: linear-gradient(135deg, var(--accent-blue, #38BDF8), #0ea5e9); box-shadow: 0 8px 20px rgba(56,189,248,0.28), inset 0 1px 0 rgba(255,255,255,0.28); }
+.innovation-card:nth-child(3n+2) .innovation-icon { background: linear-gradient(135deg, var(--gold), var(--gold-light)); box-shadow: 0 8px 20px rgba(71,132,39,0.28), inset 0 1px 0 rgba(255,255,255,0.28); }
+.innovation-card:nth-child(3n+3) .innovation-icon { background: linear-gradient(135deg, var(--accent-blue, #69a83b), var(--forest)); box-shadow: 0 8px 20px rgba(71,132,39,0.28), inset 0 1px 0 rgba(255,255,255,0.28); }
 .innovation-icon svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .innovation-card h4 { color: #fff; margin-bottom: 8px; font-size: 1.02rem; }
 .innovation-card p { color: rgba(255,255,255,0.65); font-size: 0.86rem; line-height: 1.6; margin: 0; }
@@ -2344,14 +2414,15 @@ a.qc-value:hover { color: var(--green-light); }
 
       <!-- Card 1: Farmer -->
       <div class="testi-card-new" data-reveal style="position:relative;">
-        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(46,184,92,0.1); border:1px solid rgba(46,184,92,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
+        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(71,132,39,0.1); border:1px solid rgba(71,132,39,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
           <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> VERIFIED
         </div>
         <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--green); opacity:0.7; margin-bottom:12px;">Polyhouse Engineering</div>
         <div class="testi-stars">★★★★★</div>
+        <span class="testi-quote-mark">&ldquo;</span>
         <p class="testi-quote">"The polyhouse IGO Agritech built for my 2-acre farm in Hosur completely transformed my income. My vegetable yield tripled in the first season. Their engineering team was thorough, on-time, and genuinely invested in the outcome."</p>
         <div class="testi-author">
-          <img src="https://images.pexels.com/photos/3782235/pexels-photo-3782235.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Ravi Selvam" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(46,184,92,0.25);">
+          <img src="https://images.pexels.com/photos/3782235/pexels-photo-3782235.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Ravi Selvam" style="width:50px; height:50px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(71,132,39,0.25); box-shadow:0 4px 12px rgba(11,61,19,0.18);">
           <div>
             <div class="testi-name">Ravi Selvam</div>
             <div class="testi-role">Polyhouse Farmer &middot; Hosur, Tamil Nadu</div>
@@ -2361,14 +2432,15 @@ a.qc-value:hover { color: var(--green-light); }
 
       <!-- Card 2: Export Partner -->
       <div class="testi-card-new" data-reveal style="position:relative;">
-        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(46,184,92,0.1); border:1px solid rgba(46,184,92,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
+        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(71,132,39,0.1); border:1px solid rgba(71,132,39,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
           <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> VERIFIED
         </div>
         <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--green); opacity:0.7; margin-bottom:12px;">Organic Export &mdash; 3 Years</div>
         <div class="testi-stars">★★★★★</div>
+        <span class="testi-quote-mark">&ldquo;</span>
         <p class="testi-quote">"We've been sourcing certified organic produce through IGO's export division for three years. Their APEDA compliance, consistent quality grading, and responsive team make them our most reliable Indian agri-supplier by far."</p>
         <div class="testi-author">
-          <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Khalid Al Rashid" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(46,184,92,0.25);">
+          <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Khalid Al Rashid" style="width:50px; height:50px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(71,132,39,0.25); box-shadow:0 4px 12px rgba(11,61,19,0.18);">
           <div>
             <div class="testi-name">Khalid Al Rashid</div>
             <div class="testi-role">Import Partner &middot; Dubai, UAE</div>
@@ -2378,14 +2450,15 @@ a.qc-value:hover { color: var(--green-light); }
 
       <!-- Card 3: Franchise -->
       <div class="testi-card-new" data-reveal style="position:relative;">
-        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(46,184,92,0.1); border:1px solid rgba(46,184,92,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
+        <div style="position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:4px; background:rgba(71,132,39,0.1); border:1px solid rgba(71,132,39,0.25); border-radius:99px; padding:3px 10px; font-size:0.63rem; font-weight:700; color:var(--green); letter-spacing:0.5px;">
           <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> VERIFIED
         </div>
         <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--green); opacity:0.7; margin-bottom:12px;">IGO Mart Franchise</div>
         <div class="testi-stars">★★★★★</div>
+        <span class="testi-quote-mark">&ldquo;</span>
         <p class="testi-quote">"Opening an IGO Mart franchise was the best business decision I've made. The brand support, ready supply chain, and hands-on training got us to profitability within eight months of launch."</p>
         <div class="testi-author">
-          <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Priya Menon" style="width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(46,184,92,0.25);">
+          <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Priya Menon" style="width:50px; height:50px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(71,132,39,0.25); box-shadow:0 4px 12px rgba(11,61,19,0.18);">
           <div>
             <div class="testi-name">Priya Menon</div>
             <div class="testi-role">Franchise Owner &middot; Coimbatore, Tamil Nadu</div>
@@ -2423,6 +2496,47 @@ a.qc-value:hover { color: var(--green-light); }
 </section>
 
 
+<!-- ══════════════════ IGO ACADEMY ══════════════════ -->
+<section class="content-section" style="background: var(--cream);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 8px;" data-reveal>
+      <span class="section-eyebrow">TRAINING &amp; PLACEMENTS</span>
+      <h2 class="section-title">IGO Academy &mdash; Building India&rsquo;s Next Generation of Agri-Talent</h2>
+      <p class="section-desc" style="max-width: 640px; margin: 0 auto;">IGO Groups invests directly in agricultural talent through IGO Academy, our dedicated training institute in Chennai. Operating from a 20+ acre live farm campus, the Academy has trained over 5,200 students in hydroponics, polyhouse farming, aquaculture, and agri-business management. Graduates receive MSME-recognized certification, and many go on to internships and placements within IGO Groups and our partner network of 45+ agritech organizations.</p>
+      <div style="display:flex; align-items:center; justify-content:center; gap:24px; margin-top:22px; flex-wrap:wrap;">
+        <span style="font-size:0.8rem; color:var(--muted); font-weight:600;">5,200+ Graduates</span>
+        <span style="width:1px; height:14px; background:var(--border);"></span>
+        <span style="font-size:0.8rem; color:var(--muted); font-weight:600;">20+ Acre Training Campus</span>
+        <span style="width:1px; height:14px; background:var(--border);"></span>
+        <span style="font-size:0.8rem; color:var(--muted); font-weight:600;">45+ Hiring Partners</span>
+        <span style="width:1px; height:14px; background:var(--border);"></span>
+        <span style="font-size:0.8rem; color:var(--muted); font-weight:600;">MSME &amp; ISO 9001:2015 Certified</span>
+      </div>
+      <div style="margin-top: 32px;">
+        <a href="brands/igo-academy.html" class="btn btn-outline-dark">Explore IGO Academy &rarr;</a>
+      </div>
+    </div>
+    <div class="grid three-grid" style="margin-top:40px; max-width:960px; margin-left:auto; margin-right:auto;" data-reveal>
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="assets/img/academy/academy-field-training-02.jpg" alt="IGO Academy students learning greenhouse cultivation" style="width:100%; height:180px; object-fit:cover; display:block;">
+      </div>
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="assets/img/academy/academy-field-training-03.jpg" alt="IGO Academy faculty demonstrating farm techniques to students" style="width:100%; height:180px; object-fit:cover; display:block;">
+      </div>
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="assets/img/academy/academy-classroom-high-tech-course.jpg" alt="IGO Academy High-Tech Agri Farming Course classroom session" style="width:100%; height:180px; object-fit:cover; display:block;">
+      </div>
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="assets/img/academy/academy-precision-farming-course.jpg" alt="IGO Academy Precision Farming Course training session" style="width:100%; height:180px; object-fit:cover; display:block;">
+      </div>
+      <div style="border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="assets/img/academy/academy-greenhouse-crop-inspection.jpg" alt="IGO Academy students inspecting greenhouse crops" style="width:100%; height:180px; object-fit:cover; display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ══════════════════ NEWS & AWARDS ══════════════════ -->
 <section class="news-awards-section">
   <div class="container">
@@ -2434,6 +2548,13 @@ a.qc-value:hover { color: var(--green-light); }
     <div class="news-awards-grid">
       <div data-reveal>
         <div class="na-col-title"><span>&#128240;</span> Latest News</div>
+        <a href="news.html" class="news-item">
+          <img src="assets/img/expo-franchise-india-2026-poster.jpg" alt="IGO Group at Franchise India Expo 2026" class="news-item-img">
+          <div>
+            <div class="news-item-meta">Company News &middot; July 2026</div>
+            <div class="news-item-title">IGO Group at Franchise India Expo 2026 (144th Edition), Chennai</div>
+          </div>
+        </a>
         <a href="https://www.igoagritechfarms.in/blog/campus-drive-200-students" target="_blank" rel="noopener" class="news-item">
           <img src="assets/blog/blog5.webp" alt="Campus Drive 200+ Students" class="news-item-img">
           <div>
@@ -2550,16 +2671,16 @@ a.qc-value:hover { color: var(--green-light); }
 .vision-section .cinematic-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0; filter: saturate(1.35) brightness(1.15); }
 .vision-section::after {
   content: ''; position: absolute; inset: 0; z-index: 0;
-  background: linear-gradient(180deg, rgba(10,61,31,0.78) 0%, rgba(10,61,31,0.05) 18%, rgba(10,61,31,0.05) 82%, rgba(10,61,31,0.78) 100%);
+  background: linear-gradient(180deg, rgba(11,61,19,0.78) 0%, rgba(11,61,19,0.05) 18%, rgba(11,61,19,0.05) 82%, rgba(11,61,19,0.78) 100%);
 }
 .vision-section .container { position: relative; z-index: 1; }
 .vision-timeline { margin-top: 4rem; max-width: 920px; margin-left: auto; margin-right: auto; }
 .vision-timeline-track { position: relative; height: 3px; background: rgba(255,255,255,0.14); border-radius: 3px; margin: 0 4%; }
 .vision-timeline-fill { position: absolute; inset: 0; background: linear-gradient(90deg, var(--green), var(--gold-light)); border-radius: 3px; transform: scaleX(0); }
 .vision-timeline-nodes { display: flex; justify-content: space-between; margin-top: -11px; }
-.vt-node { text-align: center; flex: 1 1 0; padding: 20px 14px; background: rgba(6,20,12,0.72); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border: 1px solid rgba(255,255,255,0.1); border-top: 2px solid rgba(240,179,58,0.5); border-radius: var(--radius-lg); margin: 0 6px; transition: transform 0.4s var(--spring), background 0.35s, border-color 0.35s, box-shadow 0.4s var(--spring); }
-.vt-node:hover { transform: translateY(-6px); background: rgba(6,20,12,0.88); border-color: rgba(240,179,58,0.5); border-top-color: var(--gold-light); box-shadow: 0 16px 32px rgba(0,0,0,0.35); }
-.vt-dot { position: relative; width: 22px; height: 22px; border-radius: 50%; background: var(--forest); border: 3px solid var(--gold-light); margin: 0 auto 22px; box-shadow: 0 0 0 6px rgba(240,179,58,0.14); }
+.vt-node { text-align: center; flex: 1 1 0; padding: 20px 14px; background: rgba(6,20,12,0.72); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border: 1px solid rgba(255,255,255,0.1); border-top: 2px solid rgba(105,168,59,0.5); border-radius: var(--radius-lg); margin: 0 6px; transition: transform 0.4s var(--spring), background 0.35s, border-color 0.35s, box-shadow 0.4s var(--spring); }
+.vt-node:hover { transform: translateY(-6px); background: rgba(6,20,12,0.88); border-color: rgba(105,168,59,0.5); border-top-color: var(--gold-light); box-shadow: 0 16px 32px rgba(0,0,0,0.35); }
+.vt-dot { position: relative; width: 22px; height: 22px; border-radius: 50%; background: var(--forest); border: 3px solid var(--gold-light); margin: 0 auto 22px; box-shadow: 0 0 0 6px rgba(105,168,59,0.14); }
 .vt-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--gold-light); opacity: 0.7; animation: vtPulse 2.4s ease-out infinite; }
 @keyframes vtPulse {
   0%   { transform: scale(1); opacity: 0.6; }
@@ -2575,7 +2696,6 @@ a.qc-value:hover { color: var(--green-light); }
 }
 </style>
 <section class="vision-section">
-  <video class="cinematic-bg-video" autoplay muted loop playsinline preload="metadata" src="assets/video/igo-hq-vision.mp4" aria-hidden="true"></video>
   <div class="container">
     <div class="section-header text-center" data-reveal>
       <span class="eyebrow" style="background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.22); color: var(--gold-light);">WHERE WE'RE GOING</span>
@@ -2618,12 +2738,12 @@ a.qc-value:hover { color: var(--green-light); }
 <section class="cta-final">
   <div class="container">
     <div class="cta-box" data-reveal>
-      <span class="section-eyebrow" style="color: rgba(255,255,255,0.45);">LET&rsquo;S GROW TOGETHER</span>
+      <span class="section-eyebrow" style="color: var(--green);">LET&rsquo;S GROW TOGETHER</span>
       <h2 class="cta-title">Ready to Partner with India&rsquo;s Leading Farming Group?</h2>
       <p class="cta-sub">Whether you&rsquo;re a farmer, investor, franchise partner, or global buyer &mdash; IGO Groups has a seat at the table for you.</p>
       <div class="cta-btn-group">
         <a href="contact.html" class="btn btn-primary" style="font-size: 0.95rem; padding: 14px 36px;">Get in Touch &rarr;</a>
-        <a href="brands.html" class="btn-hero-outline" style="font-size: 0.95rem; padding: 14px 36px; border: 1.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.75); border-radius: 12px; text-decoration: none; font-weight: 600;">View All Brands</a>
+        <a href="brands.html" class="btn-hero-outline" style="font-size: 0.95rem; padding: 14px 36px; border: 1.5px solid var(--green); color: var(--forest); border-radius: 12px; text-decoration: none; font-weight: 600;">View All Brands</a>
       </div>
     </div>
   </div>
@@ -2652,6 +2772,7 @@ a.qc-value:hover { color: var(--green-light); }
       <a href="projects.html">Projects</a>
       <a href="departments.html">Departments</a>
       <a href="leadership.html">Leadership</a>
+      <a href="teams.html">Teams</a>
       <a href="awards.html">Awards</a>
       <a href="gallery.html">Gallery</a>
       <a href="careers.html">Careers</a>

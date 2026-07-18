@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title>Zero Middlemen | IGO Groups</title>
 <meta name="description" content="IGO Groups operates with zero intermediaries — connecting farms directly to consumers, retailers, and export partners for maximum value at every step." />
 <link rel="canonical" href="https://igogroups.in/why-zero-middlemen.html" />
@@ -69,7 +70,7 @@ html.dark .process-section { background: var(--bg); }
 .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
 .process-steps::before { content: ''; position: absolute; top: 36px; left: calc(12.5% + 18px); right: calc(12.5% + 18px); height: 2px; background: linear-gradient(90deg, var(--green), var(--gold-light)); z-index: 0; }
 .process-step { text-align: center; position: relative; z-index: 1; }
-.process-step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--green); color: #fff; font-family: 'Sora', sans-serif; font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; box-shadow: 0 4px 20px rgba(46,184,92,0.35); }
+.process-step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--green); color: #fff; font-family: 'Sora', sans-serif; font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; box-shadow: 0 4px 20px rgba(71,132,39,0.35); }
 .process-step h4 { font-size: 0.9rem; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
 .process-step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
 html.dark .process-step h4 { color: #eef5f0; }
@@ -118,9 +119,50 @@ html.dark .brand-chip { background: var(--card-bg); color: #eef5f0; }
   .advantage-hero { min-height: 380px; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Zero Middlemen | IGO Groups",
+      "url": "https://igogroups.in/why-zero-middlemen.html",
+      "description": "IGO Groups operates with zero intermediaries — connecting farms directly to consumers, retailers, and export partners for maximum value at every step.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/",
+        "logo": "https://igogroups.in/assets/img/igo-logo.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://igogroups.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zero Middlemen",
+          "item": "https://igogroups.in/why-zero-middlemen.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<script>(function(){ var t = localStorage.getItem('igo-theme'); if (t !== 'light') document.documentElement.classList.add('dark'); })();</script>
+<script>(function(){ var t = localStorage.getItem('igo-theme'); if (t === 'dark') document.documentElement.classList.add('dark'); })();</script>
 
 <header class="navbar">
   <div class="container nav-inner">
@@ -136,6 +178,7 @@ html.dark .brand-chip { background: var(--card-bg); color: #eef5f0; }
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR &amp; Sustainability</a>
         </div>
       </div>
@@ -324,7 +367,7 @@ html.dark .brand-chip { background: var(--card-bg); color: #eef5f0; }
       <div class="brand-chip"><span class="brand-chip-dot"></span>Farmers Factory</div>
     </div>
     <div style="margin-top: 36px;" data-reveal>
-      <a href="brands.html" class="btn btn-outline">View All 27 Brands →</a>
+      <a href="brands.html" class="btn btn-outline">View All 26 Brands →</a>
     </div>
   </div>
 </section>
@@ -365,6 +408,7 @@ html.dark .brand-chip { background: var(--card-bg); color: #eef5f0; }
       <a href="projects.html">Projects</a>
       <a href="departments.html">Departments</a>
       <a href="leadership.html">Leadership</a>
+      <a href="teams.html">Teams</a>
       <a href="awards.html">Awards</a>
       <a href="careers.html">Careers</a>
     </div>

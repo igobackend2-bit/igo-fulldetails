@@ -3,42 +3,43 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title id="pg-title">Service Detail | IGO Groups</title>
 <meta name="description" content="Detailed information about IGO Groups service lines." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://www.igogroups.com/service-detail.html" />
+<link rel="canonical" href="https://igogroups.in/service-detail.html" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
 <style>
 .svc-hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:14px;display:block;margin-bottom:2rem;}
-.svc-brand-badge{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase;}
+.svc-brand-badge{display:inline-block;background:#e8f5e9;color:#478427;font-size:.78rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase;}
 .svc-highlights{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0 2rem;}
 .svc-tag{background:#f1f8e9;border:1px solid #c5e1a5;color:#33691e;padding:6px 16px;border-radius:24px;font-size:.85rem;font-weight:500;}
 .svc-section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#999;margin:0 0 .7rem;}
 .svc-points{margin:0 0 2.5rem;padding-left:1.5rem;line-height:2.1;color:#444;font-size:.97rem;}
-.svc-points li::marker{color:#2e7d32;font-size:1.1em;}
+.svc-points li::marker{color:#478427;font-size:1.1em;}
 .svc-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:2rem;}
-.svc-back-link{color:#2e7d32;text-decoration:none;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:6px;}
+.svc-back-link{color:#478427;text-decoration:none;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:6px;}
 .svc-back-link:hover{text-decoration:underline;}
-.svc-visit-btn{padding:.8rem 2rem;background:#2e7d32;color:#fff;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
-.svc-visit-btn:hover{background:#1b5e20;}
-.svc-enquire-btn{padding:.8rem 2rem;border:2px solid #2e7d32;color:#2e7d32;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.svc-visit-btn{padding:.8rem 2rem;background:#478427;color:#fff;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.svc-visit-btn:hover{background:#14521c;}
+.svc-enquire-btn{padding:.8rem 2rem;border:2px solid #478427;color:#478427;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
 .svc-enquire-btn:hover{background:#f1f8e9;}
 .svc-detail-grid{display:grid;grid-template-columns:1fr 340px;gap:3rem;align-items:start;}
 .svc-sidebar{background:var(--card-bg,#f9f9f7);border:1px solid var(--border,#e8e4dc);border-radius:12px;padding:1.75rem;}
 .svc-sidebar h4{margin:0 0 1rem;font-size:1rem;}
 .svc-sidebar ul{margin:0;padding-left:1.2rem;line-height:2;color:#555;font-size:.9rem;}
 .svc-breadcrumb{font-size:.85rem;color:#888;margin-bottom:1.5rem;}
-.svc-breadcrumb a{color:#2e7d32;text-decoration:none;}
+.svc-breadcrumb a{color:#478427;text-decoration:none;}
 .svc-breadcrumb a:hover{text-decoration:underline;}
 .dark .svc-brand-badge{background:#1a3a1a;color:#81c784;}
-.dark .svc-tag{background:#1a3a1a;border-color:#2e7d32;color:#a5d6a7;}
+.dark .svc-tag{background:#1a3a1a;border-color:#478427;color:#a5d6a7;}
 .dark .svc-points{color:#ccc;}
-.dark .svc-sidebar{background:#1e2a1e;border-color:#2e7d32;}
+.dark .svc-sidebar{background:#1e2a1e;border-color:#478427;}
 .dark .svc-sidebar ul{color:#bbb;}
 @media(max-width:768px){.svc-detail-grid{grid-template-columns:1fr;}.svc-hero-img{max-height:240px;}}
 </style>
@@ -46,12 +47,53 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://igogroups.in/assets/img/og-image.png" />
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "service-detail.html",
+      "url": "https://igogroups.in/service-detail.html",
+      "description": "Detailed information about IGO Groups service lines.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/",
+        "logo": "https://igogroups.in/assets/img/igo-logo.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://igogroups.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "service-detail.html",
+          "item": "https://igogroups.in/service-detail.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t !== 'light') document.documentElement.classList.add('dark');
+    if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -85,6 +127,7 @@
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR &amp; Sustainability</a>
         </div>
       </div>
@@ -121,7 +164,7 @@
 </header>
 
 <!-- Page Hero — populated by JS -->
-<section class="page-hero" id="pg-hero">
+<section class="page-hero dept-hero-photo" id="pg-hero" style="background-image:url('assets/img/office/team-12.jpg');">
   <div class="container">
     <span class="eyebrow" id="pg-eyebrow">SERVICE</span>
     <h1 id="pg-heading">Loading&hellip;</h1>
@@ -201,6 +244,7 @@
         <a href="projects.html">Projects</a>
         <a href="departments.html">Departments</a>
         <a href="leadership.html">Leadership</a>
+        <a href="teams.html">Teams</a>
         <a href="awards.html">Awards</a>
         <a href="gallery.html">Gallery</a>
         <a href="careers.html">Careers</a>

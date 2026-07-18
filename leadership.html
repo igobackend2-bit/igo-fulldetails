@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title>Leadership | IGO Groups</title>
 <meta name="description" content="Meet the 31 leaders driving India's fastest-growing farming ecosystem." />
 <link rel="canonical" href="https://igogroups.in/leadership.html" />
@@ -25,12 +26,53 @@
 <meta name="twitter:image" content="https://igogroups.in/assets/img/og-image.png" />
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Leadership | IGO Groups",
+      "url": "https://igogroups.in/leadership.html",
+      "description": "Meet the 31 leaders driving India's fastest-growing farming ecosystem.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/",
+        "logo": "https://igogroups.in/assets/img/igo-logo.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://igogroups.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Leadership",
+          "item": "https://igogroups.in/leadership.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t !== 'light') document.documentElement.classList.add('dark');
+    if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -67,7 +109,9 @@
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR & Sustainability</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -106,7 +150,7 @@
 </header>
 
 
-<section class="page-hero">
+<section class="page-hero dept-hero-photo" style="background-image:url('assets/img/office/office-exec-smiling.jpg');">
   <div class="container">
     <span class="eyebrow">OUR LEADERSHIP</span>
     <h1>The Minds Behind IGO</h1>
@@ -134,22 +178,22 @@
   background: var(--card-bg, #fff); border: 2px solid var(--green-light);
   border-radius: 18px; padding: 2.5rem; display: flex; gap: 2.5rem;
   align-items: flex-start; max-width: 780px; margin: 0 auto; cursor: pointer;
-  transition: box-shadow 0.22s; box-shadow: 0 4px 20px rgba(46,125,50,0.10);
+  transition: box-shadow 0.22s; box-shadow: 0 4px 20px rgba(71,132,39,0.10);
 }
-.ceo-featured:hover { box-shadow: 0 12px 40px rgba(46,125,50,0.18); }
+.ceo-featured:hover { box-shadow: 0 12px 40px rgba(71,132,39,0.18); }
 .ceo-avatar-lg {
   width: 108px; height: 108px; border-radius: 50%;
-  background: linear-gradient(135deg, #1b5e20, #43a047); color: #fff;
+  background: linear-gradient(135deg, #14521c, #43a047); color: #fff;
   display: flex; align-items: center; justify-content: center;
   font-size: 2rem; font-weight: 800; flex-shrink: 0;
-  box-shadow: 0 4px 18px rgba(46,125,50,0.30);
+  box-shadow: 0 4px 18px rgba(71,132,39,0.30);
 }
 .ceo-featured-info { flex: 1; }
 .ceo-title { font-size: 0.78rem; font-weight: 700; color: var(--green-light); display: block; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.09em; }
 .ceo-featured-info h2 { font-size: 1.75rem; margin: 0 0 0.5rem; line-height: 1.2; }
 .ceo-bio { color: var(--muted, #6b7280); font-size: 0.88rem; line-height: 1.75; margin-bottom: 1.25rem; }
 .ceo-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.ceo-tag { font-size: 0.73rem; font-weight: 600; background: rgba(46,125,50,0.09); color: var(--green-light); border-radius: 20px; padding: 0.22rem 0.85rem; border: 1px solid rgba(46,125,50,0.20); }
+.ceo-tag { font-size: 0.73rem; font-weight: 600; background: rgba(71,132,39,0.09); color: var(--green-light); border-radius: 20px; padding: 0.22rem 0.85rem; border: 1px solid rgba(71,132,39,0.20); }
 
 /* Professional Person Cards */
 .pro-card {
@@ -160,12 +204,12 @@
 .pro-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.13); transform: translateY(-4px); }
 .pro-card-strip { height: 4px; background: var(--green-light); }
 .pro-card-top { padding: 1.4rem 1.4rem 0; display: flex; gap: 0.9rem; align-items: flex-start; }
-.pro-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #2e7d32, #66bb6a); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; flex-shrink: 0; }
+.pro-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #478427, #69a83b); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; flex-shrink: 0; }
 .pro-card-head { flex: 1; }
 .pro-card-name { font-size: 0.95rem; font-weight: 700; color: var(--text); margin: 0 0 0.2rem; line-height: 1.3; }
 .pro-card-designation { font-size: 0.77rem; font-weight: 600; color: var(--green-light); margin: 0; line-height: 1.4; }
 .pro-card-mid { padding: 0.85rem 1.4rem 0; }
-.pro-dept-tag { display: inline-block; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; background: rgba(46,125,50,0.09); color: var(--green-light); border-radius: 20px; padding: 0.18rem 0.75rem; margin-bottom: 0.6rem; }
+.pro-dept-tag { display: inline-block; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; background: rgba(71,132,39,0.09); color: var(--green-light); border-radius: 20px; padding: 0.18rem 0.75rem; margin-bottom: 0.6rem; }
 .pro-card-focus { font-size: 0.79rem; color: var(--muted, #6b7280); line-height: 1.55; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .pro-card-footer { padding: 0.75rem 1.4rem; margin-top: auto; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.74rem; font-weight: 600; color: var(--green-light); display: flex; align-items: center; justify-content: space-between; }
 
@@ -177,7 +221,7 @@
 /* L1 card */
 .l1-card { background: var(--card-bg, #fff); border-radius: 14px; border: 1px solid var(--border, #e5e7eb); padding: 1.3rem 1.4rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .l1-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }
-.l1-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #1b5e20, #388e3c); color: #fff; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.l1-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #14521c, #388e3c); color: #fff; font-size: 0.92rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .l1-info { flex: 1; }
 .l1-name { font-size: 0.92rem; font-weight: 700; color: var(--heading); margin: 0 0 0.2rem; }
 .l1-role { font-size: 0.76rem; color: var(--green-light); font-weight: 600; margin: 0; }
@@ -208,6 +252,9 @@
           <span class="ceo-tag">Ph.D — Agricultural Management</span>
           <span class="ceo-tag">MBA (Strategy)</span>
           <span class="ceo-tag">Tamil Nadu Agricultural University</span>
+        </div>
+        <div style="margin-top:18px;">
+          <a href="index.html#ceo-video" class="card-link">Watch: CEO Chronicles Interview →</a>
         </div>
       </div>
     </div>
@@ -861,6 +908,7 @@
       <a href="projects.html">Projects</a>
       <a href="departments.html">Departments</a>
       <a href="leadership.html">Leadership</a>
+      <a href="teams.html">Teams</a>
       <a href="awards.html">Awards</a>
       <a href="gallery.html">Gallery</a>
       <a href="careers.html">Careers</a>

@@ -3,43 +3,44 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title id="pg-title">Project Detail | IGO Groups</title>
 <meta name="description" content="Detailed project information from IGO Groups farm-engineering division." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://www.igogroups.com/project-detail.html" />
+<link rel="canonical" href="https://igogroups.in/project-detail.html" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
 <style>
 .proj-hero-img{width:100%;max-height:440px;object-fit:cover;border-radius:14px;display:block;margin-bottom:2rem;}
-.proj-cat-badge{display:inline-block;background:#fff3cd;color:#856404;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:.9rem;letter-spacing:.04em;text-transform:uppercase;border:1px solid #ffc107;}
-.proj-num-badge{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#c9a227,#e8c870);color:#fff;font-weight:800;font-size:1rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(201,162,39,.35);}
+.proj-cat-badge{display:inline-block;background:#eef7e6;color:#3f6f1e;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:.9rem;letter-spacing:.04em;text-transform:uppercase;border:1px solid #69a83b;}
+.proj-num-badge{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#478427,#86c25b);color:#fff;font-weight:800;font-size:1rem;margin-bottom:1rem;box-shadow:0 4px 14px rgba(71,132,39,.35);}
 .proj-highlights{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0 2rem;}
 .proj-tag{background:#f1f8e9;border:1px solid #c5e1a5;color:#33691e;padding:6px 16px;border-radius:24px;font-size:.85rem;font-weight:500;}
 .proj-section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#999;margin:0 0 .7rem;}
 .proj-points{margin:0 0 2.5rem;padding-left:1.5rem;line-height:2.1;color:#444;font-size:.97rem;}
-.proj-points li::marker{color:#2e7d32;font-size:1.1em;}
+.proj-points li::marker{color:#478427;font-size:1.1em;}
 .proj-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:2rem;}
-.proj-back-link{color:#2e7d32;text-decoration:none;font-weight:600;font-size:.92rem;}
+.proj-back-link{color:#478427;text-decoration:none;font-weight:600;font-size:.92rem;}
 .proj-back-link:hover{text-decoration:underline;}
-.proj-visit-btn{padding:.8rem 2rem;background:#2e7d32;color:#fff;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
-.proj-visit-btn:hover{background:#1b5e20;}
-.proj-enquire-btn{padding:.8rem 2rem;border:2px solid #2e7d32;color:#2e7d32;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.proj-visit-btn{padding:.8rem 2rem;background:#478427;color:#fff;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
+.proj-visit-btn:hover{background:#14521c;}
+.proj-enquire-btn{padding:.8rem 2rem;border:2px solid #478427;color:#478427;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;}
 .proj-enquire-btn:hover{background:#f1f8e9;}
 .proj-detail-grid{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
 .proj-sidebar{background:var(--card-bg,#f9f9f7);border:1px solid var(--border,#e8e4dc);border-radius:12px;padding:1.75rem;}
 .proj-sidebar h4{margin:0 0 1rem;font-size:1rem;}
 .proj-sidebar ul{margin:0;padding-left:1.2rem;line-height:2;color:#555;font-size:.9rem;}
 .proj-breadcrumb{font-size:.85rem;color:#888;margin-bottom:1.5rem;}
-.proj-breadcrumb a{color:#2e7d32;text-decoration:none;}
+.proj-breadcrumb a{color:#478427;text-decoration:none;}
 .proj-breadcrumb a:hover{text-decoration:underline;}
-.dark .proj-cat-badge{background:#3a2a00;color:#ffc107;border-color:#664d00;}
-.dark .proj-tag{background:#1a3a1a;border-color:#2e7d32;color:#a5d6a7;}
+.dark .proj-cat-badge{background:#16240e;color:#69a83b;border-color:#2f4f1a;}
+.dark .proj-tag{background:#1a3a1a;border-color:#478427;color:#a5d6a7;}
 .dark .proj-points{color:#ccc;}
-.dark .proj-sidebar{background:#1e2a1e;border-color:#2e7d32;}
+.dark .proj-sidebar{background:#1e2a1e;border-color:#478427;}
 .dark .proj-sidebar ul{color:#bbb;}
 @media(max-width:768px){.proj-detail-grid{grid-template-columns:1fr;}.proj-hero-img{max-height:240px;}}
 </style>
@@ -47,10 +48,51 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://igogroups.in/assets/img/og-image.png" />
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "project-detail.html",
+      "url": "https://igogroups.in/project-detail.html",
+      "description": "Detailed project information from IGO Groups farm-engineering division.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/",
+        "logo": "https://igogroups.in/assets/img/igo-logo.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://igogroups.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "project-detail.html",
+          "item": "https://igogroups.in/project-detail.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <script>
-  (function(){var t=localStorage.getItem('igo-theme');if(t!=='light')document.documentElement.classList.add('dark');})();
+  (function(){var t=localStorage.getItem('igo-theme');if(t==='dark')document.documentElement.classList.add('dark');})();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
   <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
@@ -80,6 +122,7 @@
         <div class="dropdown-menu">
           <a href="about.html">About Us</a><a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR &amp; Sustainability</a>
         </div>
       </div>
@@ -109,7 +152,7 @@
   </div>
 </header>
 
-<section class="page-hero" id="pg-hero">
+<section class="page-hero dept-hero-photo" id="pg-hero" style="background-image:url('assets/img/office/team-05.jpg');">
   <div class="container">
     <span class="eyebrow" id="pg-eyebrow">PROJECT</span>
     <h1 id="pg-heading">Loading&hellip;</h1>
@@ -173,6 +216,7 @@
       <h4>Explore</h4>
       <a href="about.html">About Us</a><a href="brands.html">Our Brands</a><a href="services.html">Services</a>
       <a href="projects.html">Projects</a><a href="departments.html">Departments</a><a href="leadership.html">Leadership</a>
+<a href="teams.html">Teams</a>
       <a href="awards.html">Awards</a><a href="gallery.html">Gallery</a>
       <a href="careers.html">Careers</a><a href="news.html">News</a>
     </div>
@@ -325,6 +369,7 @@ var PROJECTS = {
   document.getElementById('pg-heading').textContent = p.title;
   document.getElementById('pg-sub').textContent = p.desc;
   document.getElementById('bc-title').textContent = p.title;
+  document.getElementById('pg-hero').style.backgroundImage = "url('" + p.img + "')";
 
   var img = document.getElementById('proj-img');
   img.src = p.img; img.alt = p.title;
@@ -352,4 +397,4 @@ var PROJECTS = {
 })();
 </script>
 </body>
-</html>
+</html> 

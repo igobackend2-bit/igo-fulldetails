@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b3d13" />
 <title>Media Gallery | IGO Groups</title>
 <meta name="description" content="Explore IGO Groups' farm projects, corporate events, and operational facilities." />
 <link rel="canonical" href="https://igogroups.in/gallery.html" />
@@ -25,12 +26,53 @@
 <meta name="twitter:image" content="https://igogroups.in/assets/img/og-image.png" />
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Media Gallery | IGO Groups",
+      "url": "https://igogroups.in/gallery.html",
+      "description": "Explore IGO Groups' farm projects, corporate events, and operational facilities.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IGO Groups",
+        "url": "https://igogroups.in/",
+        "logo": "https://igogroups.in/assets/img/igo-logo.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://igogroups.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Media Gallery",
+          "item": "https://igogroups.in/gallery.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <script>
   (function(){
     var t = localStorage.getItem('igo-theme');
-    if (t !== 'light') document.documentElement.classList.add('dark');
+    if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
 <svg class="icon-sprite" aria-hidden="true">
@@ -67,7 +109,9 @@
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
           <a href="departments.html">Departments</a>
+          <a href="teams.html">Teams</a>
           <a href="csr.html">CSR & Sustainability</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -130,7 +174,7 @@
 .gal-filter-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:2rem 0 0;}
 .gal-filter-bar button{padding:0.5rem 1.3rem;border-radius:999px;border:1.5px solid var(--border,#e5e7eb);background:transparent;color:var(--text,#374151);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
 .gal-filter-bar button .gal-count{font-size:0.7rem;background:var(--soft-gray,#f3f4f6);color:var(--muted,#6b7280);padding:1px 6px;border-radius:999px;font-weight:700;}
-.gal-filter-bar button.active,.gal-filter-bar button:hover{background:var(--green,#2e7d32);color:#fff;border-color:var(--green,#2e7d32);}
+.gal-filter-bar button.active,.gal-filter-bar button:hover{background:var(--green,#478427);color:#fff;border-color:var(--green,#478427);}
 .gal-filter-bar button.active .gal-count,.gal-filter-bar button:hover .gal-count{background:rgba(255,255,255,0.2);color:#fff;}
 
 /* ── Gallery grid ── */
@@ -150,7 +194,7 @@
 /* Overlay */
 .gal-pro-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.15) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem 1.3rem;opacity:0;transition:opacity 0.28s;}
 .gal-pro-card:hover .gal-pro-overlay{opacity:1;}
-.gal-pro-tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--green,#2e7d32);padding:2px 8px;border-radius:999px;margin-bottom:6px;width:fit-content;}
+.gal-pro-tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--green,#478427);padding:2px 8px;border-radius:999px;margin-bottom:6px;width:fit-content;}
 .gal-pro-title{font-size:0.95rem;font-weight:700;color:#fff;line-height:1.3;margin:0 0 6px;}
 .gal-pro-hint{font-size:0.72rem;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:4px;}
 .gal-pro-hint::after{content:'→';font-size:0.8rem;}
@@ -168,7 +212,7 @@
 .gal-modal-close{position:absolute;top:1.1rem;right:1.1rem;background:var(--soft-gray,#f3f4f6);border:none;width:36px;height:36px;border-radius:50%;font-size:1rem;cursor:pointer;color:var(--muted,#6b7280);display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
 .gal-modal-close:hover{background:var(--border,#e5e7eb);}
 .gal-modal-title{font-size:1.35rem;font-weight:800;margin-bottom:0.2rem;color:var(--heading,#111827);}
-.gal-modal-cat{font-size:0.72rem;font-weight:700;color:var(--green,#2e7d32);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.4rem;display:block;}
+.gal-modal-cat{font-size:0.72rem;font-weight:700;color:var(--green,#478427);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.4rem;display:block;}
 .gal-modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
 @media(max-width:600px){.gal-modal-grid{grid-template-columns:1fr 1fr;}}
 .gal-modal-img{width:100%;height:auto;display:block;object-fit:contain;border-radius:12px;cursor:zoom-in;transition:transform 0.2s,box-shadow 0.2s;background:var(--soft-gray,#f3f4f6);max-height:220px;}
@@ -380,6 +424,7 @@ document.addEventListener('keydown',function(e){
         <a href="projects.html">Projects</a>
         <a href="departments.html">Departments</a>
         <a href="leadership.html">Leadership</a>
+        <a href="teams.html">Teams</a>
         <a href="awards.html">Awards</a>
         <a href="gallery.html">Gallery</a>
         <a href="careers.html">Careers</a>
