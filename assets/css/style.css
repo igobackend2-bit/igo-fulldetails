@@ -99,7 +99,8 @@ body {
   position: relative;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; transition: opacity 0.2s ease, color 0.2s ease; }
+a:hover { opacity: 0.82; }
 img { max-width: 100%; display: block; }
 h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.01em; }
 
@@ -124,10 +125,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.01em; }
 /* ---------- Navbar (glass) ---------- */
 /* Floating glass pill — detached from the page edge, VisionOS-style */
 .navbar {
-  position: sticky; top: 12px; z-index: 200;
-  width: min(1240px, calc(100% - 24px));
-  margin: 12px auto 0;
-  border-radius: 20px;
+  position: sticky; top: 0; z-index: 200;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
   background: var(--nav-bg);
   backdrop-filter: blur(var(--glass-blur)) saturate(140%);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
@@ -507,12 +508,23 @@ html.dark .trust-badge { color: var(--green-light); }
 .brand-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--green); }
 .brand-card-img {
   width: calc(100% + 40px); margin: -20px -20px 16px; height: 220px; object-fit: cover; object-position: top;
+  transition: transform 0.5s var(--spring);
 }
+.brand-card:hover .brand-card-img { transform: scale(1.06); }
 .brand-card h4 { color: var(--forest); margin-bottom: 6px; font-size: 1.08rem; }
 html.dark .brand-card h4 { color: var(--green-light); }
 .brand-card p { color: var(--muted); font-size: 0.88rem; margin-bottom: 14px; min-height: 40px; }
-.card-link { font-weight: 700; color: var(--green); font-size: 0.88rem; }
+.card-link {
+  font-weight: 700; color: var(--green); font-size: 0.88rem;
+  display: inline-block; position: relative; opacity: 1;
+  background-image: linear-gradient(var(--green), var(--green));
+  background-repeat: no-repeat; background-position: left bottom;
+  background-size: 0% 2px; padding-bottom: 2px;
+  transition: background-size 0.3s ease, transform 0.25s ease, opacity 0.2s ease;
+}
+.card-link:hover { background-size: 100% 2px; transform: translateX(2px); opacity: 1; }
 .card-link[disabled] { color: var(--muted-light); cursor: default; pointer-events: none; }
+.card-link[disabled]:hover { background-size: 0% 2px; transform: none; }
 .brand-card .tag {
   display: inline-block; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.5px;
   border-radius: 4px; padding: 3px 8px; margin-bottom: 8px; text-transform: uppercase;

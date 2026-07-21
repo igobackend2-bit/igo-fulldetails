@@ -108,10 +108,10 @@
         <div class="dropdown-menu">
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
-          <a href="departments.html">Departments</a>
+          <a href="org-chart.html">Org Chart</a>
           <a href="teams.html">Teams</a>
+          <a href="facilities.html">Office Facilities</a>
           <a href="csr.html">CSR & Sustainability</a>
-          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -119,9 +119,8 @@
         <a href="javascript:void(0)">Business ▾</a>
         <div class="dropdown-menu">
           <a href="brands.html">Business Divisions</a>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="products.html">Products</a>
+          <a href="departments.html">Departments</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -160,22 +159,32 @@
     <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:520px;margin:0 auto 2.5rem;">Farm projects, engineering works, corporate events and operational facilities across IGO Group.</p>
     <!-- Stats strip -->
     <div style="display:inline-flex;gap:2.5rem;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1rem 2rem;backdrop-filter:blur(8px);">
-      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">9+</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Collections</div></div>
+      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">23+</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Collections</div></div>
       <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
-      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">50+</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Photos</div></div>
+      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">100+</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Photos</div></div>
       <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
-      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">4</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Categories</div></div>
+      <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:800;color:#fff;">5</div><div style="font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;">Categories</div></div>
     </div>
   </div>
 </section>
 
 <style>
-/* ── Gallery filters ── */
+/* ── Gallery category bar ── */
 .gal-filter-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:2rem 0 0;}
-.gal-filter-bar button{padding:0.5rem 1.3rem;border-radius:999px;border:1.5px solid var(--border,#e5e7eb);background:transparent;color:var(--text,#374151);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
+.gal-filter-bar button{padding:0.6rem 1.4rem;border-radius:999px;border:1.5px solid var(--border,#e5e7eb);background:transparent;color:var(--text,#374151);font-size:0.85rem;font-weight:700;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:7px;}
 .gal-filter-bar button .gal-count{font-size:0.7rem;background:var(--soft-gray,#f3f4f6);color:var(--muted,#6b7280);padding:1px 6px;border-radius:999px;font-weight:700;}
 .gal-filter-bar button.active,.gal-filter-bar button:hover{background:var(--green,#478427);color:#fff;border-color:var(--green,#478427);}
 .gal-filter-bar button.active .gal-count,.gal-filter-bar button:hover .gal-count{background:rgba(255,255,255,0.2);color:#fff;}
+
+/* ── Flat image grid (Awards / News / Office Infrastructure) ── */
+.gal-flat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem;}
+@media(max-width:900px){.gal-flat-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.gal-flat-grid{grid-template-columns:1fr 1fr;}}
+.gal-flat-tile{border-radius:14px;overflow:hidden;cursor:zoom-in;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.10);transition:transform 0.25s,box-shadow 0.25s;aspect-ratio:4/3;background:#111;}
+.gal-flat-tile:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.20);}
+.gal-flat-tile img{width:100%;height:100%;object-fit:cover;display:block;}
+.gal-flat-cap{position:absolute;left:0;right:0;bottom:0;padding:0.6rem 0.8rem;background:linear-gradient(to top,rgba(0,0,0,0.75),transparent);color:#fff;font-size:0.72rem;font-weight:700;opacity:0;transition:opacity 0.25s;}
+.gal-flat-tile:hover .gal-flat-cap{opacity:1;}
 
 /* ── Gallery grid ── */
 .gal-pro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
@@ -228,117 +237,248 @@
 
 <section class="content-section" style="padding-top:0;">
   <div class="container">
-    <!-- Filter bar -->
-    <div class="gal-filter-bar">
-      <button class="active" onclick="filterGallery('all',this)">All <span class="gal-count">9</span></button>
-      <button onclick="filterGallery('farm-projects',this)">Farm Projects <span class="gal-count">4</span></button>
-      <button onclick="filterGallery('operational',this)">Operational <span class="gal-count">3</span></button>
-      <button onclick="filterGallery('corporate',this)">Corporate Events <span class="gal-count">2</span></button>
+    <!-- Category bar -->
+    <div class="gal-filter-bar" data-reveal>
+      <button class="active" onclick="showGalCat('projects',this)">🚜 Projects <span class="gal-count">8</span></button>
+      <button onclick="showGalCat('awards',this)">🏆 Awards <span class="gal-count">9</span></button>
+      <button onclick="showGalCat('news',this)">📰 News <span class="gal-count">8</span></button>
+      <button onclick="showGalCat('office',this)">🏢 Office Infrastructure <span class="gal-count">14</span></button>
+      <button onclick="showGalCat('team',this)">👥 IGO Team <span class="gal-count">15</span></button>
     </div>
 
-    <!-- Gallery grid -->
-    <div class="gal-pro-grid" id="galleryGrid">
+    <!-- ═══ PROJECTS (click a project → see all its images) ═══ -->
+    <div class="gal-cat-panel" id="galCatProjects">
+      <div class="gal-pro-grid">
 
-      <!-- Featured: Agri Farming (spans 2 cols) -->
-      <div class="gal-pro-card gal-featured" data-cat="farm-projects" onclick="openGalleryModal('Agri Farming Projects','Farm Projects',['assets/img/gallery/agri-farming.webp','assets/img/gallery/polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-open-cultivation.webp','assets/img/gallery/sub-vertical.webp','assets/img/gallery/office-farm-building.webp'])">
-        <img src="assets/img/gallery/agri-farming.webp" alt="Agri Farming Projects" loading="lazy">
-        <span class="gal-pro-badge">Farm Projects</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Farm Projects</span>
-          <p class="gal-pro-title">Agri Farming Projects</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Agri Farming Projects','Projects',['assets/img/gallery/agri-farming.webp','assets/img/gallery/polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-open-cultivation.webp','assets/img/gallery/sub-vertical.webp','assets/img/gallery/office-farm-building.webp'])">
+          <img src="assets/img/gallery/agri-farming.webp" alt="Agri Farming Projects" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Agri Farming Projects</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Aquaculture -->
-      <div class="gal-pro-card" data-cat="farm-projects" onclick="openGalleryModal('Aquaculture Farming Projects','Farm Projects',['assets/img/gallery/aquaculture.webp','assets/img/gallery/sub-fish-farming.webp','assets/img/gallery/sub-shrimp.webp','assets/img/gallery/sub-biofloc.webp','assets/img/gallery/sub-crab.webp','assets/img/gallery/sub-pond.webp'])">
-        <img src="assets/img/gallery/aquaculture.webp" alt="Aquaculture Farming" loading="lazy">
-        <span class="gal-pro-badge">Farm Projects</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Farm Projects</span>
-          <p class="gal-pro-title">Aquaculture Farming Projects</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Aquaculture Farming Projects','Projects',['assets/img/gallery/aquaculture.webp','assets/img/gallery/sub-fish-farming.webp','assets/img/gallery/sub-shrimp.webp','assets/img/gallery/sub-biofloc.webp','assets/img/gallery/sub-crab.webp','assets/img/gallery/sub-pond.webp'])">
+          <img src="assets/img/gallery/aquaculture.webp" alt="Aquaculture Farming" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Aquaculture Farming Projects</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Livestock -->
-      <div class="gal-pro-card" data-cat="farm-projects" onclick="openGalleryModal('Livestock Farming Projects','Farm Projects',['assets/img/gallery/livestock.webp','assets/img/gallery/sub-goat.webp','assets/img/gallery/sub-dairy.webp','assets/img/gallery/sub-sheep.webp','assets/img/gallery/sub-poultry.webp'])">
-        <img src="assets/img/gallery/livestock.webp" alt="Livestock Farming" loading="lazy">
-        <span class="gal-pro-badge">Farm Projects</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Farm Projects</span>
-          <p class="gal-pro-title">Livestock Farming Projects</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Livestock Farming Projects','Projects',['assets/img/gallery/livestock.webp','assets/img/gallery/sub-goat.webp','assets/img/gallery/sub-dairy.webp','assets/img/gallery/sub-sheep.webp','assets/img/gallery/sub-poultry.webp'])">
+          <img src="assets/img/gallery/livestock.webp" alt="Livestock Farming" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Livestock Farming Projects</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Polyhouse -->
-      <div class="gal-pro-card" data-cat="operational" onclick="openGalleryModal('Polyhouse Structures','Operational Facilities',['assets/img/gallery/polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/smart-grow-sensor.webp'])">
-        <img src="assets/img/gallery/polyhouse.webp" alt="Polyhouse Structures" loading="lazy">
-        <span class="gal-pro-badge">Operational</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Operational Facilities</span>
-          <p class="gal-pro-title">Polyhouse Structures</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Polyhouse Structures','Projects',['assets/img/gallery/polyhouse.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/smart-grow-sensor.webp'])">
+          <img src="assets/img/gallery/polyhouse.webp" alt="Polyhouse Structures" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Polyhouse Structures</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Award Ceremony -->
-      <div class="gal-pro-card" data-cat="corporate" onclick="openGalleryModal('Industry Awards &amp; Recognition','Corporate Events',['assets/img/award-ceremony-ceo.png','assets/img/award-icon-of-india.jpg','assets/img/award-best-startup.jpg','assets/img/award-press-media.jpg','assets/img/award-farm-engineering-2025.jpg','assets/img/award-most-trusted-2026.jpg'])">
-        <img src="assets/img/award-ceremony-ceo.png" alt="Industry Award Ceremony" loading="lazy">
-        <span class="gal-pro-badge">Corporate</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Corporate Events</span>
-          <p class="gal-pro-title">Industry Awards &amp; Recognition</p>
-          <span class="gal-pro-hint">View award photos</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Farm Engineering Projects','Projects',['assets/img/gallery/farm-engineering.webp','assets/img/gallery/office-farm-building.webp','assets/img/gallery/sub-pond.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-borewell.webp'])">
+          <img src="assets/img/gallery/farm-engineering.webp" alt="Farm Engineering" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Farm Engineering Projects</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Farm Engineering (featured) -->
-      <div class="gal-pro-card gal-featured" data-cat="farm-projects" onclick="openGalleryModal('Farm Engineering Projects','Farm Projects',['assets/img/gallery/farm-engineering.webp','assets/img/gallery/office-farm-building.webp','assets/img/gallery/sub-pond.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-borewell.webp'])">
-        <img src="assets/img/gallery/farm-engineering.webp" alt="Farm Engineering" loading="lazy">
-        <span class="gal-pro-badge">Farm Projects</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Farm Projects</span>
-          <p class="gal-pro-title">Farm Engineering Projects</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Farm Infrastructure &amp; Irrigation','Projects',['assets/img/gallery/irrigation-system.webp','assets/img/gallery/sub-borewell.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-pond.webp'])">
+          <img src="assets/img/gallery/irrigation-system.webp" alt="Farm Irrigation" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Farm Infrastructure &amp; Irrigation</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Irrigation -->
-      <div class="gal-pro-card" data-cat="operational" onclick="openGalleryModal('Farm Infrastructure &amp; Irrigation','Operational Facilities',['assets/img/gallery/irrigation-system.webp','assets/img/gallery/sub-borewell.webp','assets/img/gallery/sub-land-leveling.webp','assets/img/gallery/sub-pond.webp'])">
-        <img src="assets/img/gallery/irrigation-system.webp" alt="Farm Irrigation" loading="lazy">
-        <span class="gal-pro-badge">Operational</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Operational Facilities</span>
-          <p class="gal-pro-title">Farm Infrastructure &amp; Irrigation</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Control &amp; Automation Systems','Projects',['assets/img/gallery/smart-grow-sensor.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-vertical.webp'])">
+          <img src="assets/img/gallery/smart-grow-sensor.webp" alt="Automation Systems" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Control &amp; Automation Systems</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Automation -->
-      <div class="gal-pro-card" data-cat="operational" onclick="openGalleryModal('Control &amp; Automation Systems','Operational Facilities',['assets/img/gallery/smart-grow-sensor.webp','assets/img/gallery/sub-hydroponic.webp','assets/img/gallery/sub-vertical.webp'])">
-        <img src="assets/img/gallery/smart-grow-sensor.webp" alt="Automation Systems" loading="lazy">
-        <span class="gal-pro-badge">Operational</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Operational Facilities</span>
-          <p class="gal-pro-title">Control &amp; Automation Systems</p>
-          <span class="gal-pro-hint">View photo collection</span>
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Cold Storage &amp; Packhouse Facilities','Projects',['assets/img/gallery/cold-storage.jpg','assets/img/gallery/packhouse.webp','assets/img/gallery/farm-buildings-infra.webp'])">
+          <img src="assets/img/gallery/cold-storage.jpg" alt="Cold Storage & Packhouse" loading="lazy">
+          <span class="gal-pro-badge">Projects</span>
+          <div class="gal-pro-overlay">
+            <span class="gal-pro-tag">Projects</span>
+            <p class="gal-pro-title">Cold Storage &amp; Packhouse Facilities</p>
+            <span class="gal-pro-hint">View photo collection</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Campus Drives -->
-      <div class="gal-pro-card" data-cat="corporate" onclick="openGalleryModal('Campus Drives &amp; Industrial Visits','Corporate Events',['assets/img/gallery/independence-day.webp','assets/img/gallery/sub-campus-drive.webp','assets/img/gallery/sub-iv-event.webp'])">
-        <img src="assets/img/gallery/independence-day.webp" alt="Campus Events" loading="lazy">
-        <span class="gal-pro-badge">Corporate</span>
-        <div class="gal-pro-overlay">
-          <span class="gal-pro-tag">Corporate Events</span>
-          <p class="gal-pro-title">Campus Drives &amp; Industrial Visits</p>
-          <span class="gal-pro-hint">View event photos</span>
+      </div>
+    </div>
+
+    <!-- ═══ AWARDS (all award images shown directly) ═══ -->
+    <div class="gal-cat-panel" id="galCatAwards" style="display:none;">
+      <div class="gal-flat-grid">
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-ceremony-ceo.png','Award Ceremony — CEO')"><img src="assets/img/award-ceremony-ceo.png" alt="Award Ceremony" loading="lazy"><span class="gal-flat-cap">Award Ceremony</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-icon-of-india.jpg','Icon of India 2024')"><img src="assets/img/award-icon-of-india.jpg" alt="Icon of India 2024" loading="lazy"><span class="gal-flat-cap">Icon of India 2024</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-best-startup.jpg','Best Startup Award')"><img src="assets/img/award-best-startup.jpg" alt="Best Startup Award" loading="lazy"><span class="gal-flat-cap">Best Startup Award</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-press-media.jpg','Press & Media Recognition')"><img src="assets/img/award-press-media.jpg" alt="Press & Media Recognition" loading="lazy"><span class="gal-flat-cap">Press &amp; Media</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-farm-engineering-2025.jpg','Farm Engineering Award 2025')"><img src="assets/img/award-farm-engineering-2025.jpg" alt="Farm Engineering Award 2025" loading="lazy"><span class="gal-flat-cap">Farm Engineering 2025</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/award-most-trusted-2026.jpg','Most Trusted Brand 2026')"><img src="assets/img/award-most-trusted-2026.jpg" alt="Most Trusted Brand 2026" loading="lazy"><span class="gal-flat-cap">Most Trusted 2026</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/award-ceremony.jpg','Award Ceremony')"><img src="assets/img/gallery/award-ceremony.jpg" alt="Award Ceremony" loading="lazy"><span class="gal-flat-cap">Award Ceremony</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/sub-award2.jpg','Award Recognition')"><img src="assets/img/gallery/sub-award2.jpg" alt="Award Recognition" loading="lazy"><span class="gal-flat-cap">Award Recognition</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/sub-award3.jpg','Award Recognition')"><img src="assets/img/gallery/sub-award3.jpg" alt="Award Recognition" loading="lazy"><span class="gal-flat-cap">Award Recognition</span></div>
+      </div>
+    </div>
+
+    <!-- ═══ NEWS (all news & event images shown directly) ═══ -->
+    <div class="gal-cat-panel" id="galCatNews" style="display:none;">
+      <div class="gal-flat-grid">
+        <div class="gal-flat-tile" onclick="openLightbox('assets/blog/blog1.webp','IGO News')"><img src="assets/blog/blog1.webp" alt="IGO News" loading="lazy"><span class="gal-flat-cap">News</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/blog/blog2.webp','IGO News')"><img src="assets/blog/blog2.webp" alt="IGO News" loading="lazy"><span class="gal-flat-cap">News</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/blog/blog3.webp','IGO News')"><img src="assets/blog/blog3.webp" alt="IGO News" loading="lazy"><span class="gal-flat-cap">News</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/blog/blog4.webp','IGO News')"><img src="assets/blog/blog4.webp" alt="IGO News" loading="lazy"><span class="gal-flat-cap">News</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/blog/blog5.webp','IGO News')"><img src="assets/blog/blog5.webp" alt="IGO News" loading="lazy"><span class="gal-flat-cap">News</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/independence-day.webp','Independence Day Celebration')"><img src="assets/img/gallery/independence-day.webp" alt="Independence Day Celebration" loading="lazy"><span class="gal-flat-cap">Independence Day</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/sub-campus-drive.webp','Campus Drive')"><img src="assets/img/gallery/sub-campus-drive.webp" alt="Campus Drive" loading="lazy"><span class="gal-flat-cap">Campus Drive</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/gallery/sub-iv-event.webp','Industrial Visit Event')"><img src="assets/img/gallery/sub-iv-event.webp" alt="Industrial Visit Event" loading="lazy"><span class="gal-flat-cap">Industrial Visit</span></div>
+      </div>
+    </div>
+
+    <!-- ═══ OFFICE INFRASTRUCTURE (all office/facility images shown directly) ═══ -->
+    <div class="gal-cat-panel" id="galCatOffice" style="display:none;">
+      <div class="gal-flat-grid">
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/office/hq-front-hero.jpg','Head Office Building')"><img src="assets/img/office/hq-front-hero.jpg" alt="Head Office Building" loading="lazy"><span class="gal-flat-cap">Head Office</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-reception-real.png','Reception')"><img src="assets/img/facilities/office-reception-real.png" alt="Reception" loading="lazy"><span class="gal-flat-cap">Reception</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-workstations-real.png','Open-Plan Workstations')"><img src="assets/img/facilities/office-workstations-real.png" alt="Open-Plan Workstations" loading="lazy"><span class="gal-flat-cap">Workstations</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-collaboration-real.png','Team Collaboration Area')"><img src="assets/img/facilities/office-collaboration-real.png" alt="Team Collaboration Area" loading="lazy"><span class="gal-flat-cap">Collaboration Area</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-it-infrastructure-real.png','IT & Digital Infrastructure')"><img src="assets/img/facilities/office-it-infrastructure-real.png" alt="IT & Digital Infrastructure" loading="lazy"><span class="gal-flat-cap">IT Infrastructure</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-new-talent-real.png','A Home for New Talent')"><img src="assets/img/facilities/office-new-talent-real.png" alt="A Home for New Talent" loading="lazy"><span class="gal-flat-cap">New Talent Hub</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/office-parking-real.png','Parking')"><img src="assets/img/facilities/office-parking-real.png" alt="Parking" loading="lazy"><span class="gal-flat-cap">Parking</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-conference-hall.webp','Conference Hall')"><img src="assets/img/facilities/facility-conference-hall.webp" alt="Conference Hall" loading="lazy"><span class="gal-flat-cap">Conference Hall</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-meeting-rooms.webp','Meeting Rooms')"><img src="assets/img/facilities/facility-meeting-rooms.webp" alt="Meeting Rooms" loading="lazy"><span class="gal-flat-cap">Meeting Rooms</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-training-hall.webp','Training Hall')"><img src="assets/img/facilities/facility-training-hall.webp" alt="Training Hall" loading="lazy"><span class="gal-flat-cap">Training Hall</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-innovation-lab.webp','Innovation Lab')"><img src="assets/img/facilities/facility-innovation-lab.webp" alt="Innovation Lab" loading="lazy"><span class="gal-flat-cap">Innovation Lab</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-server-room.webp','Server Room')"><img src="assets/img/facilities/facility-server-room.webp" alt="Server Room" loading="lazy"><span class="gal-flat-cap">Server Room</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-cafeteria.webp','Cafeteria')"><img src="assets/img/facilities/facility-cafeteria.webp" alt="Cafeteria" loading="lazy"><span class="gal-flat-cap">Cafeteria</span></div>
+        <div class="gal-flat-tile" onclick="openLightbox('assets/img/facilities/facility-pantry.webp','Pantry')"><img src="assets/img/facilities/facility-pantry.webp" alt="Pantry" loading="lazy"><span class="gal-flat-cap">Pantry</span></div>
+      </div>
+    </div>
+
+    <!-- ═══ IGO TEAM (click a team → see that team's members) ═══ -->
+    <div class="gal-cat-panel" id="galCatTeam" style="display:none;">
+      <div class="gal-pro-grid">
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Accounts Team','IGO Team',['assets/img/office/teams/accounts-team/accounts-team.jpg','assets/img/office/teams/accounts-team/accounts-team-2.jpg'])">
+          <img src="assets/img/office/teams/accounts-team/accounts-team.jpg" alt="Accounts Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Accounts Team</p><span class="gal-pro-hint">View team photos</span></div>
         </div>
-      </div>
 
-    </div><!-- end gal-pro-grid -->
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Agri Team','IGO Team',['assets/img/office/teams/agri-team/agri-team.png','assets/img/office/teams/agri-team/agri-team-2.jpg'])">
+          <img src="assets/img/office/teams/agri-team/agri-team.png" alt="Agri Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Agri Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Business Development Team','IGO Team',['assets/img/office/teams/bd-team/bd-team.png','assets/img/office/teams/bd-team/bd-team-2.jpg'])">
+          <img src="assets/img/office/teams/bd-team/bd-team.png" alt="Business Development Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Business Development Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('CRM Team','IGO Team',['assets/img/office/teams/crm-team/crm-team.png','assets/img/office/teams/crm-team/crm-team-2.jpg'])">
+          <img src="assets/img/office/teams/crm-team/crm-team.png" alt="CRM Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">CRM Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Data Analyst Team','IGO Team',['assets/img/office/teams/data-analyst-team/data-analyst-team.png','assets/img/office/teams/data-analyst-team/data-analyst-team-2.jpg'])">
+          <img src="assets/img/office/teams/data-analyst-team/data-analyst-team.png" alt="Data Analyst Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Data Analyst Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Engineering Team','IGO Team',['assets/img/office/teams/engineering-team/engineering-team.png','assets/img/office/teams/engineering-team/engineering-team-2.jpg','assets/img/office/teams/engineering-team/engineering-team-3.jpg'])">
+          <img src="assets/img/office/teams/engineering-team/engineering-team.png" alt="Engineering Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Engineering Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Farmers Factory Team','IGO Team',['assets/img/office/teams/farmers-factory-team/farmers-factory-team.png'])">
+          <img src="assets/img/office/teams/farmers-factory-team/farmers-factory-team.png" alt="Farmers Factory Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Farmers Factory Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('HR Team','IGO Team',['assets/img/office/teams/hr-team/hr-team.png'])">
+          <img src="assets/img/office/teams/hr-team/hr-team.png" alt="HR Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">HR Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('IT Team','IGO Team',['assets/img/office/teams/it-team/it-team.png','assets/img/office/teams/it-team/it-team-2.jpg'])">
+          <img src="assets/img/office/teams/it-team/it-team.png" alt="IT Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">IT Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Labour &amp; Vendor Sourcing Team','IGO Team',['assets/img/office/teams/labour-vendor-team/labour-vendor-team.png','assets/img/office/teams/labour-vendor-team/labour-vendor-team-2.jpg'])">
+          <img src="assets/img/office/teams/labour-vendor-team/labour-vendor-team.png" alt="Labour & Vendor Sourcing Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Labour &amp; Vendor Sourcing Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Lease &amp; Buying Team','IGO Team',['assets/img/office/teams/lease-buy-team/lease-buy-team.png','assets/img/office/teams/lease-buy-team/lease-buy-team-2.jpg'])">
+          <img src="assets/img/office/teams/lease-buy-team/lease-buy-team.png" alt="Lease & Buying Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Lease &amp; Buying Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Marketing Team','IGO Team',['assets/img/office/teams/marketing-team/marketing-team.png','assets/img/office/teams/marketing-team/marketing-team-2.jpg'])">
+          <img src="assets/img/office/teams/marketing-team/marketing-team.png" alt="Marketing Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Marketing Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Purchase Team','IGO Team',['assets/img/office/teams/purchase-team/purchase-team.png','assets/img/office/teams/purchase-team/purchase-team-2.jpg','assets/img/office/teams/purchase-team/purchase-team-3.jpg'])">
+          <img src="assets/img/office/teams/purchase-team/purchase-team.png" alt="Purchase Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Purchase Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('R&amp;D Team','IGO Team',['assets/img/office/teams/rd-team/rd-team.png','assets/img/office/teams/rd-team/rd-team-2.jpg'])">
+          <img src="assets/img/office/teams/rd-team/rd-team.png" alt="R&D Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">R&amp;D Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+        <div class="gal-pro-card" data-reveal onclick="openGalleryModal('Site Visit Team','IGO Team',['assets/img/office/teams/site-visit-team/site-visit-team.jpg'])">
+          <img src="assets/img/office/teams/site-visit-team/site-visit-team.jpg" alt="Site Visit Team" loading="lazy">
+          <span class="gal-pro-badge">IGO Team</span>
+          <div class="gal-pro-overlay"><span class="gal-pro-tag">IGO Team</span><p class="gal-pro-title">Site Visit Team</p><span class="gal-pro-hint">View team photos</span></div>
+        </div>
+
+      </div>
+    </div>
+
   </div><!-- end container -->
 </section>
 
@@ -359,12 +499,13 @@
 </div>
 
 <script>
-function filterGallery(cat,btn){
+function showGalCat(cat,btn){
   document.querySelectorAll('.gal-filter-bar button').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
-  document.querySelectorAll('.gal-pro-card').forEach(function(card){
-    if(cat==='all'||card.dataset.cat===cat){card.removeAttribute('data-hidden');}
-    else{card.setAttribute('data-hidden','1');}
+  var panels={projects:'galCatProjects',awards:'galCatAwards',news:'galCatNews',office:'galCatOffice',team:'galCatTeam'};
+  Object.keys(panels).forEach(function(key){
+    var el=document.getElementById(panels[key]);
+    if(el){ el.style.display=(key===cat)?'':'none'; }
   });
 }
 function openGalleryModal(title,cat,imgs){
@@ -420,11 +561,11 @@ document.addEventListener('keydown',function(e){
         <h4>Explore</h4>
         <a href="about.html">About Us</a>
         <a href="brands.html">Our Brands</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
         <a href="departments.html">Departments</a>
         <a href="leadership.html">Leadership</a>
+        <a href="org-chart.html">Org Chart</a>
         <a href="teams.html">Teams</a>
+        <a href="facilities.html">Office Facilities</a>
         <a href="awards.html">Awards</a>
         <a href="gallery.html">Gallery</a>
         <a href="careers.html">Careers</a>

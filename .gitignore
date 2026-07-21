@@ -3,3 +3,11 @@ node_modules/
 Thumbs.db
 *.log
 scratch/IGO-GROUP-PROFILE/
+
+# Unused raw video uploads (originals already compressed into assets/video, not referenced by any page)
+assets/img/youtube/WhatsApp Video 2026-07-18 at 4.04.27 PM.mp4
+assets/img/projects/project videos.mp4
+assets/images/office culture/IGO profile video.mp4
+
+# Oversized clip not used on any page (141MB, exceeds GitHub's 100MB limit)
+assets/video/ceo-chronicles-interview.mp4

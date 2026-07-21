@@ -37,14 +37,14 @@
     {"@type":"Question","name":"How can I join the IGO team?","acceptedAnswer":{"@type":"Answer","text":"Check our Careers page for the latest openings. We are always looking for passionate agronomists, engineers, and supply chain experts."}},
     {"@type":"Question","name":"Where is IGO Groups headquartered?","acceptedAnswer":{"@type":"Answer","text":"IGO Groups is headquartered at No. 17, Kovalan Street, 2nd Main Road, Uthandi Kanathur, Chennai – 600119, Tamil Nadu, India."}},
     {"@type":"Question","name":"What is the SBASM Technology developed by IGO?","acceptedAnswer":{"@type":"Answer","text":"SBASM (Soil-Based Agri-Science Management) is IGO Group's proprietary farming methodology that optimises soil health, water usage, and crop yield using data-driven inputs. It forms the backbone of all IGO managed farm projects."}},
-    {"@type":"Question","name":"How many brands does IGO Groups operate?","acceptedAnswer":{"@type":"Answer","text":"IGO Groups operates 26 brands spanning agritech, farm engineering, retail, fintech, education, and sustainability sectors."}},
+    {"@type":"Question","name":"How many brands does IGO Groups operate?","acceptedAnswer":{"@type":"Answer","text":"IGO Groups operates 27 brands spanning agritech, farm engineering, retail, fintech, education, and sustainability sectors."}},
     {"@type":"Question","name":"How can I invest in IGO managed farmland?","acceptedAnswer":{"@type":"Answer","text":"IGO Farmlands Estates offers managed farmland investment packages for individuals and NRIs. Contact our team at bd2@igogroups.com or visit our IGO Farmlands Estates page for details."}},
     {"@type":"Question","name":"Does IGO Groups offer franchise opportunities?","acceptedAnswer":{"@type":"Answer","text":"Yes. Through IGO Franchise (FICO), we offer franchise models for agri-marts, polyhouse ventures, farm loan centres, and more."}},
     {"@type":"Question","name":"What crops are suitable for polyhouse farming?","acceptedAnswer":{"@type":"Answer","text":"Capsicum, tomato, cucumber, gerbera, rose, and strawberry are among the most profitable polyhouse crops in India. IGO Tech Farming Scientists can guide crop selection based on your region, soil, and investment size."}},
     {"@type":"Question","name":"How can I contact the HR / Careers team?","acceptedAnswer":{"@type":"Answer","text":"You can reach our HR team directly at hr.admin@igogroups.com or submit your application via the Careers page."}},
     {"@type":"Question","name":"What are IGO Groups office hours?","acceptedAnswer":{"@type":"Answer","text":"Our head office is open Monday to Saturday, 10:00 AM to 7:30 PM IST. We are closed on Sundays and public holidays."}},
     {"@type":"Question","name":"Does IGO export agricultural products internationally?","acceptedAnswer":{"@type":"Answer","text":"Yes. IGO Exports & Imports handles international trade of premium Indian farm produce to 18+ countries across the Middle East, Europe, and Southeast Asia."}},
-    {"@type":"Question","name":"Is there an app for IGO Group services?","acceptedAnswer":{"@type":"Answer","text":"Yes. The India Green App is IGO Group's unified digital platform providing farmers and investors access to all 26 brands' services including produce buying, farm loans, expert consultation, and market prices."}},
+    {"@type":"Question","name":"Is there an app for IGO Group services?","acceptedAnswer":{"@type":"Answer","text":"Yes. The India Green App is IGO Group's unified digital platform providing farmers and investors access to all 27 brands' services including produce buying, farm loans, expert consultation, and market prices."}},
     {"@type":"Question","name":"How do I reach IGO Groups?","acceptedAnswer":{"@type":"Answer","text":"Call us at +91 73977 89803, email bd2@igogroups.com, or use the Contact form on our website. You can also WhatsApp the same number."}}
   ]
 }
@@ -90,10 +90,10 @@
         <div class="dropdown-menu">
           <a href="about.html">About Us</a>
           <a href="leadership.html">Leadership</a>
-          <a href="departments.html">Departments</a>
+          <a href="org-chart.html">Org Chart</a>
           <a href="teams.html">Teams</a>
+          <a href="facilities.html">Office Facilities</a>
           <a href="csr.html">CSR & Sustainability</a>
-          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -101,9 +101,8 @@
         <a href="javascript:void(0)">Business ▾</a>
         <div class="dropdown-menu">
           <a href="brands.html">Business Divisions</a>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="products.html">Products</a>
+          <a href="departments.html">Departments</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
         </div>
       </div>
 
@@ -141,69 +140,113 @@
   </div>
 </section>
 
+<style>
+  .faq-filter-bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem;}
+  .faq-filter-bar button{padding:0.5rem 1.2rem;border-radius:999px;border:1.5px solid var(--border,#e5e7eb);background:transparent;color:var(--text,#374151);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
+  .faq-filter-bar button.active,.faq-filter-bar button:hover{background:var(--green,#478427);color:#fff;border-color:var(--green,#478427);}
+  .faq-card{margin-bottom:1rem;}
+  .faq-card summary{cursor:pointer;list-style:none;font-weight:700;}
+  .faq-card summary::-webkit-details-marker{display:none;}
+  .faq-card summary::after{content:"+";float:right;color:var(--green,#478427);font-weight:700;}
+  .faq-card[open] summary::after{content:"\2212";}
+  .faq-card p{margin-top:0.7rem;color:var(--muted);}
+</style>
 <section class="content-section">
   <div class="container" style="max-width: 800px; margin: 0 auto;">
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How do I apply for an IGO Farm Loan?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">You can apply directly through our IGO Farm Loans portal or contact our Fintech division. We require basic land records and KYC to process NABARD/KCC subsidies.</p>
+    <div class="faq-filter-bar">
+      <button class="active" onclick="filterFAQ('all',this)">All</button>
+      <button onclick="filterFAQ('company',this)">Company</button>
+      <button onclick="filterFAQ('departments',this)">Departments</button>
+      <button onclick="filterFAQ('recruitment',this)">Recruitment</button>
+      <button onclick="filterFAQ('employees',this)">Employees</button>
+      <button onclick="filterFAQ('visitors',this)">Visitors</button>
+      <button onclick="filterFAQ('internships',this)">Internships</button>
     </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>What is included in Polyhouse construction?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Our turnkey polyhouse services include design, structural engineering, automated climate control, drip irrigation setup, and initial agronomy consulting.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Do you export organic produce globally?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Yes, our trade division exports certified organic fruits, vegetables, and millets to over 18 countries across the Middle East, Europe, and Southeast Asia.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How can I join the IGO team?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Check our Careers page for the latest openings! We are always looking for passionate agronomists, engineers, and supply chain experts.</p>
-    </div>    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Where is IGO Groups headquartered?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">IGO Groups is headquartered at No. 17, Kovalan Street, 2nd Main Road, Uthandi Kanathur, Chennai – 600119, Tamil Nadu, India.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>What is the SBASM Technology developed by IGO?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">SBASM (Soil-Based Agri-Science Management) is IGO Group's proprietary farming methodology that optimises soil health, water usage, and crop yield using data-driven inputs. It forms the backbone of all IGO managed farm projects.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How many brands does IGO Groups operate?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">IGO Groups operates 26 brands spanning farming-tech, farm engineering, retail, fintech, education, and sustainability sectors. You can view all brands on our <a href="brands.html">Business Divisions</a> page.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How can I invest in IGO managed farmland?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">IGO Farmlands Estates offers managed farmland investment packages for individuals and NRIs. Contact our team at <a href="mailto:bd2@igogroups.com">bd2@igogroups.com</a> or visit our <a href="brands/igo-farmlands-estates.html">IGO Farmlands Estates</a> page for details.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Does IGO Groups offer franchise opportunities?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Yes. Through IGO Franchise (FICO), we offer franchise models for agri-marts, polyhouse ventures, farm loan centres, and more. Visit our <a href="brands/igo-franchise.html">FICO page</a> or contact us to learn more.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>What crops are suitable for polyhouse farming?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Capsicum, tomato, cucumber, gerbera, rose, and strawberry are among the most profitable polyhouse crops in India. IGO Tech Farming Scientists can guide crop selection based on your region, soil, and investment size.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How can I contact the HR / Careers team?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">You can reach our HR team directly at <a href="mailto:hr.admin@igogroups.com">hr.admin@igogroups.com</a> or submit your application via the <a href="careers.html">Careers page</a>.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>What are IGO Groups' office hours?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Our head office is open Monday to Saturday, 10:00 AM to 7:30 PM IST. We are closed on Sundays and public holidays.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Does IGO export farm products internationally?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Yes. IGO Exports & Imports handles international trade of premium Indian farm produce. Our upcoming brand India Green Organics will focus specifically on certified organic exports to EU and USA markets.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>Is there an app for IGO Group services?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Yes. The India Green App is IGO Group's unified digital platform providing farmers and investors access to all 26 brands' services including produce buying, farm loans, expert consultation, and market prices in one app.</p>
-    </div>
-    <div class="card" data-reveal style="margin-bottom:1rem;">
-      <h3>How do I reach IGO Groups?</h3>
-      <p style="margin-top:0.5rem; color:var(--muted);">Call us at <a href="tel:+917397789803">+91 73977 89803</a>, email <a href="mailto:bd2@igogroups.com">bd2@igogroups.com</a>, or use the <a href="contact.html">Contact form</a> on our website. You can also WhatsApp the same number.</p>
-    </div>
+
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">How do I apply for an IGO Farm Loan?</h3></summary>
+      <p>You can apply directly through our IGO Farm Loans portal or contact our Fintech division. We require basic land records and KYC to process NABARD/KCC subsidies.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">What is included in Polyhouse construction?</h3></summary>
+      <p>Our turnkey polyhouse services include design, structural engineering, automated climate control, drip irrigation setup, and initial agronomy consulting.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">Do you export organic produce globally?</h3></summary>
+      <p>Yes, our trade division exports certified organic fruits, vegetables, and millets to over 18 countries across the Middle East, Europe, and Southeast Asia.</p>
+    </details>
+    <details class="card faq-card" data-cat="recruitment" data-reveal>
+      <summary><h3 style="display:inline;">How can I join the IGO team?</h3></summary>
+      <p>Check our Careers page for the latest openings! We are always looking for passionate agronomists, engineers, and supply chain experts.</p>
+    </details>
+    <details class="card faq-card" data-cat="visitors" data-reveal>
+      <summary><h3 style="display:inline;">Where is IGO Groups headquartered?</h3></summary>
+      <p>IGO Groups is headquartered at No. 17, Kovalan Street, 2nd Main Road, Uthandi Kanathur, Chennai – 600119, Tamil Nadu, India.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">What is the SBASM Technology developed by IGO?</h3></summary>
+      <p>SBASM (Soil-Based Agri-Science Management) is IGO Group's proprietary farming methodology that optimises soil health, water usage, and crop yield using data-driven inputs. It forms the backbone of all IGO managed farm projects.</p>
+    </details>
+    <details class="card faq-card" data-cat="company departments" data-reveal>
+      <summary><h3 style="display:inline;">How many brands does IGO Groups operate?</h3></summary>
+      <p>IGO Groups operates 27 brands spanning farming-tech, farm engineering, retail, fintech, education, and sustainability sectors. You can view all brands on our <a href="brands.html">Business Divisions</a> page.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">How can I invest in IGO managed farmland?</h3></summary>
+      <p>IGO Farmlands Estates offers managed farmland investment packages for individuals and NRIs. Contact our team at <a href="mailto:bd2@igogroups.com">bd2@igogroups.com</a> or visit our <a href="brands/igo-farmlands-estates.html">IGO Farmlands Estates</a> page for details.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">Does IGO Groups offer franchise opportunities?</h3></summary>
+      <p>Yes. Through IGO Franchise (FICO), we offer franchise models for agri-marts, polyhouse ventures, farm loan centres, and more. Visit our <a href="brands/igo-franchise.html">FICO page</a> or contact us to learn more.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">What crops are suitable for polyhouse farming?</h3></summary>
+      <p>Capsicum, tomato, cucumber, gerbera, rose, and strawberry are among the most profitable polyhouse crops in India. IGO Tech Farming Scientists can guide crop selection based on your region, soil, and investment size.</p>
+    </details>
+    <details class="card faq-card" data-cat="recruitment" data-reveal>
+      <summary><h3 style="display:inline;">How can I contact the HR / Careers team?</h3></summary>
+      <p>You can reach our HR team directly at <a href="mailto:hr.admin@igogroups.com">hr.admin@igogroups.com</a> or submit your application via the <a href="careers.html">Careers page</a>.</p>
+    </details>
+    <details class="card faq-card" data-cat="visitors" data-reveal>
+      <summary><h3 style="display:inline;">What are IGO Groups' office hours?</h3></summary>
+      <p>Our head office is open Monday to Saturday, 10:00 AM to 7:30 PM IST. We are closed on Sundays and public holidays.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">Does IGO export farm products internationally?</h3></summary>
+      <p>Yes. IGO Exports & Imports handles international trade of premium Indian farm produce. Our upcoming brand India Green Organics will focus specifically on certified organic exports to EU and USA markets.</p>
+    </details>
+    <details class="card faq-card" data-cat="company" data-reveal>
+      <summary><h3 style="display:inline;">Is there an app for IGO Group services?</h3></summary>
+      <p>Yes. The India Green App is IGO Group's unified digital platform providing farmers and investors access to all 27 brands' services including produce buying, farm loans, expert consultation, and market prices in one app.</p>
+    </details>
+    <details class="card faq-card" data-cat="visitors" data-reveal>
+      <summary><h3 style="display:inline;">How do I reach IGO Groups?</h3></summary>
+      <p>Call us at <a href="tel:+917397789803">+91 73977 89803</a>, email <a href="mailto:bd2@igogroups.com">bd2@igogroups.com</a>, or use the <a href="contact.html">Contact form</a> on our website. You can also WhatsApp the same number.</p>
+    </details>
+    <details class="card faq-card" data-cat="departments" data-reveal>
+      <summary><h3 style="display:inline;">How many departments does IGO Group have, and where can I learn about each one?</h3></summary>
+      <p>IGO Group runs 18 integrated departments, from Agri Operations and Engineering to IT &amp; AI and Finance. Each has its own page with team, tools, and achievements on our <a href="departments.html">Departments</a> page.</p>
+    </details>
+    <details class="card faq-card" data-cat="employees" data-reveal>
+      <summary><h3 style="display:inline;">What is it like working at IGO Group?</h3></summary>
+      <p>Employees work across 18 departments in a collaborative, tech-driven environment, with mentorship from department heads and continuous learning via IGO Academy.</p>
+    </details>
+    <details class="card faq-card" data-cat="internships" data-reveal>
+      <summary><h3 style="display:inline;">Does IGO Group offer internships?</h3></summary>
+      <p>Yes. IGO Group takes on interns and trainees across departments, with a direct pipeline from IGO Academy's training programs into placement within the group. See <a href="careers.html">Careers</a> for current openings.</p>
+    </details>
   </div>
 </section>
+<script>
+  function filterFAQ(cat, btn) {
+    document.querySelectorAll('.faq-filter-bar button').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.faq-card').forEach(function(card){
+      var cats = (card.getAttribute('data-cat') || '').split(' ');
+      card.style.display = (cat === 'all' || cats.indexOf(cat) !== -1) ? '' : 'none';
+    });
+  }
+</script>
 
 <footer class="footer">
   <div class="container footer-grid">
@@ -223,11 +266,11 @@
         <h4>Explore</h4>
         <a href="about.html">About Us</a>
         <a href="brands.html">Our Brands</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
         <a href="departments.html">Departments</a>
         <a href="leadership.html">Leadership</a>
+        <a href="org-chart.html">Org Chart</a>
         <a href="teams.html">Teams</a>
+        <a href="facilities.html">Office Facilities</a>
         <a href="awards.html">Awards</a>
         <a href="gallery.html">Gallery</a>
         <a href="careers.html">Careers</a>

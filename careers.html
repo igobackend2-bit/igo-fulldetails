@@ -440,10 +440,10 @@
           <div class="dropdown-menu">
             <a href="about.html">About Us</a>
             <a href="leadership.html">Leadership</a>
-            <a href="departments.html">Departments</a>
+          <a href="org-chart.html">Org Chart</a>
             <a href="teams.html">Teams</a>
-            <a href="csr.html">CSR & Sustainability</a>
-          <a href="brands/igo-academy.html">IGO Academy</a>
+          <a href="facilities.html">Office Facilities</a>
+          <a href="csr.html">CSR & Sustainability</a>
           </div>
         </div>
 
@@ -451,10 +451,9 @@
           <a href="javascript:void(0)">Business ▾</a>
           <div class="dropdown-menu">
             <a href="brands.html">Business Divisions</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="products.html">Products</a>
-          </div>
+            <a href="departments.html">Departments</a>
+          <a href="brands/igo-academy.html">IGO Academy</a>
+        </div>
         </div>
 
         <div class="dropdown" tabindex="0">
@@ -1000,6 +999,57 @@ html.dark .process-step h4 { color: var(--green-light); }
   </div>
 </section>
 
+<!-- ══════════════════ CAREER GROWTH ══════════════════ -->
+<style>
+  .cg-item { background:#fff; border-radius:12px; border:1px solid var(--border, #e5e7eb); overflow:hidden; }
+  html.dark .cg-item { background: var(--card-bg, #16221a); border-color: rgba(255,255,255,0.1); }
+  .cg-item summary { list-style:none; cursor:pointer; padding:1rem 1.2rem; display:flex; align-items:center; gap:0.7rem; font-weight:700; font-size:0.92rem; color:var(--dark,#111827); }
+  html.dark .cg-item summary { color:#fff; }
+  .cg-item summary::-webkit-details-marker { display:none; }
+  .cg-item summary::after { content:"+"; margin-left:auto; font-size:1.1rem; color:var(--brand-green,#478427); font-weight:700; }
+  .cg-item[open] summary::after { content:"\2212"; }
+  .cg-item .cg-icon { font-size:1.2rem; flex-shrink:0; }
+  .cg-item p { margin:0 1.2rem 1.1rem 2.7rem; color:var(--muted,#6b7280); font-size:0.86rem; line-height:1.6; }
+</style>
+<section class="content-section">
+  <div class="container">
+    <div class="section-header text-center" data-reveal>
+      <span class="eyebrow">GROWING WITH IGO</span>
+      <h2>Career Growth at IGO Group</h2>
+    </div>
+    <p style="max-width:700px;margin:0 auto;text-align:center;color:var(--muted);font-size:0.95rem;">Click each area to see how IGO Group supports your growth beyond your first role.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;max-width:1000px;margin:2.5rem auto 0;">
+
+      <details class="cg-item" data-reveal>
+        <summary><span class="cg-icon">🧭</span> Career Paths</summary>
+        <p>IGO Group's structure &mdash; Employees &rarr; Team Leads &rarr; Core Managers &rarr; Department Heads &rarr; Senior Leadership &mdash; gives every team member a visible path forward across our 18 departments.</p>
+      </details>
+
+      <details class="cg-item" data-reveal>
+        <summary><span class="cg-icon">📈</span> Internal Promotions</summary>
+        <p>Many of IGO's current Core Managers and Department Heads started in field or entry-level roles and grew into leadership as the group expanded to 18 departments and 27 brands.</p>
+      </details>
+
+      <details class="cg-item" data-reveal>
+        <summary><span class="cg-icon">🎓</span> Training Programs</summary>
+        <p>IGO Academy runs 10+ hands-on training programs in polyhouse farming, hydroponics, aquaculture and more &mdash; open to employees as well as external students.</p>
+        <p style="margin-top:-0.6rem;"><a href="brands/igo-academy.html" class="card-link">Explore IGO Academy &rarr;</a></p>
+      </details>
+
+      <details class="cg-item" data-reveal>
+        <summary><span class="cg-icon">🤝</span> Mentorship</summary>
+        <p>Department Heads and Core Managers mentor team leads and new employees on the job, passing on hands-on knowledge across Agri Operations, Engineering, IT &amp; AI, and every other department.</p>
+      </details>
+
+      <details class="cg-item" data-reveal>
+        <summary><span class="cg-icon">🌱</span> Internship Opportunities</summary>
+        <p>IGO Group takes on interns and trainees across departments, with a direct pipeline from IGO Academy's training programs into placement within the group and its 45+ hiring partners.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ HOW TO APPLY ══════════════════ -->
 <section class="content-section" style="background: var(--soft-gray);">
   <div class="container">
@@ -1218,12 +1268,12 @@ function submitApplyForm(e) {
       <h4>Explore</h4>
       <a href="about.html">About Us</a>
       <a href="brands.html">Our Brands</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
       <a href="departments.html">Departments</a>
       <a href="leadership.html">Leadership</a>
+      <a href="org-chart.html">Org Chart</a>
       <a href="teams.html">Teams</a>
-      <a href="awards.html">Awards</a>
+      <a href="facilities.html">Office Facilities</a>
+        <a href="awards.html">Awards</a>
       <a href="gallery.html">Gallery</a>
       <a href="careers.html">Careers</a>
       <a href="news.html">News</a>
